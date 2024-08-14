@@ -3,9 +3,9 @@
 	"id": "minecraftvillagerdimensionmod",
 	"version": "${version}",
 	"name": "Minecraft Villager Dimension Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is the Villager Dimension Mod",
 	"authors": [
-		"ScottyCraft Productions"
+		"Scott Craft Productions"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
