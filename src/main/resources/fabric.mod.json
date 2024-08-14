@@ -2,10 +2,10 @@
 	"schemaVersion": 1,
 	"id": "minecraftvillagerdimensionmod",
 	"version": "${version}",
-	"name": "minecraftvillagerdimensionmod",
+	"name": "Minecraft Villager Dimension Mod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"ScottyCraft Productions"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -16,10 +16,14 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.scott.minecraftvillagerdimensionmod.Minecraftvillagerdimensionmod"
+			"net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod"
 		],
+		"client": [
+			"net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionModClient"
+		],
+
 		"fabric-datagen": [
-			"net.scott.minecraftvillagerdimensionmod.MinecraftvillagerdimensionmodDataGenerator"
+			"net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionModDataGenerator"
 		]
 	},
 	"mixins": [
