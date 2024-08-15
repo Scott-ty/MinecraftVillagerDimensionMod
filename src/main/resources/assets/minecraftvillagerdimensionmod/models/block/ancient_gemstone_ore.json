@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "minecraftvillagerdimensionmod:block/ancient_gemstone_block"
+    "all": "minecraftvillagerdimensionmod:block/ancient_gemstone_ore"
   }
 }

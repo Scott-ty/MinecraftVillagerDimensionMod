@@ -1,14 +1,12 @@
 {
   "item.minecraftvillagerdimensionmod.ancient_gemstone": "Ancient Gemstone",
   "item.minecraftvillagerdimensionmod.ancient_gemstone_dust": "Ancient Gemstone Dust",
-  "item.minecraftvillagerdimensionmod.ancient_gemstone_ore": "Ancient Gemstone Ore",
   "item.minecraftvillagerdimensionmod.pillagerite": "Pillagerite",
   "item.minecraftvillagerdimensionmod.pillagerite_ingot": "Pillagerite Ingot",
-  "item.minecraftvillagerdimensionmod.pillagerite_ore": "Pillagerite Ore",
   "item.minecraftvillagerdimensionmod.magicite": "Magicite",
   "item.minecraftvillagerdimensionmod.magicite_dust": "Magicite Dust",
-  "item.minecraftvillagerdimensionmod.magicite_ore": "Magicite Ore",
 
+  "block.minecraftvillagerdimensionmod.ancient_gemstone_ore": "Ancient Gemstone Ore",
 
   "itemgroup.ancient_gemstone": "Villager Dimension Mod"
 }
