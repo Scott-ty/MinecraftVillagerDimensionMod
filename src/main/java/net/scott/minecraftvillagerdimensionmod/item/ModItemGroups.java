@@ -18,6 +18,14 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.ANCIENT_GEMSTONE)).entries(((displayContext, entries) -> {
                             entries.add(ModItems.ANCIENT_GEMSTONE);
                             entries.add(ModItems.ANCIENT_GEMSTONE_DUST);
+                            entries.add(ModItems.ANCIENT_GEMSTONE_ORE);
+                            entries.add(ModItems.PILLAGERITE);
+                            entries.add(ModItems.PILLAGERITE_INGOT);
+                            entries.add(ModItems.PILLAGERITE_ORE);
+                            entries.add(ModItems.MAGICITE);
+                            entries.add(ModItems.MAGICITE_DUST);
+                            entries.add(ModItems.MAGICITE_ORE);
+
 
                     })).build());
 

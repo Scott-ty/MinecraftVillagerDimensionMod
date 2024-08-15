@@ -2,6 +2,7 @@ package net.scott.minecraftvillagerdimensionmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.item.ModItemGroups;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 import org.slf4j.Logger;
@@ -16,5 +17,6 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
+		ModBlocks.registerModBlocks();
 	}
 }
