@@ -22,8 +22,10 @@ public class ModItemGroups {
                             entries.add(ModBlocks.ANCIENT_GEMSTONE_ORE);
                             entries.add(ModItems.PILLAGERITE);
                             entries.add(ModItems.PILLAGERITE_INGOT);
+                            entries.add(ModBlocks.PILLAGERITE_ORE);
                             entries.add(ModItems.MAGICITE);
                             entries.add(ModItems.MAGICITE_DUST);
+
 
 
                     })).build());

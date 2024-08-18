@@ -6,7 +6,10 @@
   "item.minecraftvillagerdimensionmod.magicite": "Magicite",
   "item.minecraftvillagerdimensionmod.magicite_dust": "Magicite Dust",
 
+
   "block.minecraftvillagerdimensionmod.ancient_gemstone_ore": "Ancient Gemstone Ore",
+  "block.minecraftvillagerdimensionmod.pillagerite_ore": "Pillagerite Ore",
+
 
   "itemgroup.ancient_gemstone": "Villager Dimension Mod"
 }

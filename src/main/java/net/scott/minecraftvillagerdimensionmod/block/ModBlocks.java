@@ -19,6 +19,8 @@ public class ModBlocks {
     public static final Block ANCIENT_GEMSTONE_ORE = registerBlock("ancient_gemstone_ore",
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE))); // Will have to use create and set the block settings
     // .requiresTool().strength(3.0F, 3.0F) ... something like this?
+    public static final Block PILLAGERITE_ORE = registerBlock("pillagerite_ore",
+            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)));
     private static Block registerBlock(String name, Block block)
     {
         registerBlockItem(name, block);
