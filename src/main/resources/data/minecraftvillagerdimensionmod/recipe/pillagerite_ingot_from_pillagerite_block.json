@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraftvillagerdimensionmod:pillagerite_block"
+    }
+  ],
+  "result": {
+    "id": "minecraftvillagerdimensionmod:pillagerite_ingot",
+    "count": 9
+  }
+}

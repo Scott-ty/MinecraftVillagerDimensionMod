@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraftvillagerdimensionmod:magicite_block"
+    }
+  ],
+  "result": {
+    "id": "minecraftvillagerdimensionmod:magicite_dust",
+    "count": 9
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraftvillagerdimensionmod:ancient_gemstone_block"
+    }
+  ],
+  "result": {
+    "id": "minecraftvillagerdimensionmod:ancient_gemstone_dust",
+    "count": 9
+  }
+}

@@ -8,7 +8,16 @@
 
 
   "block.minecraftvillagerdimensionmod.ancient_gemstone_ore": "Ancient Gemstone Ore",
+  "block.minecraftvillagerdimensionmod.deepslate_ancient_gemstone_ore": "Deepslate Ancient Gemstone Ore",
+  "block.minecraftvillagerdimensionmod.ancient_gemstone_block": "Ancient Gemstone Block",
+
   "block.minecraftvillagerdimensionmod.pillagerite_ore": "Pillagerite Ore",
+  "block.minecraftvillagerdimensionmod.deepslate_pillagerite_ore": "Deepslate Pillagerite Ore",
+  "block.minecraftvillagerdimensionmod.pillagerite_block": "Pillagerite Block",
+
+  "block.minecraftvillagerdimensionmod.magicite_ore": "Magicite Ore",
+  "block.minecraftvillagerdimensionmod.deepslate_magicite_ore": "Deepslate Magicite Ore",
+  "block.minecraftvillagerdimensionmod.magicite_block": "Magicite Block",
 
 
   "itemgroup.ancient_gemstone": "Villager Dimension Mod"

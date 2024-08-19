@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "ancient_gemstone",
+  "ingredient": {
+    "item": "minecraftvillagerdimensionmod:magicite"
+  },
+  "result": {
+    "id": "minecraftvillagerdimensionmod:magicite_dust"
+  }
+}

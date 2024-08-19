@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "ancient_gemstone",
+  "ingredient": {
+    "item": "minecraftvillagerdimensionmod:deepslate_ancient_gemstone_ore"
+  },
+  "result": {
+    "id": "minecraftvillagerdimensionmod:ancient_gemstone_dust"
+  }
+}
