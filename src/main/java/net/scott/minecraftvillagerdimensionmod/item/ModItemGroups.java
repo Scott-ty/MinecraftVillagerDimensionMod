@@ -38,6 +38,8 @@ public class ModItemGroups {
                             entries.add(ModBlocks.DEEPSLATE_MAGICITE_ORE);
                             entries.add(ModBlocks.MAGICITE_BLOCK);
 
+                            entries.add(ModItems.ANCIENT_GEMSTONE_PICKAXE);
+
                     })).build());
 
     public static void registerItemGroups(){
