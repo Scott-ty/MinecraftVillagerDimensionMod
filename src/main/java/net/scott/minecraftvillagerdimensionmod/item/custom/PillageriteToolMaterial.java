@@ -10,15 +10,15 @@ import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 
 import java.util.function.Supplier;
 
-public class ModToolMaterial{
-    public enum modToolMaterial implements ToolMaterial{
-        ANCIENT_GEMSTONE_DUST(
+public class PillageriteToolMaterial {
+    public enum pillageriteToolMaterial implements ToolMaterial{
+        PILLAGERITE_INGOT(
                 2032,
                 8.3F,
                 7.2F,
                 15,
                 BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-                () -> Ingredient.ofItems(ModItems.ANCIENT_GEMSTONE_DUST));
+                () -> Ingredient.ofItems(ModItems.PILLAGERITE_INGOT));
 
         private final TagKey<Block> inverseTag;
         private final int itemDurability;
@@ -27,7 +27,7 @@ public class ModToolMaterial{
         private final int enchantability;
         private final Supplier<Ingredient> repairIngredient;
 
-        modToolMaterial(int itemDurability, float miningSpeed, float attackDamage, int enchantability, TagKey<Block> inverseTag, Supplier<Ingredient> repairIngredient){
+        pillageriteToolMaterial(int itemDurability, float miningSpeed, float attackDamage, int enchantability, TagKey<Block> inverseTag, Supplier<Ingredient> repairIngredient){
             this.itemDurability = itemDurability;
             this.miningSpeed = miningSpeed;
             this.attackDamage = attackDamage;

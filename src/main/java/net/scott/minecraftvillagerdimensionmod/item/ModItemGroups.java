@@ -39,6 +39,7 @@ public class ModItemGroups {
                             entries.add(ModBlocks.MAGICITE_BLOCK);
 
                             entries.add(ModItems.ANCIENT_GEMSTONE_PICKAXE);
+                            entries.add(ModItems.PILLAGERITE_PICKAXE);
 
                     })).build());
 
