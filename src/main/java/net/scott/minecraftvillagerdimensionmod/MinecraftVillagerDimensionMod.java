@@ -27,10 +27,10 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(ModBlocks.EMERALD_TORCH)
-				.lightWithItem(Items.FLINT_AND_STEEL)
+				.flatPortal()
+				.lightWithWater()
 				.destDimID(Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "dim"))
 				.tintColor(0x00674F)
-				.flatPortal()
 				.registerPortal();
 	}
 }
