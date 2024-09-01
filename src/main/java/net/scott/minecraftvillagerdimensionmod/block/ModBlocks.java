@@ -3,19 +3,36 @@ package net.scott.minecraftvillagerdimensionmod.block;
 import net.fabricmc.fabric.api.block.v1.FabricBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FacingBlock;
+import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.sound.BlockSoundGroup;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.minecraft.util.Identifier;
+import net.scott.minecraftvillagerdimensionmod.particle.ModParticleTypes;
 
 public class ModBlocks {
+
+    public static final Block EMERALD_TORCH = registerBlock("emerald_torch", new TorchBlock(
+            ModParticleTypes.EMERALD_FLAME,
+            AbstractBlock.Settings.create().noCollision().breakInstantly().luminance(state -> 14).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY)
+    ));
+    public static final Block WALL_EMERALD_TORCH = registerBlock("wall_emerald_torch",new WallTorchBlock(
+                    ModParticleTypes.EMERALD_FLAME,
+                    AbstractBlock.Settings.create()
+                            .noCollision()
+                            .breakInstantly()
+                            .luminance(state -> 14)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .dropsLike(EMERALD_TORCH)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+
 
     public static final Block ANCIENT_GEMSTONE_ORE = registerBlock("ancient_gemstone_ore",
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE))); // Will have to use create and set the block settings

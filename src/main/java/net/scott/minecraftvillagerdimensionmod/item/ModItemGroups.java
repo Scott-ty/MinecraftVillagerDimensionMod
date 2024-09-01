@@ -40,6 +40,26 @@ public class ModItemGroups {
 
                             entries.add(ModItems.ANCIENT_GEMSTONE_PICKAXE);
                             entries.add(ModItems.PILLAGERITE_PICKAXE);
+                            entries.add(ModItems.MAGICITE_PICKAXE);
+
+                            entries.add(ModItems.ANCIENT_GEMSTONE_AXE);
+                            entries.add(ModItems.PILLAGERITE_AXE);
+                            entries.add(ModItems.MAGICITE_AXE);
+
+                            entries.add(ModItems.ANCIENT_GEMSTONE_SWORD);
+                            entries.add(ModItems.PILLAGERITE_SWORD);
+                            entries.add(ModItems.MAGICITE_SWORD);
+
+                            entries.add(ModItems.ANCIENT_GEMSTONE_HOE);
+                            entries.add(ModItems.PILLAGERITE_HOE);
+                            entries.add(ModItems.MAGICITE_HOE);
+
+                            entries.add(ModItems.ANCIENT_GEMSTONE_SHOVEL);
+                            entries.add(ModItems.PILLAGERITE_SHOVEL);
+                            entries.add(ModItems.MAGICITE_SHOVEL);
+
+                            entries.add(ModItems.EMERALD_TORCH_ITEM);
+
 
                     })).build());
 

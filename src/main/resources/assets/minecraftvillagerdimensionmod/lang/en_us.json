@@ -21,6 +21,28 @@
 
   "item.minecraftvillagerdimensionmod.ancient_gemstone_pickaxe": "Ancient Gemstone Pickaxe",
   "item.minecraftvillagerdimensionmod.pillagerite_pickaxe": "Pillagerite Pickaxe",
+  "item.minecraftvillagerdimensionmod.magicite_pickaxe": "Magicite Pickaxe",
+
+  "item.minecraftvillagerdimensionmod.ancient_gemstone_axe": "Ancient Gemstone Axe",
+  "item.minecraftvillagerdimensionmod.pillagerite_axe": "Pillagerite Axe",
+  "item.minecraftvillagerdimensionmod.magicite_axe": "Magicite Axe",
+
+  "item.minecraftvillagerdimensionmod.ancient_gemstone_sword": "Ancient Gemstone Sword",
+  "item.minecraftvillagerdimensionmod.pillagerite_sword": "Pillagerite Sword",
+  "item.minecraftvillagerdimensionmod.magicite_sword": "Magicite Sword",
+
+  "item.minecraftvillagerdimensionmod.ancient_gemstone_hoe": "Ancient Gemstone Hoe",
+  "item.minecraftvillagerdimensionmod.pillagerite_hoe": "Pillagerite Hoe",
+  "item.minecraftvillagerdimensionmod.magicite_hoe": "Magicite Hoe",
+
+  "item.minecraftvillagerdimensionmod.ancient_gemstone_shovel": "Ancient Gemstone Shovel",
+  "item.minecraftvillagerdimensionmod.pillagerite_shovel": "Pillagerite Shovel",
+  "item.minecraftvillagerdimensionmod.magicite_shovel": "Magicite Shovel",
+
+  "block.minecraftvillagerdimensionmod.emerald_torch": "Emerald Torch",
+
+
+
 
   "itemgroup.ancient_gemstone": "Villager Dimension Mod"
 }

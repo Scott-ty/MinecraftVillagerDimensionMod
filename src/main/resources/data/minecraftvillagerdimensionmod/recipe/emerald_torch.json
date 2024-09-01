@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:emerald",
+      "count" : 1
+    },
+    {
+      "item": "minecraft:torch",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "minecraftvillagerdimensionmod:emerald_torch_item",
+    "count": 1
+  }
+}

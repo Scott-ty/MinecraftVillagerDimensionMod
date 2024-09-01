@@ -2,6 +2,15 @@
   "replace": false,
   "values": [
     "minecraftvillagerdimensionmod:ancient_gemstone_block",
-    "minecraftvillagerdimensionmod:ancient_gemstone_ore"
+    "minecraftvillagerdimensionmod:ancient_gemstone_ore",
+    "minecraftvillagerdimensionmod:deepslate_ancient_gemstone_ore",
+
+    "minecraftvillagerdimensionmod:pillagerite_block",
+    "minecraftvillagerdimensionmod:pillagerite_ore",
+    "minecraftvillagerdimensionmod:deepslate_pillagerite_ore",
+
+    "minecraftvillagerdimensionmod:magicite_block",
+    "minecraftvillagerdimensionmod:magicite_ore",
+    "minecraftvillagerdimensionmod:deepslate_magicite_ore"
   ]
 }

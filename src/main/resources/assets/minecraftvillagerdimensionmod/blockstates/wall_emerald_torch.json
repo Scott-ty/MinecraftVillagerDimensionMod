@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "minecraftvillagerdimensionmod:block/wall_emerald_torch"
+    },
+    "facing=north": {
+      "model": "minecraftvillagerdimensionmod:block/wall_emerald_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "minecraftvillagerdimensionmod:block/wall_emerald_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "minecraftvillagerdimensionmod:block/wall_emerald_torch",
+      "y": 180
+    }
+  }
+}
