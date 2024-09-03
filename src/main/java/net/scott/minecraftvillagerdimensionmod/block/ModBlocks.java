@@ -1,13 +1,12 @@
 package net.scott.minecraftvillagerdimensionmod.block;
 
-import net.fabricmc.fabric.api.block.v1.FabricBlock;
-import net.fabricmc.fabric.api.item.v1.FabricItem;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import com.terraformersmc.terraform.sign.api.block.*;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -56,6 +55,59 @@ public class ModBlocks {
     public static final Block MAGICITE_BLOCK = registerBlock("magicite_block",
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK)));
 
+    //************************************* ROWAN WOOD *******************************************************************//
+    public static final Block ROWAN_LOG = registerBlock("rowan_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(4f)));
+    public static final Block ROWAN_WOOD = registerBlock("rowan_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).strength(4f)));
+    public static final Block STRIPPED_ROWAN_LOG = registerBlock("stripped_rowan_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).strength(4f)));
+    public static final Block STRIPPED_ROWAN_WOOD = registerBlock("stripped_rowan_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4f)));
+
+    public static final Block ROWAN_PLANKS = registerBlock("rowan_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).strength(4f)));
+    public static final Block ROWAN_LEAVES = registerBlock("rowan_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
+
+    public static final Identifier ROWAN_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/rowan");
+    public static final Identifier ROWAN_HANGING_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/hanging/rowan");
+    public static final Identifier ROWAN_HANGING_GUI_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "textures/gui/hanging_signs/rowan");
+
+    public static final Block STANDING_ROWAN_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "rowan_standing_sign"),
+            new TerraformSignBlock(ROWAN_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
+    public static final Block WALL_ROWAN_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "rowan_wall_sign"),
+            new TerraformWallSignBlock(ROWAN_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)));
+
+    public static final Block HANGING_ROWAN_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "rowan_hanging_sign"),
+            new TerraformHangingSignBlock(ROWAN_HANGING_SIGN_TEXTURE,ROWAN_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
+    public static final Block WALL_HANGING_ROWAN_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "rowan_wall_hanging_sign"),
+            new TerraformWallHangingSignBlock(ROWAN_HANGING_SIGN_TEXTURE,ROWAN_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
+
+    public static final BlockFamily ROWAN_FAMILY = BlockFamilies.register(ModBlocks.ROWAN_PLANKS)
+            .sign(ModBlocks.STANDING_ROWAN_SIGN, ModBlocks.WALL_ROWAN_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
+
+    public static final Block ROWAN_STAIRS = registerBlock("rowan_stairs",
+            new StairsBlock(ModBlocks.ROWAN_PLANKS.getDefaultState(),AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+    public static final Block ROWAN_SLAB = registerBlock("rowan_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+
+    public static final Block ROWAN_BUTTON = registerBlock("rowan_button",
+            new ButtonBlock(BlockSetType.OAK, 10, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON)));
+    public static final Block ROWAN_PRESSURE_PLATE = registerBlock("rowan_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE)));
+
+    public static final Block ROWAN_FENCE = registerBlock("rowan_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
+    public static final Block ROWAN_FENCE_GATE = registerBlock("rowan_fence_gate",
+            new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
+    public static final Block ROWAN_DOOR = registerBlock("rowan_door",
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK)));
+    public static final Block ROWAN_TRAPDOOR = registerBlock("rowan_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK)));
+
+    //*******************************************************************************************************************//
 
     private static Block registerBlock(String name, Block block)
     {

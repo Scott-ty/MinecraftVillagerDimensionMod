@@ -76,6 +76,13 @@ public class ModItems {
     public static final Item MAGICITE_DUST = registerItem("magicite_dust", new Item(new Item.Settings()));
 
 
+    // ROWAN WOOD SIGNS
+    public static final Item ROWAN_SIGN = registerItem("rowan_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.STANDING_ROWAN_SIGN, ModBlocks.WALL_ROWAN_SIGN));
+    public static final Item HANGING_ROWAN_SIGN = registerItem("rowan_hanging_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.HANGING_ROWAN_SIGN, ModBlocks.WALL_HANGING_ROWAN_SIGN));
+
+
     // Once an item has been made, you have to add it to a group
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){
     }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "minecraftvillagerdimensionmod:block/rowan_planks",
+    "side": "minecraftvillagerdimensionmod:block/rowan_planks",
+    "top": "minecraftvillagerdimensionmod:block/rowan_planks"
+  }
+}

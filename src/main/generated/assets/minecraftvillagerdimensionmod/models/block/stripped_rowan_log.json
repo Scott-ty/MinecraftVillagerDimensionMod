@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraftvillagerdimensionmod:block/stripped_rowan_log_top",
+    "side": "minecraftvillagerdimensionmod:block/stripped_rowan_log"
+  }
+}

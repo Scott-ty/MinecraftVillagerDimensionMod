@@ -60,6 +60,25 @@ public class ModItemGroups {
 
                             entries.add(ModItems.EMERALD_TORCH_ITEM);
 
+                            entries.add(ModBlocks.ROWAN_LOG);
+                            entries.add(ModBlocks.ROWAN_WOOD);
+                            entries.add(ModBlocks.STRIPPED_ROWAN_LOG);
+                            entries.add(ModBlocks.STRIPPED_ROWAN_WOOD);
+                            entries.add(ModBlocks.ROWAN_PLANKS);
+                            entries.add(ModBlocks.ROWAN_LEAVES);
+
+                            entries.add(ModItems.ROWAN_SIGN);
+                            entries.add(ModItems.HANGING_ROWAN_SIGN);
+
+                            entries.add(ModBlocks.ROWAN_SLAB);
+                            entries.add(ModBlocks.ROWAN_STAIRS);
+                            entries.add(ModBlocks.ROWAN_PRESSURE_PLATE);
+                            entries.add(ModBlocks.ROWAN_BUTTON);
+                            entries.add(ModBlocks.ROWAN_DOOR);
+                            entries.add(ModBlocks.ROWAN_TRAPDOOR);
+                            entries.add(ModBlocks.ROWAN_FENCE);
+                            entries.add(ModBlocks.ROWAN_FENCE_GATE);
+
 
                     })).build());
 

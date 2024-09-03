@@ -41,8 +41,27 @@
 
   "block.minecraftvillagerdimensionmod.emerald_torch": "Emerald Torch",
 
+  "block.minecraftvillagerdimensionmod.rowan_log": "Rowan Log",
+  "block.minecraftvillagerdimensionmod.rowan_wood": "Rowan Wood",
+  "block.minecraftvillagerdimensionmod.stripped_rowan_log": "Stripped Rowan Log",
+  "block.minecraftvillagerdimensionmod.stripped_rowan_wood": "Stripped Rowan Wood",
+  "block.minecraftvillagerdimensionmod.rowan_planks": "Rowan Planks",
+  "block.minecraftvillagerdimensionmod.rowan_leaves": "Rowan Leaves",
 
+  "block.minecraftvillagerdimensionmod.rowan_standing_sign": "Rowan Standing Sign",
+  "block.minecraftvillagerdimensionmod.rowan_wall_sign": "Rowan Wall Sign",
 
+  "block.minecraftvillagerdimensionmod.rowan_hanging_sign": "Rowan Hanging Sign",
+  "block.minecraftvillagerdimensionmod.rowan_wall_hanging_sign": "Rowan Wall Hanging Sign",
+
+  "block.minecraftvillagerdimensionmod.rowan_stairs": "Rowan Stairs",
+  "block.minecraftvillagerdimensionmod.rowan_slab": "Rowan Slab",
+  "block.minecraftvillagerdimensionmod.rowan_button": "Rowan Button",
+  "block.minecraftvillagerdimensionmod.rowan_pressure_plate": "Rowan Pressure Plate",
+  "block.minecraftvillagerdimensionmod.rowan_fence": "Rowan Fence",
+  "block.minecraftvillagerdimensionmod.rowan_fence_gate": "Rowan Fence Gate",
+  "block.minecraftvillagerdimensionmod.rowan_door": "Rowan Door",
+  "block.minecraftvillagerdimensionmod.rowan_trapdoor": "Rowan Trapdoor",
 
   "itemgroup.ancient_gemstone": "Villager Dimension Mod"
 }
