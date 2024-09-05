@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraftvillagerdimensionmod:juniper_log"
+    }
+  ],
+  "result": {
+    "id": "minecraftvillagerdimensionmod:juniper_planks",
+    "count": 4
+  }
+}

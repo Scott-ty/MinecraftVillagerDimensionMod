@@ -41,6 +41,8 @@
 
   "block.minecraftvillagerdimensionmod.emerald_torch": "Emerald Torch",
 
+
+
   "block.minecraftvillagerdimensionmod.rowan_log": "Rowan Log",
   "block.minecraftvillagerdimensionmod.rowan_wood": "Rowan Wood",
   "block.minecraftvillagerdimensionmod.stripped_rowan_log": "Stripped Rowan Log",
@@ -62,6 +64,30 @@
   "block.minecraftvillagerdimensionmod.rowan_fence_gate": "Rowan Fence Gate",
   "block.minecraftvillagerdimensionmod.rowan_door": "Rowan Door",
   "block.minecraftvillagerdimensionmod.rowan_trapdoor": "Rowan Trapdoor",
+
+
+
+  "block.minecraftvillagerdimensionmod.juniper_log": "Juniper Log",
+  "block.minecraftvillagerdimensionmod.juniper_wood": "Juniper Wood",
+  "block.minecraftvillagerdimensionmod.stripped_juniper_log": "Stripped Juniper Log",
+  "block.minecraftvillagerdimensionmod.stripped_juniper_wood": "Stripped Juniper Wood",
+  "block.minecraftvillagerdimensionmod.juniper_planks": "Juniper Planks",
+  "block.minecraftvillagerdimensionmod.juniper_leaves": "Juniper Leaves",
+
+  "block.minecraftvillagerdimensionmod.juniper_standing_sign": "Juniper Standing Sign",
+  "block.minecraftvillagerdimensionmod.juniper_wall_sign": "Juniper Wall Sign",
+
+  "block.minecraftvillagerdimensionmod.juniper_hanging_sign": "Juniper Hanging Sign",
+  "block.minecraftvillagerdimensionmod.juniper_wall_hanging_sign": "Juniper Wall Hanging Sign",
+
+  "block.minecraftvillagerdimensionmod.juniper_stairs": "Juniper Stairs",
+  "block.minecraftvillagerdimensionmod.juniper_slab": "Juniper Slab",
+  "block.minecraftvillagerdimensionmod.juniper_button": "Juniper Button",
+  "block.minecraftvillagerdimensionmod.juniper_pressure_plate": "Juniper Pressure Plate",
+  "block.minecraftvillagerdimensionmod.juniper_fence": "Juniper Fence",
+  "block.minecraftvillagerdimensionmod.juniper_fence_gate": "Juniper Fence Gate",
+  "block.minecraftvillagerdimensionmod.juniper_door": "Juniper Door",
+  "block.minecraftvillagerdimensionmod.juniper_trapdoor": "Juniper Trapdoor",
 
   "itemgroup.ancient_gemstone": "Villager Dimension Mod"
 }

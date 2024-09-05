@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraftvillagerdimensionmod:block/juniper_log",
+    "side": "minecraftvillagerdimensionmod:block/juniper_log"
+  }
+}

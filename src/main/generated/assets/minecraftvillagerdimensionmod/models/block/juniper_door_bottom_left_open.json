@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "minecraftvillagerdimensionmod:block/juniper_door_bottom",
+    "top": "minecraftvillagerdimensionmod:block/juniper_door_top"
+  }
+}

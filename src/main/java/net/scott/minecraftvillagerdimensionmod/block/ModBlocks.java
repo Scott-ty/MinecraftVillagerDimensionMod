@@ -109,6 +109,60 @@ public class ModBlocks {
 
     //*******************************************************************************************************************//
 
+    //************************************* JUNIPER WOOD *******************************************************************//
+    public static final Block JUNIPER_LOG = registerBlock("juniper_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(4f)));
+    public static final Block JUNIPER_WOOD = registerBlock("juniper_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).strength(4f)));
+    public static final Block STRIPPED_JUNIPER_LOG = registerBlock("stripped_juniper_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).strength(4f)));
+    public static final Block STRIPPED_JUNIPER_WOOD = registerBlock("stripped_juniper_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4f)));
+
+    public static final Block JUNIPER_PLANKS = registerBlock("juniper_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).strength(4f)));
+    public static final Block JUNIPER_LEAVES = registerBlock("juniper_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
+
+    public static final Identifier JUNIPER_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/juniper");
+    public static final Identifier JUNIPER_HANGING_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/hanging/juniper");
+    public static final Identifier JUNIPER_HANGING_GUI_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "textures/gui/hanging_signs/juniper");
+
+    public static final Block STANDING_JUNIPER_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "juniper_standing_sign"),
+            new TerraformSignBlock(JUNIPER_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
+    public static final Block WALL_JUNIPER_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "juniper_wall_sign"),
+            new TerraformWallSignBlock(JUNIPER_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)));
+
+    public static final Block HANGING_JUNIPER_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "juniper_hanging_sign"),
+            new TerraformHangingSignBlock(JUNIPER_HANGING_SIGN_TEXTURE,JUNIPER_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
+    public static final Block WALL_HANGING_JUNIPER_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "juniper_wall_hanging_sign"),
+            new TerraformWallHangingSignBlock(JUNIPER_HANGING_SIGN_TEXTURE,JUNIPER_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
+
+    public static final BlockFamily JUNIPER_FAMILY = BlockFamilies.register(ModBlocks.JUNIPER_PLANKS)
+            .sign(ModBlocks.STANDING_JUNIPER_SIGN, ModBlocks.WALL_JUNIPER_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
+
+    public static final Block JUNIPER_STAIRS = registerBlock("juniper_stairs",
+            new StairsBlock(ModBlocks.JUNIPER_PLANKS.getDefaultState(),AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+    public static final Block JUNIPER_SLAB = registerBlock("juniper_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+
+    public static final Block JUNIPER_BUTTON = registerBlock("juniper_button",
+            new ButtonBlock(BlockSetType.OAK, 10, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON)));
+    public static final Block JUNIPER_PRESSURE_PLATE = registerBlock("juniper_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE)));
+
+    public static final Block JUNIPER_FENCE = registerBlock("juniper_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
+    public static final Block JUNIPER_FENCE_GATE = registerBlock("juniper_fence_gate",
+            new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
+    public static final Block JUNIPER_DOOR = registerBlock("juniper_door",
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK)));
+    public static final Block JUNIPER_TRAPDOOR = registerBlock("juniper_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK)));
+
+    //*******************************************************************************************************************//
+
     private static Block registerBlock(String name, Block block)
     {
         registerBlockItem(name, block);

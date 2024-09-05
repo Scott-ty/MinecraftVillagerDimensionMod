@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "minecraftvillagerdimensionmod:block/juniper_slab"
+    },
+    "type=double": {
+      "model": "minecraftvillagerdimensionmod:block/juniper_planks"
+    },
+    "type=top": {
+      "model": "minecraftvillagerdimensionmod:block/juniper_slab_top"
+    }
+  }
+}

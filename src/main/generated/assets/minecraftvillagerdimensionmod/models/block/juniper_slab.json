@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "minecraftvillagerdimensionmod:block/juniper_planks",
+    "side": "minecraftvillagerdimensionmod:block/juniper_planks",
+    "top": "minecraftvillagerdimensionmod:block/juniper_planks"
+  }
+}

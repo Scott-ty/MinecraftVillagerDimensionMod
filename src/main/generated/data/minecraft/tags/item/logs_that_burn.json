@@ -3,6 +3,10 @@
     "minecraftvillagerdimensionmod:rowan_log",
     "minecraftvillagerdimensionmod:stripped_rowan_log",
     "minecraftvillagerdimensionmod:rowan_wood",
-    "minecraftvillagerdimensionmod:stripped_rowan_wood"
+    "minecraftvillagerdimensionmod:stripped_rowan_wood",
+    "minecraftvillagerdimensionmod:juniper_log",
+    "minecraftvillagerdimensionmod:stripped_juniper_log",
+    "minecraftvillagerdimensionmod:juniper_wood",
+    "minecraftvillagerdimensionmod:stripped_juniper_wood"
   ]
 }

@@ -16,6 +16,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
 
+        //************************************* ROWAN WOOD ****************************************************************//
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.ROWAN_PLANKS.asItem());
 
@@ -24,5 +25,17 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.STRIPPED_ROWAN_LOG.asItem())
                 .add(ModBlocks.ROWAN_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_ROWAN_WOOD.asItem());
+        //*******************************************************************************************************************//
+
+        //************************************* JUNIPER WOOD ****************************************************************//
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.JUNIPER_PLANKS.asItem());
+
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.JUNIPER_LOG.asItem())
+                .add(ModBlocks.STRIPPED_JUNIPER_LOG.asItem())
+                .add(ModBlocks.JUNIPER_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_JUNIPER_WOOD.asItem());
+        //*******************************************************************************************************************//
     }
 }

@@ -16,7 +16,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
-        //************************************* ROWAN WOOD *******************************************************************//
+        //************************************* ROWAN WOOD ****************************************************************//
         blockStateModelGenerator.registerLog(ModBlocks.ROWAN_LOG).log(ModBlocks.ROWAN_LOG).wood(ModBlocks.ROWAN_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_ROWAN_LOG).log(ModBlocks.STRIPPED_ROWAN_LOG).wood(ModBlocks.STRIPPED_ROWAN_WOOD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ROWAN_LEAVES);
@@ -34,7 +34,23 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.ROWAN_TRAPDOOR);
 
         //*******************************************************************************************************************//
+        //************************************* JUNIPER WOOD ****************************************************************//
+        blockStateModelGenerator.registerLog(ModBlocks.JUNIPER_LOG).log(ModBlocks.JUNIPER_LOG).wood(ModBlocks.JUNIPER_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_JUNIPER_LOG).log(ModBlocks.STRIPPED_JUNIPER_LOG).wood(ModBlocks.STRIPPED_JUNIPER_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JUNIPER_LEAVES);
 
+        BlockStateModelGenerator.BlockTexturePool juniper_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JUNIPER_PLANKS);
+        juniper_pool.family(ModBlocks.JUNIPER_FAMILY);
+        juniper_pool.stairs(ModBlocks.JUNIPER_STAIRS);
+        juniper_pool.button(ModBlocks.JUNIPER_BUTTON);
+        juniper_pool.slab(ModBlocks.JUNIPER_SLAB);
+        juniper_pool.pressurePlate(ModBlocks.JUNIPER_PRESSURE_PLATE);
+        juniper_pool.fence(ModBlocks.JUNIPER_FENCE);
+        juniper_pool.fenceGate(ModBlocks.JUNIPER_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.JUNIPER_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.JUNIPER_TRAPDOOR);
+        //*******************************************************************************************************************//
     }
 
     @Override
@@ -42,6 +58,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         // ROWAN WOOD SIGNS
         itemModelGenerator.register(ModItems.HANGING_ROWAN_SIGN, Models.GENERATED);
+
+        // JUNIPER WOOD SIGNS
+        itemModelGenerator.register(ModItems.HANGING_JUNIPER_SIGN, Models.GENERATED);
 
     }
 }

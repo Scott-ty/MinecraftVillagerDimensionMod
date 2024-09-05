@@ -83,6 +83,12 @@ public class ModItems {
             new SignItem(new Item.Settings().maxCount(16), ModBlocks.HANGING_ROWAN_SIGN, ModBlocks.WALL_HANGING_ROWAN_SIGN));
 
 
+    // JUNIPER WOOD SIGNS
+    public static final Item JUNIPER_SIGN = registerItem("juniper_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.STANDING_JUNIPER_SIGN, ModBlocks.WALL_JUNIPER_SIGN));
+    public static final Item HANGING_JUNIPER_SIGN = registerItem("juniper_hanging_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.HANGING_JUNIPER_SIGN, ModBlocks.WALL_HANGING_JUNIPER_SIGN));
+
     // Once an item has been made, you have to add it to a group
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){
     }

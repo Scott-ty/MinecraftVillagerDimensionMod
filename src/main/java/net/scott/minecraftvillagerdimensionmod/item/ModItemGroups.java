@@ -80,6 +80,26 @@ public class ModItemGroups {
                             entries.add(ModBlocks.ROWAN_FENCE_GATE);
 
 
+                            entries.add(ModBlocks.JUNIPER_LOG);
+                            entries.add(ModBlocks.JUNIPER_WOOD);
+                            entries.add(ModBlocks.STRIPPED_JUNIPER_LOG);
+                            entries.add(ModBlocks.STRIPPED_JUNIPER_WOOD);
+                            entries.add(ModBlocks.JUNIPER_PLANKS);
+                            entries.add(ModBlocks.JUNIPER_LEAVES);
+
+                            entries.add(ModItems.JUNIPER_SIGN);
+                            entries.add(ModItems.HANGING_JUNIPER_SIGN);
+
+                            entries.add(ModBlocks.JUNIPER_SLAB);
+                            entries.add(ModBlocks.JUNIPER_STAIRS);
+                            entries.add(ModBlocks.JUNIPER_PRESSURE_PLATE);
+                            entries.add(ModBlocks.JUNIPER_BUTTON);
+                            entries.add(ModBlocks.JUNIPER_DOOR);
+                            entries.add(ModBlocks.JUNIPER_TRAPDOOR);
+                            entries.add(ModBlocks.JUNIPER_FENCE);
+                            entries.add(ModBlocks.JUNIPER_FENCE_GATE);
+
+
                     })).build());
 
     public static void registerItemGroups(){

@@ -25,6 +25,7 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModParticleTypes.registerParticles();
 
+		// ROWAN WOOD
 		StrippableBlockRegistry.register(ModBlocks.ROWAN_LOG, ModBlocks.STRIPPED_ROWAN_LOG);
 		StrippableBlockRegistry.register(ModBlocks.ROWAN_WOOD, ModBlocks.STRIPPED_ROWAN_WOOD);
 
@@ -34,6 +35,17 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_ROWAN_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROWAN_PLANKS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROWAN_LEAVES, 30, 60);
+
+		// JUNIPER WOOD
+		StrippableBlockRegistry.register(ModBlocks.JUNIPER_LOG, ModBlocks.STRIPPED_JUNIPER_LOG);
+		StrippableBlockRegistry.register(ModBlocks.JUNIPER_WOOD, ModBlocks.STRIPPED_JUNIPER_WOOD);
+
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_JUNIPER_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_JUNIPER_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_LEAVES, 30, 60);
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.EMERALD_BLOCK)

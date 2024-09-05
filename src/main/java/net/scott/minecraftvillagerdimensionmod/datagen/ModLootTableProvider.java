@@ -29,6 +29,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        //************************************* ROWAN WOOD ****************************************************************//
         addDrop(ModBlocks.ROWAN_LOG);
         addDrop(ModBlocks.ROWAN_WOOD);
         addDrop(ModBlocks.STRIPPED_ROWAN_WOOD);
@@ -51,6 +52,31 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.ROWAN_DOOR, doorDrops(ModBlocks.ROWAN_DOOR));
         addDrop(ModBlocks.ROWAN_SLAB, slabDrops(ModBlocks.ROWAN_SLAB));
+        //*******************************************************************************************************************//
 
+        //************************************* JUNIPER WOOD ****************************************************************//
+        addDrop(ModBlocks.JUNIPER_LOG);
+        addDrop(ModBlocks.JUNIPER_WOOD);
+        addDrop(ModBlocks.STRIPPED_JUNIPER_WOOD);
+        addDrop(ModBlocks.STRIPPED_JUNIPER_LOG);
+        addDrop(ModBlocks.JUNIPER_PLANKS);
+        // Change Log to sapling
+        addDrop(ModBlocks.JUNIPER_LEAVES, leavesDrops(ModBlocks.JUNIPER_LEAVES, ModBlocks.JUNIPER_LOG, 0.005f));
+
+        addDrop(ModBlocks.STANDING_JUNIPER_SIGN);
+        addDrop(ModBlocks.WALL_JUNIPER_SIGN);
+        addDrop(ModBlocks.WALL_HANGING_JUNIPER_SIGN);
+        addDrop(ModBlocks.HANGING_JUNIPER_SIGN);
+
+        addDrop(ModBlocks.JUNIPER_STAIRS);
+        addDrop(ModBlocks.JUNIPER_BUTTON);
+        addDrop(ModBlocks.JUNIPER_PRESSURE_PLATE);
+        addDrop(ModBlocks.JUNIPER_FENCE);
+        addDrop(ModBlocks.JUNIPER_FENCE_GATE);
+        addDrop(ModBlocks.JUNIPER_TRAPDOOR);
+
+        addDrop(ModBlocks.JUNIPER_DOOR, doorDrops(ModBlocks.JUNIPER_DOOR));
+        addDrop(ModBlocks.JUNIPER_SLAB, slabDrops(ModBlocks.JUNIPER_SLAB));
+        //*******************************************************************************************************************//
     }
 }

@@ -27,5 +27,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ROWAN_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.ROWAN_FENCE_GATE);
+        //*******************************************************************************************************************//
+
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.JUNIPER_LOG)
+                .add(ModBlocks.STRIPPED_JUNIPER_LOG)
+                .add(ModBlocks.JUNIPER_WOOD)
+                .add(ModBlocks.STRIPPED_JUNIPER_WOOD);
+
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(ModBlocks.JUNIPER_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.JUNIPER_FENCE_GATE);
+        //*******************************************************************************************************************//
     }
 }
