@@ -21,6 +21,11 @@ public class ModItemGroups {
                             entries.add(ModItems.ANCIENT_GEMSTONE);
                             entries.add(ModItems.ANCIENT_GEMSTONE_DUST);
 
+                            entries.add(ModItems.ANCIENT_GEMSTONE_BOOTS);
+                            entries.add(ModItems.ANCIENT_GEMSTONE_HELMET);
+                            entries.add(ModItems.ANCIENT_GEMSTONE_CHESTPLATE);
+                            entries.add(ModItems.ANCIENT_GEMSTONE_LEGGING);
+
                             entries.add(ModItems.PILLAGERITE);
                             entries.add(ModItems.PILLAGERITE_INGOT);
 

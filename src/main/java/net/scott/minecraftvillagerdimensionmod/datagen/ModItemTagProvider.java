@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
+import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -48,5 +49,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.SYCAMORE_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_SYCAMORE_WOOD.asItem());
         //*******************************************************************************************************************//
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.ANCIENT_GEMSTONE_HELMET, ModItems.ANCIENT_GEMSTONE_CHESTPLATE, ModItems.ANCIENT_GEMSTONE_LEGGING, ModItems.ANCIENT_GEMSTONE_BOOTS);
     }
 }

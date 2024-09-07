@@ -13,6 +13,7 @@ import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
 import net.scott.minecraftvillagerdimensionmod.item.custom.AncientGemstoneToolMaterial;
 import net.scott.minecraftvillagerdimensionmod.item.custom.MagiciteToolMaterial;
+import net.scott.minecraftvillagerdimensionmod.item.custom.ModArmorMaterials;
 import net.scott.minecraftvillagerdimensionmod.item.custom.PillageriteToolMaterial;
 
 public class ModItems {
@@ -37,6 +38,32 @@ public class ModItems {
     public static final Item ANCIENT_GEMSTONE_HOE = registerItem("ancient_gemstone_hoe", new HoeItem(AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
             AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, 3, -2.4F
     ))));
+
+
+
+    public static final Item  ANCIENT_GEMSTONE_HELMET = registerItem("ancient_gemstone_helmet",
+            new ArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(25))));
+
+    public static final Item  ANCIENT_GEMSTONE_BOOTS = registerItem("ancient_gemstone_boots",
+            new ArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
+
+    public static final Item  ANCIENT_GEMSTONE_CHESTPLATE = registerItem("ancient_gemstone_chestplate",
+            new ArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(25))));
+
+    public static final Item  ANCIENT_GEMSTONE_LEGGING = registerItem("ancient_gemstone_legging",
+            new ArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
+
+
+
+
 
     public static final Item PILLAGERITE_PICKAXE = registerItem("pillagerite_pickaxe", new PickaxeItem(PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
             PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 3, -2.4F

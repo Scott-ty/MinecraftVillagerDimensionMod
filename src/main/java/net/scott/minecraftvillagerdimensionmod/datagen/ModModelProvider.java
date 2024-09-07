@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 
@@ -92,6 +93,12 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.SYCAMORE_BOAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SYCAMORE_CHEST_BOAT, Models.GENERATED);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.ANCIENT_GEMSTONE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.ANCIENT_GEMSTONE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.ANCIENT_GEMSTONE_LEGGING);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.ANCIENT_GEMSTONE_BOOTS);
+
 
     }
 }
