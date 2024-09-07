@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "minecraftvillagerdimensionmod:rowan_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraftvillagerdimensionmod:rowan_button"
+  }
+}

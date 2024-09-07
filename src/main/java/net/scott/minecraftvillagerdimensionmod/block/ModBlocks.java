@@ -32,7 +32,6 @@ public class ModBlocks {
             )
     );
 
-
     public static final Block ANCIENT_GEMSTONE_ORE = registerBlock("ancient_gemstone_ore",
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE))); // Will have to use create and set the block settings
     // .requiresTool().strength(3.0F, 3.0F) ... something like this?
@@ -75,14 +74,14 @@ public class ModBlocks {
     public static final Identifier ROWAN_HANGING_GUI_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "textures/gui/hanging_signs/rowan");
 
     public static final Block STANDING_ROWAN_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "rowan_standing_sign"),
-            new TerraformSignBlock(ROWAN_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
+            new TerraformSignBlock(ROWAN_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.BIRCH_SIGN)));
     public static final Block WALL_ROWAN_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "rowan_wall_sign"),
-            new TerraformWallSignBlock(ROWAN_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)));
+            new TerraformWallSignBlock(ROWAN_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.BIRCH_WALL_SIGN)));
 
     public static final Block HANGING_ROWAN_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "rowan_hanging_sign"),
-            new TerraformHangingSignBlock(ROWAN_HANGING_SIGN_TEXTURE,ROWAN_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
+            new TerraformHangingSignBlock(ROWAN_HANGING_SIGN_TEXTURE,ROWAN_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.BIRCH_HANGING_SIGN)));
     public static final Block WALL_HANGING_ROWAN_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "rowan_wall_hanging_sign"),
-            new TerraformWallHangingSignBlock(ROWAN_HANGING_SIGN_TEXTURE,ROWAN_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
+            new TerraformWallHangingSignBlock(ROWAN_HANGING_SIGN_TEXTURE,ROWAN_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.BIRCH_WALL_HANGING_SIGN)));
 
     public static final BlockFamily ROWAN_FAMILY = BlockFamilies.register(ModBlocks.ROWAN_PLANKS)
             .sign(ModBlocks.STANDING_ROWAN_SIGN, ModBlocks.WALL_ROWAN_SIGN)
@@ -103,9 +102,9 @@ public class ModBlocks {
     public static final Block ROWAN_FENCE_GATE = registerBlock("rowan_fence_gate",
             new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
     public static final Block ROWAN_DOOR = registerBlock("rowan_door",
-            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK)));
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
     public static final Block ROWAN_TRAPDOOR = registerBlock("rowan_trapdoor",
-            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK)));
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
 
     //*******************************************************************************************************************//
 
@@ -157,9 +156,9 @@ public class ModBlocks {
     public static final Block JUNIPER_FENCE_GATE = registerBlock("juniper_fence_gate",
             new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
     public static final Block JUNIPER_DOOR = registerBlock("juniper_door",
-            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK)));
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
     public static final Block JUNIPER_TRAPDOOR = registerBlock("juniper_trapdoor",
-            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK)));
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
 
     //*******************************************************************************************************************//
 

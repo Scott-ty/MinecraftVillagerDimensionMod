@@ -19,6 +19,7 @@ import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryWrapper;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
+import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -52,6 +53,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.ROWAN_DOOR, doorDrops(ModBlocks.ROWAN_DOOR));
         addDrop(ModBlocks.ROWAN_SLAB, slabDrops(ModBlocks.ROWAN_SLAB));
+
+        //addDrop(ModBlocks.HANGING_ROWAN_SIGN, drops(ModItems.HANGING_ROWAN_SIGN));
+        //addDrop(ModBlocks.WALL_HANGING_ROWAN_SIGN, drops(ModItems.HANGING_ROWAN_SIGN));
+        //addDrop(ModBlocks.STANDING_ROWAN_SIGN, drops(ModItems.ROWAN_SIGN));
+        //addDrop(ModBlocks.WALL_ROWAN_SIGN, drops(ModItems.ROWAN_SIGN));
+
         //*******************************************************************************************************************//
 
         //************************************* JUNIPER WOOD ****************************************************************//
@@ -60,6 +67,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STRIPPED_JUNIPER_WOOD);
         addDrop(ModBlocks.STRIPPED_JUNIPER_LOG);
         addDrop(ModBlocks.JUNIPER_PLANKS);
+
         // Change Log to sapling
         addDrop(ModBlocks.JUNIPER_LEAVES, leavesDrops(ModBlocks.JUNIPER_LEAVES, ModBlocks.JUNIPER_LOG, 0.005f));
 
@@ -77,6 +85,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.JUNIPER_DOOR, doorDrops(ModBlocks.JUNIPER_DOOR));
         addDrop(ModBlocks.JUNIPER_SLAB, slabDrops(ModBlocks.JUNIPER_SLAB));
+
+
+        //addDrop(ModBlocks.HANGING_JUNIPER_SIGN, drops(ModItems.HANGING_JUNIPER_SIGN));
+        //addDrop(ModBlocks.WALL_HANGING_JUNIPER_SIGN, drops(ModItems.HANGING_JUNIPER_SIGN));
+        //addDrop(ModBlocks.STANDING_JUNIPER_SIGN, drops(ModItems.JUNIPER_SIGN));
+        ///addDrop(ModBlocks.WALL_JUNIPER_SIGN, drops(ModItems.JUNIPER_SIGN));
+
         //*******************************************************************************************************************//
     }
 }
