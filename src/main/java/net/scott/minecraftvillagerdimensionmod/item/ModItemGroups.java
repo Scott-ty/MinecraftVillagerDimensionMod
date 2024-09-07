@@ -10,6 +10,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
+import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
 
 public class ModItemGroups {
 
@@ -79,6 +80,9 @@ public class ModItemGroups {
                             entries.add(ModBlocks.ROWAN_FENCE);
                             entries.add(ModBlocks.ROWAN_FENCE_GATE);
 
+                            entries.add(ModItems.ROWAN_BOAT);
+                            entries.add(ModItems.ROWAN_CHEST_BOAT);
+
 
                             entries.add(ModBlocks.JUNIPER_LOG);
                             entries.add(ModBlocks.JUNIPER_WOOD);
@@ -98,6 +102,33 @@ public class ModItemGroups {
                             entries.add(ModBlocks.JUNIPER_TRAPDOOR);
                             entries.add(ModBlocks.JUNIPER_FENCE);
                             entries.add(ModBlocks.JUNIPER_FENCE_GATE);
+
+                            entries.add(ModItems.JUNIPER_BOAT);
+                            entries.add(ModItems.JUNIPER_CHEST_BOAT);
+
+
+
+                        entries.add(ModBlocks.SYCAMORE_LOG);
+                        entries.add(ModBlocks.SYCAMORE_WOOD);
+                        entries.add(ModBlocks.STRIPPED_SYCAMORE_LOG);
+                        entries.add(ModBlocks.STRIPPED_SYCAMORE_WOOD);
+                        entries.add(ModBlocks.SYCAMORE_PLANKS);
+                        entries.add(ModBlocks.SYCAMORE_LEAVES);
+
+                        entries.add(ModItems.SYCAMORE_SIGN);
+                        entries.add(ModItems.HANGING_SYCAMORE_SIGN);
+
+                        entries.add(ModBlocks.SYCAMORE_SLAB);
+                        entries.add(ModBlocks.SYCAMORE_STAIRS);
+                        entries.add(ModBlocks.SYCAMORE_PRESSURE_PLATE);
+                        entries.add(ModBlocks.SYCAMORE_BUTTON);
+                        entries.add(ModBlocks.SYCAMORE_DOOR);
+                        entries.add(ModBlocks.SYCAMORE_TRAPDOOR);
+                        entries.add(ModBlocks.SYCAMORE_FENCE);
+                        entries.add(ModBlocks.SYCAMORE_FENCE_GATE);
+
+                        entries.add(ModItems.SYCAMORE_BOAT);
+                        entries.add(ModItems.SYCAMORE_CHEST_BOAT);
 
 
                     })).build());

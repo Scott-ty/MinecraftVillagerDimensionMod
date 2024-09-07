@@ -7,6 +7,7 @@ import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
+import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
 import net.scott.minecraftvillagerdimensionmod.item.ModItemGroups;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 import net.scott.minecraftvillagerdimensionmod.particle.ModParticleTypes;
@@ -46,6 +47,20 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_JUNIPER_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_PLANKS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_LEAVES, 30, 60);
+
+		// SYCAMORE WOOD
+		StrippableBlockRegistry.register(ModBlocks.SYCAMORE_LOG, ModBlocks.STRIPPED_SYCAMORE_LOG);
+		StrippableBlockRegistry.register(ModBlocks.SYCAMORE_WOOD, ModBlocks.STRIPPED_SYCAMORE_WOOD);
+
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_SYCAMORE_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_SYCAMORE_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_LEAVES, 30, 60);
+
+		// Register ModBoats Java Class
+		ModBoats.registerBoats();
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.EMERALD_BLOCK)

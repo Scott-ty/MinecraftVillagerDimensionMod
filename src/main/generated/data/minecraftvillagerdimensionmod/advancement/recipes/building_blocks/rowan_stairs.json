@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "a_dark_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:rowan_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraftvillagerdimensionmod:rowan_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "a_dark_wood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraftvillagerdimensionmod:rowan_stairs"
+    ]
+  }
+}

@@ -46,6 +46,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createSignRecipe(ModItems.ROWAN_SIGN, Ingredient.ofItems(ModBlocks.ROWAN_PLANKS))
                 .criterion("a_dark_wood", InventoryChangedCriterion.Conditions.items(ModBlocks.ROWAN_LOG)
                 ).offerTo(exporter);
+
+        offerBoatRecipe(exporter, ModItems.ROWAN_BOAT, ModBlocks.ROWAN_PLANKS);
+        offerChestBoatRecipe(exporter, ModItems.ROWAN_CHEST_BOAT, ModItems.JUNIPER_BOAT);
         //*******************************************************************************************************************//
 
         //************************************* JUNIPER WOOD ****************************************************************//
@@ -71,6 +74,35 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createSignRecipe(ModItems.JUNIPER_SIGN, Ingredient.ofItems(ModBlocks.JUNIPER_PLANKS))
                 .criterion("feeling_grey", InventoryChangedCriterion.Conditions.items(ModBlocks.JUNIPER_LOG)
                 ).offerTo(exporter);
+        offerBoatRecipe(exporter, ModItems.JUNIPER_BOAT, ModBlocks.JUNIPER_PLANKS);
+        offerChestBoatRecipe(exporter, ModItems.JUNIPER_CHEST_BOAT, ModItems.JUNIPER_BOAT);
+        //*******************************************************************************************************************//
+
+        //************************************* SYCAMORE WOOD ****************************************************************//
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SYCAMORE_SLAB, ModBlocks.SYCAMORE_PLANKS);
+        createStairsRecipe(ModBlocks.SYCAMORE_STAIRS, Ingredient.ofItems(ModBlocks.SYCAMORE_PLANKS))
+                .criterion("youre_syc", InventoryChangedCriterion.Conditions.items(ModBlocks.SYCAMORE_LOG)
+                ).offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.SYCAMORE_FENCE_GATE, Ingredient.ofItems(ModBlocks.SYCAMORE_PLANKS))
+                .criterion("youre_syc", InventoryChangedCriterion.Conditions.items(ModBlocks.SYCAMORE_LOG)
+                ).offerTo(exporter);
+        createFenceRecipe(ModBlocks.SYCAMORE_FENCE, Ingredient.ofItems(ModBlocks.SYCAMORE_PLANKS))
+                .criterion("youre_syc", InventoryChangedCriterion.Conditions.items(ModBlocks.SYCAMORE_LOG)
+                ).offerTo(exporter);
+        offerPressurePlateRecipe(exporter, ModBlocks.SYCAMORE_PRESSURE_PLATE, ModBlocks.SYCAMORE_PLANKS);
+
+        createDoorRecipe(ModBlocks.SYCAMORE_DOOR, Ingredient.ofItems(ModBlocks.SYCAMORE_PLANKS))
+                .criterion("youre_syc", InventoryChangedCriterion.Conditions.items(ModBlocks.SYCAMORE_LOG)
+                ).offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.SYCAMORE_TRAPDOOR, Ingredient.ofItems(ModBlocks.SYCAMORE_PLANKS))
+                .criterion("youre_syc", InventoryChangedCriterion.Conditions.items(ModBlocks.SYCAMORE_LOG)
+                ).offerTo(exporter);
+        offerHangingSignRecipe(exporter, ModItems.HANGING_SYCAMORE_SIGN, ModBlocks.SYCAMORE_PLANKS);
+        createSignRecipe(ModItems.SYCAMORE_SIGN, Ingredient.ofItems(ModBlocks.SYCAMORE_PLANKS))
+                .criterion("youre_syc", InventoryChangedCriterion.Conditions.items(ModBlocks.SYCAMORE_LOG)
+                ).offerTo(exporter);
+        offerBoatRecipe(exporter, ModItems.SYCAMORE_BOAT, ModBlocks.SYCAMORE_PLANKS);
+        offerChestBoatRecipe(exporter, ModItems.SYCAMORE_CHEST_BOAT, ModItems.SYCAMORE_BOAT);
         //*******************************************************************************************************************//
     }
 }

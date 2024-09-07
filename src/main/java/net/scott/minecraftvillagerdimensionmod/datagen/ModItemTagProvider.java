@@ -37,5 +37,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.JUNIPER_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_JUNIPER_WOOD.asItem());
         //*******************************************************************************************************************//
+
+        //************************************* SYCAMORE WOOD ****************************************************************//
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.SYCAMORE_PLANKS.asItem());
+
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.SYCAMORE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_SYCAMORE_LOG.asItem())
+                .add(ModBlocks.SYCAMORE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_SYCAMORE_WOOD.asItem());
+        //*******************************************************************************************************************//
     }
 }

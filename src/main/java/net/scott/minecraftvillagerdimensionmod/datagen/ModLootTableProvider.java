@@ -54,11 +54,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ROWAN_DOOR, doorDrops(ModBlocks.ROWAN_DOOR));
         addDrop(ModBlocks.ROWAN_SLAB, slabDrops(ModBlocks.ROWAN_SLAB));
 
-        //addDrop(ModBlocks.HANGING_ROWAN_SIGN, drops(ModItems.HANGING_ROWAN_SIGN));
-        //addDrop(ModBlocks.WALL_HANGING_ROWAN_SIGN, drops(ModItems.HANGING_ROWAN_SIGN));
-        //addDrop(ModBlocks.STANDING_ROWAN_SIGN, drops(ModItems.ROWAN_SIGN));
-        //addDrop(ModBlocks.WALL_ROWAN_SIGN, drops(ModItems.ROWAN_SIGN));
-
         //*******************************************************************************************************************//
 
         //************************************* JUNIPER WOOD ****************************************************************//
@@ -86,12 +81,32 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.JUNIPER_DOOR, doorDrops(ModBlocks.JUNIPER_DOOR));
         addDrop(ModBlocks.JUNIPER_SLAB, slabDrops(ModBlocks.JUNIPER_SLAB));
 
+        //*******************************************************************************************************************//
 
-        //addDrop(ModBlocks.HANGING_JUNIPER_SIGN, drops(ModItems.HANGING_JUNIPER_SIGN));
-        //addDrop(ModBlocks.WALL_HANGING_JUNIPER_SIGN, drops(ModItems.HANGING_JUNIPER_SIGN));
-        //addDrop(ModBlocks.STANDING_JUNIPER_SIGN, drops(ModItems.JUNIPER_SIGN));
-        ///addDrop(ModBlocks.WALL_JUNIPER_SIGN, drops(ModItems.JUNIPER_SIGN));
+        //************************************* SYCAMORE WOOD ****************************************************************//
+        addDrop(ModBlocks.SYCAMORE_LOG);
+        addDrop(ModBlocks.SYCAMORE_WOOD);
+        addDrop(ModBlocks.STRIPPED_SYCAMORE_WOOD);
+        addDrop(ModBlocks.STRIPPED_SYCAMORE_LOG);
+        addDrop(ModBlocks.SYCAMORE_PLANKS);
 
+        // Change Log to sapling
+        addDrop(ModBlocks.SYCAMORE_LEAVES, leavesDrops(ModBlocks.SYCAMORE_LEAVES, ModBlocks.SYCAMORE_LOG, 0.005f));
+
+        addDrop(ModBlocks.STANDING_SYCAMORE_SIGN);
+        addDrop(ModBlocks.WALL_SYCAMORE_SIGN);
+        addDrop(ModBlocks.WALL_HANGING_SYCAMORE_SIGN);
+        addDrop(ModBlocks.HANGING_SYCAMORE_SIGN);
+
+        addDrop(ModBlocks.SYCAMORE_STAIRS);
+        addDrop(ModBlocks.SYCAMORE_BUTTON);
+        addDrop(ModBlocks.SYCAMORE_PRESSURE_PLATE);
+        addDrop(ModBlocks.SYCAMORE_FENCE);
+        addDrop(ModBlocks.SYCAMORE_FENCE_GATE);
+        addDrop(ModBlocks.SYCAMORE_TRAPDOOR);
+
+        addDrop(ModBlocks.SYCAMORE_DOOR, doorDrops(ModBlocks.SYCAMORE_DOOR));
+        addDrop(ModBlocks.SYCAMORE_SLAB, slabDrops(ModBlocks.SYCAMORE_SLAB));
         //*******************************************************************************************************************//
     }
 }

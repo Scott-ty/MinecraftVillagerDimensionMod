@@ -1,4 +1,5 @@
 package net.scott.minecraftvillagerdimensionmod.item;
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Blocks;
@@ -9,6 +10,7 @@ import net.minecraft.util.math.Direction;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
+import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
 import net.scott.minecraftvillagerdimensionmod.item.custom.AncientGemstoneToolMaterial;
 import net.scott.minecraftvillagerdimensionmod.item.custom.MagiciteToolMaterial;
 import net.scott.minecraftvillagerdimensionmod.item.custom.PillageriteToolMaterial;
@@ -82,12 +84,33 @@ public class ModItems {
     public static final Item HANGING_ROWAN_SIGN = registerItem("rowan_hanging_sign",
             new SignItem(new Item.Settings().maxCount(16), ModBlocks.HANGING_ROWAN_SIGN, ModBlocks.WALL_HANGING_ROWAN_SIGN));
 
+    // JUNIPER WOOD
+    public static final Item ROWAN_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.ROWAN_BOAT_ID, ModBoats.ROWAN_BOAT_KEY, false);
+    public static final Item ROWAN_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.ROWAN_CHEST_BOAT_ID, ModBoats.ROWAN_BOAT_KEY, true);
+
+
 
     // JUNIPER WOOD SIGNS
     public static final Item JUNIPER_SIGN = registerItem("juniper_sign",
             new SignItem(new Item.Settings().maxCount(16), ModBlocks.STANDING_JUNIPER_SIGN, ModBlocks.WALL_JUNIPER_SIGN));
     public static final Item HANGING_JUNIPER_SIGN = registerItem("juniper_hanging_sign",
             new SignItem(new Item.Settings().maxCount(16), ModBlocks.HANGING_JUNIPER_SIGN, ModBlocks.WALL_HANGING_JUNIPER_SIGN));
+
+    // JUNIPER WOOD
+    public static final Item JUNIPER_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.JUNIPER_BOAT_ID, ModBoats.JUNIPER_BOAT_KEY, false);
+    public static final Item JUNIPER_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.JUNIPER_CHEST_BOAT_ID, ModBoats.JUNIPER_BOAT_KEY, true);
+
+
+
+    // SYCAMORE WOOD SIGNS
+    public static final Item SYCAMORE_SIGN = registerItem("sycamore_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.STANDING_SYCAMORE_SIGN, ModBlocks.WALL_SYCAMORE_SIGN));
+    public static final Item HANGING_SYCAMORE_SIGN = registerItem("sycamore_hanging_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.HANGING_SYCAMORE_SIGN, ModBlocks.WALL_HANGING_SYCAMORE_SIGN));
+
+    // SYCAMORE WOOD
+    public static final Item SYCAMORE_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.SYCAMORE_BOAT_ID, ModBoats.SYCAMORE_BOAT_KEY, false);
+    public static final Item SYCAMORE_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.SYCAMORE_CHEST_BOAT_ID, ModBoats.SYCAMORE_BOAT_KEY, true);
 
     // Once an item has been made, you have to add it to a group
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){

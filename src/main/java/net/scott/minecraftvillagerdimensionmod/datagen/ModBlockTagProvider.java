@@ -41,5 +41,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.JUNIPER_FENCE_GATE);
         //*******************************************************************************************************************//
+
+
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.SYCAMORE_LOG)
+                .add(ModBlocks.STRIPPED_SYCAMORE_LOG)
+                .add(ModBlocks.SYCAMORE_WOOD)
+                .add(ModBlocks.STRIPPED_SYCAMORE_WOOD);
+
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(ModBlocks.SYCAMORE_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.SYCAMORE_FENCE_GATE);
+        //*******************************************************************************************************************//
     }
 }

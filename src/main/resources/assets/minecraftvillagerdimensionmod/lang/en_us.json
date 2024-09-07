@@ -65,6 +65,9 @@
   "block.minecraftvillagerdimensionmod.rowan_door": "Rowan Door",
   "block.minecraftvillagerdimensionmod.rowan_trapdoor": "Rowan Trapdoor",
 
+  "item.minecraftvillagerdimensionmod.rowan_boat": "Rowan Boat",
+  "item.minecraftvillagerdimensionmod.rowan_chest_boat": "Rowan Chest Boat",
+
 
 
   "block.minecraftvillagerdimensionmod.juniper_log": "Juniper Log",
@@ -88,6 +91,35 @@
   "block.minecraftvillagerdimensionmod.juniper_fence_gate": "Juniper Fence Gate",
   "block.minecraftvillagerdimensionmod.juniper_door": "Juniper Door",
   "block.minecraftvillagerdimensionmod.juniper_trapdoor": "Juniper Trapdoor",
+
+  "item.minecraftvillagerdimensionmod.juniper_boat": "Juniper Boat",
+  "item.minecraftvillagerdimensionmod.juniper_chest_boat": "Juniper Chest Boat",
+
+
+  "block.minecraftvillagerdimensionmod.sycamore_log": "Sycamore Log",
+  "block.minecraftvillagerdimensionmod.sycamore_wood": "Sycamore Wood",
+  "block.minecraftvillagerdimensionmod.stripped_sycamore_log": "Stripped Sycamore Log",
+  "block.minecraftvillagerdimensionmod.stripped_sycamore_wood": "Stripped Sycamore Wood",
+  "block.minecraftvillagerdimensionmod.sycamore_planks": "Sycamore Planks",
+  "block.minecraftvillagerdimensionmod.sycamore_leaves": "Sycamore Leaves",
+
+  "block.minecraftvillagerdimensionmod.sycamore_standing_sign": "Sycamore Standing Sign",
+  "block.minecraftvillagerdimensionmod.sycamore_wall_sign": "Sycamore Wall Sign",
+
+  "block.minecraftvillagerdimensionmod.sycamore_hanging_sign": "Sycamore Hanging Sign",
+  "block.minecraftvillagerdimensionmod.sycamore_wall_hanging_sign": "Sycamore Wall Hanging Sign",
+
+  "block.minecraftvillagerdimensionmod.sycamore_stairs": "Sycamore Stairs",
+  "block.minecraftvillagerdimensionmod.sycamore_slab": "Sycamore Slab",
+  "block.minecraftvillagerdimensionmod.sycamore_button": "Sycamore Button",
+  "block.minecraftvillagerdimensionmod.sycamore_pressure_plate": "Sycamore Pressure Plate",
+  "block.minecraftvillagerdimensionmod.sycamore_fence": "Sycamore Fence",
+  "block.minecraftvillagerdimensionmod.sycamore_fence_gate": "Sycamore Fence Gate",
+  "block.minecraftvillagerdimensionmod.sycamore_door": "Sycamore Door",
+  "block.minecraftvillagerdimensionmod.sycamore_trapdoor": "Sycamore Trapdoor",
+
+  "item.minecraftvillagerdimensionmod.sycamore_boat": "Sycamore Boat",
+  "item.minecraftvillagerdimensionmod.sycamore_chest_boat": "Sycamore Chest Boat",
 
   "itemgroup.ancient_gemstone": "Villager Dimension Mod"
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sycamore_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:sycamore_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraftvillagerdimensionmod:sycamore_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sycamore_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraftvillagerdimensionmod:sycamore_slab"
+    ]
+  }
+}

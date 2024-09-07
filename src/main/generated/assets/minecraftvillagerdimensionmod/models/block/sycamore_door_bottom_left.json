@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "minecraftvillagerdimensionmod:block/sycamore_door_bottom",
+    "top": "minecraftvillagerdimensionmod:block/sycamore_door_top"
+  }
+}

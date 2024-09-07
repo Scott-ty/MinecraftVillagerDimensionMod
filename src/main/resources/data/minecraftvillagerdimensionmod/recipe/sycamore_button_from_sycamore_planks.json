@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "minecraftvillagerdimensionmod:sycamore_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraftvillagerdimensionmod:sycamore_button"
+  }
+}

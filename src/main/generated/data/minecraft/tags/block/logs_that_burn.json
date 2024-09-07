@@ -7,6 +7,10 @@
     "minecraftvillagerdimensionmod:juniper_log",
     "minecraftvillagerdimensionmod:stripped_juniper_log",
     "minecraftvillagerdimensionmod:juniper_wood",
-    "minecraftvillagerdimensionmod:stripped_juniper_wood"
+    "minecraftvillagerdimensionmod:stripped_juniper_wood",
+    "minecraftvillagerdimensionmod:sycamore_log",
+    "minecraftvillagerdimensionmod:stripped_sycamore_log",
+    "minecraftvillagerdimensionmod:sycamore_wood",
+    "minecraftvillagerdimensionmod:stripped_sycamore_wood"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "minecraftvillagerdimensionmod:block/sycamore_slab"
+    },
+    "type=double": {
+      "model": "minecraftvillagerdimensionmod:block/sycamore_planks"
+    },
+    "type=top": {
+      "model": "minecraftvillagerdimensionmod:block/sycamore_slab_top"
+    }
+  }
+}

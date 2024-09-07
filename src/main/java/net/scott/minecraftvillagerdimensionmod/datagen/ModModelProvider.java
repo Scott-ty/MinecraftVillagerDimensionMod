@@ -51,16 +51,47 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.JUNIPER_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.JUNIPER_TRAPDOOR);
         //*******************************************************************************************************************//
+
+        //************************************* SYCAMORE WOOD ****************************************************************//
+        blockStateModelGenerator.registerLog(ModBlocks.SYCAMORE_LOG).log(ModBlocks.SYCAMORE_LOG).wood(ModBlocks.SYCAMORE_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_SYCAMORE_LOG).log(ModBlocks.STRIPPED_SYCAMORE_LOG).wood(ModBlocks.STRIPPED_SYCAMORE_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SYCAMORE_LEAVES);
+
+        BlockStateModelGenerator.BlockTexturePool sycamore_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYCAMORE_PLANKS);
+        sycamore_pool.family(ModBlocks.SYCAMORE_FAMILY);
+        sycamore_pool.stairs(ModBlocks.SYCAMORE_STAIRS);
+        sycamore_pool.button(ModBlocks.SYCAMORE_BUTTON);
+        sycamore_pool.slab(ModBlocks.SYCAMORE_SLAB);
+        sycamore_pool.pressurePlate(ModBlocks.SYCAMORE_PRESSURE_PLATE);
+        sycamore_pool.fence(ModBlocks.SYCAMORE_FENCE);
+        sycamore_pool.fenceGate(ModBlocks.SYCAMORE_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.SYCAMORE_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.SYCAMORE_TRAPDOOR);
+        //*******************************************************************************************************************//
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
-        // ROWAN WOOD SIGNS
+        // ROWAN WOOD
         itemModelGenerator.register(ModItems.HANGING_ROWAN_SIGN, Models.GENERATED);
 
-        // JUNIPER WOOD SIGNS
+        itemModelGenerator.register(ModItems.ROWAN_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ROWAN_CHEST_BOAT, Models.GENERATED);
+
+        // JUNIPER WOOD
         itemModelGenerator.register(ModItems.HANGING_JUNIPER_SIGN, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.JUNIPER_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.JUNIPER_CHEST_BOAT, Models.GENERATED);
+
+
+        // JUNIPER WOOD
+        itemModelGenerator.register(ModItems.HANGING_SYCAMORE_SIGN, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.SYCAMORE_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SYCAMORE_CHEST_BOAT, Models.GENERATED);
 
     }
 }

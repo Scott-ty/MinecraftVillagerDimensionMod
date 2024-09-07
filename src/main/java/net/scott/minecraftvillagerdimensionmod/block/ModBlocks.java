@@ -162,6 +162,60 @@ public class ModBlocks {
 
     //*******************************************************************************************************************//
 
+    //************************************* SYCAMORE WOOD *******************************************************************//
+    public static final Block SYCAMORE_LOG = registerBlock("sycamore_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(4f)));
+    public static final Block SYCAMORE_WOOD = registerBlock("sycamore_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).strength(4f)));
+    public static final Block STRIPPED_SYCAMORE_LOG = registerBlock("stripped_sycamore_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).strength(4f)));
+    public static final Block STRIPPED_SYCAMORE_WOOD = registerBlock("stripped_sycamore_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4f)));
+
+    public static final Block SYCAMORE_PLANKS = registerBlock("sycamore_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).strength(4f)));
+    public static final Block SYCAMORE_LEAVES = registerBlock("sycamore_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
+
+    public static final Identifier SYCAMORE_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/sycamore");
+    public static final Identifier SYCAMORE_HANGING_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/hanging/sycamore");
+    public static final Identifier SYCAMORE_HANGING_GUI_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "textures/gui/hanging_signs/sycamore");
+
+    public static final Block STANDING_SYCAMORE_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "sycamore_standing_sign"),
+            new TerraformSignBlock(SYCAMORE_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.ACACIA_SIGN)));
+    public static final Block WALL_SYCAMORE_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "sycamore_wall_sign"),
+            new TerraformWallSignBlock(SYCAMORE_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.ACACIA_WALL_SIGN)));
+
+    public static final Block HANGING_SYCAMORE_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "sycamore_hanging_sign"),
+            new TerraformHangingSignBlock(SYCAMORE_HANGING_SIGN_TEXTURE,SYCAMORE_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.ACACIA_HANGING_SIGN)));
+    public static final Block WALL_HANGING_SYCAMORE_SIGN = Registry.register(Registries.BLOCK, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "sycamore_wall_hanging_sign"),
+            new TerraformWallHangingSignBlock(SYCAMORE_HANGING_SIGN_TEXTURE,SYCAMORE_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.ACACIA_WALL_HANGING_SIGN)));
+
+    public static final BlockFamily SYCAMORE_FAMILY = BlockFamilies.register(ModBlocks.SYCAMORE_PLANKS)
+            .sign(ModBlocks.STANDING_SYCAMORE_SIGN, ModBlocks.WALL_SYCAMORE_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
+
+    public static final Block SYCAMORE_STAIRS = registerBlock("sycamore_stairs",
+            new StairsBlock(ModBlocks.SYCAMORE_PLANKS.getDefaultState(),AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+    public static final Block SYCAMORE_SLAB = registerBlock("sycamore_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+
+    public static final Block SYCAMORE_BUTTON = registerBlock("sycamore_button",
+            new ButtonBlock(BlockSetType.OAK, 10, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON)));
+    public static final Block SYCAMORE_PRESSURE_PLATE = registerBlock("sycamore_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE)));
+
+    public static final Block SYCAMORE_FENCE = registerBlock("sycamore_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
+    public static final Block SYCAMORE_FENCE_GATE = registerBlock("sycamore_fence_gate",
+            new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
+    public static final Block SYCAMORE_DOOR = registerBlock("sycamore_door",
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
+    public static final Block SYCAMORE_TRAPDOOR = registerBlock("sycamore_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
+
+    //*******************************************************************************************************************//
+
     private static Block registerBlock(String name, Block block)
     {
         registerBlockItem(name, block);

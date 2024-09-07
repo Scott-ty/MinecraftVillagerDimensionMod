@@ -58,5 +58,20 @@ public class ModAdvancementsProvider extends FabricAdvancementProvider {
                 // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
                 .criterion("feeling_grey", InventoryChangedCriterion.Conditions.items(ModBlocks.JUNIPER_LOG))
                 .build(consumer, MinecraftVillagerDimensionMod.MOD_ID + "/root");
+
+        AdvancementEntry rootAdvancementSycamore = Advancement.Builder.create()
+                .display(
+                        ModBlocks.SYCAMORE_LOG, // The display icon
+                        Text.literal("You're Syc!"), // The title
+                        Text.literal("Why would you cut such a beautiful tree?"), // The description
+                        Identifier.of("textures/gui/advancements/backgrounds/adventure.png"), // Background image used
+                        AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .criterion("youre_syc", InventoryChangedCriterion.Conditions.items(ModBlocks.SYCAMORE_LOG))
+                .build(consumer, MinecraftVillagerDimensionMod.MOD_ID + "/root");
     }
 }
