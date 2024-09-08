@@ -2,7 +2,15 @@
   "values": [
     "minecraftvillagerdimensionmod:ancient_gemstone_helmet",
     "minecraftvillagerdimensionmod:ancient_gemstone_chestplate",
-    "minecraftvillagerdimensionmod:ancient_gemstone_legging",
-    "minecraftvillagerdimensionmod:ancient_gemstone_boots"
+    "minecraftvillagerdimensionmod:ancient_gemstone_leggings",
+    "minecraftvillagerdimensionmod:ancient_gemstone_boots",
+    "minecraftvillagerdimensionmod:pillagerite_helmet",
+    "minecraftvillagerdimensionmod:pillagerite_chestplate",
+    "minecraftvillagerdimensionmod:pillagerite_leggings",
+    "minecraftvillagerdimensionmod:pillagerite_boots",
+    "minecraftvillagerdimensionmod:magicite_helmet",
+    "minecraftvillagerdimensionmod:magicite_chestplate",
+    "minecraftvillagerdimensionmod:magicite_leggings",
+    "minecraftvillagerdimensionmod:magicite_boots"
   ]
 }

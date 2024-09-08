@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "minecraftvillagerdimensionmod:magicite_dust"
+    }
+  },
+  "pattern": [
+    "E E",
+    "E E"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraftvillagerdimensionmod:magicite_boots"
+  }
+}

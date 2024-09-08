@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "minecraftvillagerdimensionmod:ancient_gemstone_dust"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "E E"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraftvillagerdimensionmod:ancient_gemstone_helmet"
+  }
+}

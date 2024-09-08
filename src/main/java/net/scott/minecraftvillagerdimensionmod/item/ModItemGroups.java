@@ -18,101 +18,113 @@ public class ModItemGroups {
             Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "ancient_gemstone"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ancient_gemstone"))
                     .icon(() -> new ItemStack(ModItems.ANCIENT_GEMSTONE)).entries(((displayContext, entries) -> {
-                            entries.add(ModItems.ANCIENT_GEMSTONE);
-                            entries.add(ModItems.ANCIENT_GEMSTONE_DUST);
+                        // ANCIENT GEMSTONE
+                        entries.add(ModItems.ANCIENT_GEMSTONE);
+                        entries.add(ModItems.ANCIENT_GEMSTONE_DUST);
 
-                            entries.add(ModItems.ANCIENT_GEMSTONE_BOOTS);
-                            entries.add(ModItems.ANCIENT_GEMSTONE_HELMET);
-                            entries.add(ModItems.ANCIENT_GEMSTONE_CHESTPLATE);
-                            entries.add(ModItems.ANCIENT_GEMSTONE_LEGGING);
+                        entries.add(ModBlocks.ANCIENT_GEMSTONE_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_ANCIENT_GEMSTONE_ORE);
+                        entries.add(ModBlocks.ANCIENT_GEMSTONE_BLOCK);
 
-                            entries.add(ModItems.PILLAGERITE);
-                            entries.add(ModItems.PILLAGERITE_INGOT);
+                        entries.add(ModItems.ANCIENT_GEMSTONE_HELMET);
+                        entries.add(ModItems.ANCIENT_GEMSTONE_CHESTPLATE);
+                        entries.add(ModItems.ANCIENT_GEMSTONE_LEGGINGS);
+                        entries.add(ModItems.ANCIENT_GEMSTONE_BOOTS);
 
-                            entries.add(ModItems.MAGICITE);
-                            entries.add(ModItems.MAGICITE_DUST);
+                        entries.add(ModItems.ANCIENT_GEMSTONE_PICKAXE);
+                        entries.add(ModItems.ANCIENT_GEMSTONE_AXE);
+                        entries.add(ModItems.ANCIENT_GEMSTONE_SWORD);
+                        entries.add(ModItems.ANCIENT_GEMSTONE_HOE);
+                        entries.add(ModItems.ANCIENT_GEMSTONE_SHOVEL);
 
-                            entries.add(ModBlocks.ANCIENT_GEMSTONE_ORE);
-                            entries.add(ModBlocks.DEEPSLATE_ANCIENT_GEMSTONE_ORE);
-                            entries.add(ModBlocks.ANCIENT_GEMSTONE_BLOCK);
+                        // MAGICITE
+                        entries.add(ModItems.MAGICITE);
+                        entries.add(ModItems.MAGICITE_DUST);
 
-                            entries.add(ModBlocks.PILLAGERITE_ORE);
-                            entries.add(ModBlocks.DEEPSLATE_PILLAGERITE_ORE);
-                            entries.add(ModBlocks.PILLAGERITE_BLOCK);
+                        entries.add(ModBlocks.MAGICITE_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_MAGICITE_ORE);
+                        entries.add(ModBlocks.MAGICITE_BLOCK);
 
-                            entries.add(ModBlocks.MAGICITE_ORE);
-                            entries.add(ModBlocks.DEEPSLATE_MAGICITE_ORE);
-                            entries.add(ModBlocks.MAGICITE_BLOCK);
+                        entries.add(ModItems.MAGICITE_HELMET);
+                        entries.add(ModItems.MAGICITE_CHESTPLATE);
+                        entries.add(ModItems.MAGICITE_LEGGINGS);
+                        entries.add(ModItems.MAGICITE_BOOTS);
 
-                            entries.add(ModItems.ANCIENT_GEMSTONE_PICKAXE);
-                            entries.add(ModItems.PILLAGERITE_PICKAXE);
-                            entries.add(ModItems.MAGICITE_PICKAXE);
+                        entries.add(ModItems.MAGICITE_PICKAXE);
+                        entries.add(ModItems.MAGICITE_AXE);
+                        entries.add(ModItems.MAGICITE_SWORD);
+                        entries.add(ModItems.MAGICITE_HOE);
+                        entries.add(ModItems.MAGICITE_SHOVEL);
 
-                            entries.add(ModItems.ANCIENT_GEMSTONE_AXE);
-                            entries.add(ModItems.PILLAGERITE_AXE);
-                            entries.add(ModItems.MAGICITE_AXE);
+                        // PILLAGERITE
+                        entries.add(ModItems.PILLAGERITE);
+                        entries.add(ModItems.PILLAGERITE_INGOT);
 
-                            entries.add(ModItems.ANCIENT_GEMSTONE_SWORD);
-                            entries.add(ModItems.PILLAGERITE_SWORD);
-                            entries.add(ModItems.MAGICITE_SWORD);
+                        entries.add(ModBlocks.PILLAGERITE_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_PILLAGERITE_ORE);
+                        entries.add(ModBlocks.PILLAGERITE_BLOCK);
 
-                            entries.add(ModItems.ANCIENT_GEMSTONE_HOE);
-                            entries.add(ModItems.PILLAGERITE_HOE);
-                            entries.add(ModItems.MAGICITE_HOE);
+                        entries.add(ModItems.PILLAGERITE_HELMET);
+                        entries.add(ModItems.PILLAGERITE_CHESTPLATE);
+                        entries.add(ModItems.PILLAGERITE_LEGGINGS);
+                        entries.add(ModItems.PILLAGERITE_BOOTS);
 
-                            entries.add(ModItems.ANCIENT_GEMSTONE_SHOVEL);
-                            entries.add(ModItems.PILLAGERITE_SHOVEL);
-                            entries.add(ModItems.MAGICITE_SHOVEL);
+                        entries.add(ModItems.PILLAGERITE_PICKAXE);
+                        entries.add(ModItems.PILLAGERITE_AXE);
+                        entries.add(ModItems.PILLAGERITE_SWORD);
+                        entries.add(ModItems.PILLAGERITE_HOE);
+                        entries.add(ModItems.PILLAGERITE_SHOVEL);
 
-                            entries.add(ModItems.EMERALD_TORCH_ITEM);
+                        // MISC ITEMS
+                        entries.add(ModItems.EMERALD_TORCH_ITEM);
 
-                            entries.add(ModBlocks.ROWAN_LOG);
-                            entries.add(ModBlocks.ROWAN_WOOD);
-                            entries.add(ModBlocks.STRIPPED_ROWAN_LOG);
-                            entries.add(ModBlocks.STRIPPED_ROWAN_WOOD);
-                            entries.add(ModBlocks.ROWAN_PLANKS);
-                            entries.add(ModBlocks.ROWAN_LEAVES);
+                        // ROWAN WOOD
+                        entries.add(ModBlocks.ROWAN_LOG);
+                        entries.add(ModBlocks.ROWAN_WOOD);
+                        entries.add(ModBlocks.STRIPPED_ROWAN_LOG);
+                        entries.add(ModBlocks.STRIPPED_ROWAN_WOOD);
+                        entries.add(ModBlocks.ROWAN_PLANKS);
+                        entries.add(ModBlocks.ROWAN_LEAVES);
 
-                            entries.add(ModItems.ROWAN_SIGN);
-                            entries.add(ModItems.HANGING_ROWAN_SIGN);
+                        entries.add(ModItems.ROWAN_SIGN);
+                        entries.add(ModItems.HANGING_ROWAN_SIGN);
 
-                            entries.add(ModBlocks.ROWAN_SLAB);
-                            entries.add(ModBlocks.ROWAN_STAIRS);
-                            entries.add(ModBlocks.ROWAN_PRESSURE_PLATE);
-                            entries.add(ModBlocks.ROWAN_BUTTON);
-                            entries.add(ModBlocks.ROWAN_DOOR);
-                            entries.add(ModBlocks.ROWAN_TRAPDOOR);
-                            entries.add(ModBlocks.ROWAN_FENCE);
-                            entries.add(ModBlocks.ROWAN_FENCE_GATE);
+                        entries.add(ModBlocks.ROWAN_SLAB);
+                        entries.add(ModBlocks.ROWAN_STAIRS);
+                        entries.add(ModBlocks.ROWAN_PRESSURE_PLATE);
+                        entries.add(ModBlocks.ROWAN_BUTTON);
+                        entries.add(ModBlocks.ROWAN_DOOR);
+                        entries.add(ModBlocks.ROWAN_TRAPDOOR);
+                        entries.add(ModBlocks.ROWAN_FENCE);
+                        entries.add(ModBlocks.ROWAN_FENCE_GATE);
 
-                            entries.add(ModItems.ROWAN_BOAT);
-                            entries.add(ModItems.ROWAN_CHEST_BOAT);
+                        entries.add(ModItems.ROWAN_BOAT);
+                        entries.add(ModItems.ROWAN_CHEST_BOAT);
 
+                        // JUNIPER WOOD
+                        entries.add(ModBlocks.JUNIPER_LOG);
+                        entries.add(ModBlocks.JUNIPER_WOOD);
+                        entries.add(ModBlocks.STRIPPED_JUNIPER_LOG);
+                        entries.add(ModBlocks.STRIPPED_JUNIPER_WOOD);
+                        entries.add(ModBlocks.JUNIPER_PLANKS);
+                        entries.add(ModBlocks.JUNIPER_LEAVES);
 
-                            entries.add(ModBlocks.JUNIPER_LOG);
-                            entries.add(ModBlocks.JUNIPER_WOOD);
-                            entries.add(ModBlocks.STRIPPED_JUNIPER_LOG);
-                            entries.add(ModBlocks.STRIPPED_JUNIPER_WOOD);
-                            entries.add(ModBlocks.JUNIPER_PLANKS);
-                            entries.add(ModBlocks.JUNIPER_LEAVES);
+                        entries.add(ModItems.JUNIPER_SIGN);
+                        entries.add(ModItems.HANGING_JUNIPER_SIGN);
 
-                            entries.add(ModItems.JUNIPER_SIGN);
-                            entries.add(ModItems.HANGING_JUNIPER_SIGN);
+                        entries.add(ModBlocks.JUNIPER_SLAB);
+                        entries.add(ModBlocks.JUNIPER_STAIRS);
+                        entries.add(ModBlocks.JUNIPER_PRESSURE_PLATE);
+                        entries.add(ModBlocks.JUNIPER_BUTTON);
+                        entries.add(ModBlocks.JUNIPER_DOOR);
+                        entries.add(ModBlocks.JUNIPER_TRAPDOOR);
+                        entries.add(ModBlocks.JUNIPER_FENCE);
+                        entries.add(ModBlocks.JUNIPER_FENCE_GATE);
 
-                            entries.add(ModBlocks.JUNIPER_SLAB);
-                            entries.add(ModBlocks.JUNIPER_STAIRS);
-                            entries.add(ModBlocks.JUNIPER_PRESSURE_PLATE);
-                            entries.add(ModBlocks.JUNIPER_BUTTON);
-                            entries.add(ModBlocks.JUNIPER_DOOR);
-                            entries.add(ModBlocks.JUNIPER_TRAPDOOR);
-                            entries.add(ModBlocks.JUNIPER_FENCE);
-                            entries.add(ModBlocks.JUNIPER_FENCE_GATE);
+                        entries.add(ModItems.JUNIPER_BOAT);
+                        entries.add(ModItems.JUNIPER_CHEST_BOAT);
 
-                            entries.add(ModItems.JUNIPER_BOAT);
-                            entries.add(ModItems.JUNIPER_CHEST_BOAT);
-
-
-
+                        // SYCAMORE WOOD
                         entries.add(ModBlocks.SYCAMORE_LOG);
                         entries.add(ModBlocks.SYCAMORE_WOOD);
                         entries.add(ModBlocks.STRIPPED_SYCAMORE_LOG);
@@ -134,7 +146,6 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SYCAMORE_BOAT);
                         entries.add(ModItems.SYCAMORE_CHEST_BOAT);
-
 
                     })).build());
 

@@ -88,17 +88,30 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.JUNIPER_CHEST_BOAT, Models.GENERATED);
 
 
-        // JUNIPER WOOD
+        // SYCAMORE WOOD
         itemModelGenerator.register(ModItems.HANGING_SYCAMORE_SIGN, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SYCAMORE_BOAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SYCAMORE_CHEST_BOAT, Models.GENERATED);
 
-        itemModelGenerator.registerArmor((ArmorItem) ModItems.ANCIENT_GEMSTONE_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem) ModItems.ANCIENT_GEMSTONE_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem) ModItems.ANCIENT_GEMSTONE_LEGGING);
-        itemModelGenerator.registerArmor((ArmorItem) ModItems.ANCIENT_GEMSTONE_BOOTS);
+        // ANCIENT GEMSTONE
+        itemModelGenerator.register(ModItems.ANCIENT_GEMSTONE_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANCIENT_GEMSTONE_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANCIENT_GEMSTONE_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANCIENT_GEMSTONE_BOOTS, Models.GENERATED);
 
+
+        // PILLAGERITE
+        itemModelGenerator.register(ModItems.PILLAGERITE_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PILLAGERITE_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PILLAGERITE_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PILLAGERITE_BOOTS, Models.GENERATED);
+
+        // MAGICITE
+        itemModelGenerator.register(ModItems.MAGICITE_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MAGICITE_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MAGICITE_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MAGICITE_BOOTS, Models.GENERATED);
 
     }
 }

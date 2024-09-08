@@ -9,8 +9,17 @@
   "item.minecraftvillagerdimensionmod.ancient_gemstone_boots": "Ancient Gemstone Boots",
   "item.minecraftvillagerdimensionmod.ancient_gemstone_chestplate": "Ancient Gemstone Chestplate",
   "item.minecraftvillagerdimensionmod.ancient_gemstone_helmet": "Ancient Gemstone Helmet",
-  "item.minecraftvillagerdimensionmod.ancient_gemstone_legging": "Ancient Gemstone Leggings",
+  "item.minecraftvillagerdimensionmod.ancient_gemstone_leggings": "Ancient Gemstone Leggings",
 
+  "item.minecraftvillagerdimensionmod.pillagerite_boots": "Pillagerite Boots",
+  "item.minecraftvillagerdimensionmod.pillagerite_chestplate": "Pillagerite Chestplate",
+  "item.minecraftvillagerdimensionmod.pillagerite_helmet": "Pillagerite Helmet",
+  "item.minecraftvillagerdimensionmod.pillagerite_leggings": "Pillagerite Leggings",
+
+  "item.minecraftvillagerdimensionmod.magicite_boots": "Magicite Boots",
+  "item.minecraftvillagerdimensionmod.magicite_chestplate": "Magicite Chestplate",
+  "item.minecraftvillagerdimensionmod.magicite_helmet": "Magicite Helmet",
+  "item.minecraftvillagerdimensionmod.magicite_leggings": "Magicite Leggings",
 
   "block.minecraftvillagerdimensionmod.ancient_gemstone_ore": "Ancient Gemstone Ore",
   "block.minecraftvillagerdimensionmod.deepslate_ancient_gemstone_ore": "Deepslate Ancient Gemstone Ore",

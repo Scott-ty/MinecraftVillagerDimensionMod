@@ -3,15 +3,22 @@ package net.scott.minecraftvillagerdimensionmod.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
+import net.scott.minecraftvillagerdimensionmod.item.custom.ModArmorMaterials;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -19,6 +26,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
+
     }
     @Override
     public void generate(RecipeExporter exporter) {
@@ -104,6 +112,90 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerBoatRecipe(exporter, ModItems.SYCAMORE_BOAT, ModBlocks.SYCAMORE_PLANKS);
         offerChestBoatRecipe(exporter, ModItems.SYCAMORE_CHEST_BOAT, ModItems.SYCAMORE_BOAT);
         //*******************************************************************************************************************//
+        
+        // ANCIENT GEMSTONE
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ANCIENT_GEMSTONE_HELMET)
+                .input('E', ModItems.ANCIENT_GEMSTONE_DUST)
+                .pattern("EEE")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.ANCIENT_GEMSTONE_DUST), conditionsFromItem(ModItems.ANCIENT_GEMSTONE_DUST))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ANCIENT_GEMSTONE_CHESTPLATE)
+                .input('E', ModItems.ANCIENT_GEMSTONE_DUST)
+                .pattern("E E")
+                .pattern("EEE")
+                .pattern("EEE")
+                .criterion(hasItem(ModItems.ANCIENT_GEMSTONE_DUST), conditionsFromItem(ModItems.ANCIENT_GEMSTONE_DUST))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ANCIENT_GEMSTONE_LEGGINGS)
+                .input('E', ModItems.ANCIENT_GEMSTONE_DUST)
+                .pattern("EEE")
+                .pattern("E E")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.ANCIENT_GEMSTONE_DUST), conditionsFromItem(ModItems.ANCIENT_GEMSTONE_DUST))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ANCIENT_GEMSTONE_BOOTS)
+                .input('E', ModItems.ANCIENT_GEMSTONE_DUST)
+                .pattern("E E")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.ANCIENT_GEMSTONE_DUST), conditionsFromItem(ModItems.ANCIENT_GEMSTONE_DUST))
+                .offerTo(exporter);
+
+        // PILLAGERITE
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.PILLAGERITE_HELMET)
+                .input('E', ModItems.PILLAGERITE_INGOT)
+                .pattern("EEE")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.PILLAGERITE_INGOT), conditionsFromItem(ModItems.PILLAGERITE_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.PILLAGERITE_CHESTPLATE)
+                .input('E', ModItems.PILLAGERITE_INGOT)
+                .pattern("E E")
+                .pattern("EEE")
+                .pattern("EEE")
+                .criterion(hasItem(ModItems.PILLAGERITE_INGOT), conditionsFromItem(ModItems.PILLAGERITE_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.PILLAGERITE_LEGGINGS)
+                .input('E', ModItems.PILLAGERITE_INGOT)
+                .pattern("EEE")
+                .pattern("E E")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.PILLAGERITE_INGOT), conditionsFromItem(ModItems.PILLAGERITE_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.PILLAGERITE_BOOTS)
+                .input('E', ModItems.PILLAGERITE_INGOT)
+                .pattern("E E")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.PILLAGERITE_INGOT), conditionsFromItem(ModItems.PILLAGERITE_INGOT))
+                .offerTo(exporter);
+
+        // MAGICITE
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.MAGICITE_HELMET)
+                .input('E', ModItems.MAGICITE_DUST)
+                .pattern("EEE")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.MAGICITE_DUST), conditionsFromItem(ModItems.MAGICITE_DUST))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.MAGICITE_CHESTPLATE)
+                .input('E', ModItems.MAGICITE_DUST)
+                .pattern("E E")
+                .pattern("EEE")
+                .pattern("EEE")
+                .criterion(hasItem(ModItems.MAGICITE_DUST), conditionsFromItem(ModItems.MAGICITE_DUST))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.MAGICITE_LEGGINGS)
+                .input('E', ModItems.MAGICITE_DUST)
+                .pattern("EEE")
+                .pattern("E E")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.MAGICITE_DUST), conditionsFromItem(ModItems.MAGICITE_DUST))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.MAGICITE_BOOTS)
+                .input('E', ModItems.MAGICITE_DUST)
+                .pattern("E E")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.MAGICITE_DUST), conditionsFromItem(ModItems.MAGICITE_DUST))
+                .offerTo(exporter);
     }
 }
 

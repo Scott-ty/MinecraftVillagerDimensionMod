@@ -11,10 +11,7 @@ import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
-import net.scott.minecraftvillagerdimensionmod.item.custom.AncientGemstoneToolMaterial;
-import net.scott.minecraftvillagerdimensionmod.item.custom.MagiciteToolMaterial;
-import net.scott.minecraftvillagerdimensionmod.item.custom.ModArmorMaterials;
-import net.scott.minecraftvillagerdimensionmod.item.custom.PillageriteToolMaterial;
+import net.scott.minecraftvillagerdimensionmod.item.custom.*;
 
 public class ModItems {
 
@@ -42,7 +39,7 @@ public class ModItems {
 
 
     public static final Item  ANCIENT_GEMSTONE_HELMET = registerItem("ancient_gemstone_helmet",
-            new ArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
+            new CustomArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
                     ArmorItem.Type.HELMET,
                     new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(25))));
 
@@ -56,7 +53,7 @@ public class ModItems {
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(25))));
 
-    public static final Item  ANCIENT_GEMSTONE_LEGGING = registerItem("ancient_gemstone_legging",
+    public static final Item  ANCIENT_GEMSTONE_LEGGINGS = registerItem("ancient_gemstone_leggings",
             new ArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
@@ -81,6 +78,29 @@ public class ModItems {
             PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 3, -2.4F
     ))));
 
+    public static final Item PILLAGERITE_HELMET = registerItem("pillagerite_helmet",
+            new ArmorItem(ModArmorMaterials.PILLAGERITE_INGOT,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(25))));
+
+    public static final Item PILLAGERITE_BOOTS = registerItem("pillagerite_boots",
+            new ArmorItem(ModArmorMaterials.PILLAGERITE_INGOT,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
+
+    public static final Item PILLAGERITE_CHESTPLATE = registerItem("pillagerite_chestplate",
+            new ArmorItem(ModArmorMaterials.PILLAGERITE_INGOT,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(25))));
+
+    public static final Item PILLAGERITE_LEGGINGS = registerItem("pillagerite_leggings",
+            new ArmorItem(ModArmorMaterials.PILLAGERITE_INGOT,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
+
+
+
+
     public static final Item MAGICITE_PICKAXE = registerItem("magicite_pickaxe", new PickaxeItem(MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
             MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 3, -2.4F
     ))));
@@ -96,6 +116,29 @@ public class ModItems {
     public static final Item MAGICITE_HOE = registerItem("magicite_hoe", new HoeItem(MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
             MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 3, -2.4F
     ))));
+
+    public static final Item MAGICITE_HELMET = registerItem("magicite_helmet",
+            new ArmorItem(ModArmorMaterials.MAGICITE_DUST,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(25))));
+
+    public static final Item MAGICITE_BOOTS = registerItem("magicite_boots",
+            new ArmorItem(ModArmorMaterials.MAGICITE_DUST,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
+
+    public static final Item MAGICITE_CHESTPLATE = registerItem("magicite_chestplate",
+            new ArmorItem(ModArmorMaterials.MAGICITE_DUST,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(25))));
+
+    public static final Item MAGICITE_LEGGINGS = registerItem("magicite_leggings",
+            new ArmorItem(ModArmorMaterials.MAGICITE_DUST,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
+
+
+
 
     public static final Item ANCIENT_GEMSTONE = registerItem("ancient_gemstone", new Item(new Item.Settings()));
     public static final Item ANCIENT_GEMSTONE_DUST = registerItem("ancient_gemstone_dust", new Item(new Item.Settings()));
