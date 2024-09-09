@@ -1,6 +1,7 @@
 package net.scott.minecraftvillagerdimensionmod.block;
 
 import com.terraformersmc.terraform.sign.api.block.*;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.data.family.BlockFamilies;
@@ -12,7 +13,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.minecraft.util.Identifier;
+import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 import net.scott.minecraftvillagerdimensionmod.particle.ModParticleTypes;
+import net.scott.minecraftvillagerdimensionmod.world.ModConfiguredFeatures;
+
+import java.util.Optional;
 
 public class ModBlocks {
 
@@ -105,6 +110,20 @@ public class ModBlocks {
             new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
     public static final Block ROWAN_TRAPDOOR = registerBlock("rowan_trapdoor",
             new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
+
+
+    public static final Block ROWAN_SAPLING = registerBlock("rowan_sapling",
+            new SaplingBlock(
+                    new SaplingGenerator(
+                            MinecraftVillagerDimensionMod.MOD_ID,
+                            0.1F,
+                            Optional.empty(),
+                            Optional.empty(),
+                            Optional.of(ModConfiguredFeatures.ROWAN_KEY),
+                            Optional.empty(),
+                            Optional.empty(),
+                            Optional.empty()
+                    ), AbstractBlock.Settings.copy(Blocks.DARK_OAK_SAPLING)));
 
     //*******************************************************************************************************************//
 
@@ -226,6 +245,7 @@ public class ModBlocks {
         return Registry.register(Registries.ITEM, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));
     }
+
     public static void registerModBlocks(){
         MinecraftVillagerDimensionMod.LOGGER.info("Registering ModBlocks for " + MinecraftVillagerDimensionMod.MOD_ID);
     }

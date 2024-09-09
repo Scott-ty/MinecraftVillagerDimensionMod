@@ -34,6 +34,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.ROWAN_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.ROWAN_TRAPDOOR);
 
+        blockStateModelGenerator.registerTintableCross(ModBlocks.ROWAN_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
         //*******************************************************************************************************************//
         //************************************* JUNIPER WOOD ****************************************************************//
         blockStateModelGenerator.registerLog(ModBlocks.JUNIPER_LOG).log(ModBlocks.JUNIPER_LOG).wood(ModBlocks.JUNIPER_WOOD);

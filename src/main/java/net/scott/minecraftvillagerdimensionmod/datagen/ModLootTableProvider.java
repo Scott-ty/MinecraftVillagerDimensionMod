@@ -36,8 +36,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STRIPPED_ROWAN_WOOD);
         addDrop(ModBlocks.STRIPPED_ROWAN_LOG);
         addDrop(ModBlocks.ROWAN_PLANKS);
-        // Change Log to sapling
-        addDrop(ModBlocks.ROWAN_LEAVES, leavesDrops(ModBlocks.ROWAN_LEAVES, ModBlocks.ROWAN_LOG, 0.005f));
+        addDrop(ModBlocks.ROWAN_SAPLING);
+
+        addDrop(ModBlocks.ROWAN_LEAVES, leavesDrops(ModBlocks.ROWAN_LEAVES, ModBlocks.ROWAN_SAPLING, 0.005f));
 
         addDrop(ModBlocks.STANDING_ROWAN_SIGN);
         addDrop(ModBlocks.WALL_ROWAN_SIGN);

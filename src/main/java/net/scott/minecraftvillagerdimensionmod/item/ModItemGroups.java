@@ -101,6 +101,8 @@ public class ModItemGroups {
                         entries.add(ModItems.ROWAN_BOAT);
                         entries.add(ModItems.ROWAN_CHEST_BOAT);
 
+                        entries.add(ModBlocks.ROWAN_SAPLING);
+
                         // JUNIPER WOOD
                         entries.add(ModBlocks.JUNIPER_LOG);
                         entries.add(ModBlocks.JUNIPER_WOOD);
