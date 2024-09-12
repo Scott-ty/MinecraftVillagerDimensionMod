@@ -110,6 +110,8 @@
   "item.minecraftvillagerdimensionmod.juniper_boat": "Juniper Boat",
   "item.minecraftvillagerdimensionmod.juniper_chest_boat": "Juniper Chest Boat",
 
+  "block.minecraftvillagerdimensionmod.juniper_sapling": "Juniper Sapling",
+
 
   "block.minecraftvillagerdimensionmod.sycamore_log": "Sycamore Log",
   "block.minecraftvillagerdimensionmod.sycamore_wood": "Sycamore Wood",
@@ -135,6 +137,8 @@
 
   "item.minecraftvillagerdimensionmod.sycamore_boat": "Sycamore Boat",
   "item.minecraftvillagerdimensionmod.sycamore_chest_boat": "Sycamore Chest Boat",
+
+  "block.minecraftvillagerdimensionmod.sycamore_sapling": "Sycamore Sapling",
 
   "itemgroup.ancient_gemstone": "Villager Dimension Mod"
 }

@@ -63,9 +63,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STRIPPED_JUNIPER_WOOD);
         addDrop(ModBlocks.STRIPPED_JUNIPER_LOG);
         addDrop(ModBlocks.JUNIPER_PLANKS);
+        addDrop(ModBlocks.JUNIPER_SAPLING);
 
         // Change Log to sapling
-        addDrop(ModBlocks.JUNIPER_LEAVES, leavesDrops(ModBlocks.JUNIPER_LEAVES, ModBlocks.JUNIPER_LOG, 0.005f));
+        addDrop(ModBlocks.JUNIPER_LEAVES, leavesDrops(ModBlocks.JUNIPER_LEAVES, ModBlocks.JUNIPER_SAPLING, 0.005f));
 
         addDrop(ModBlocks.STANDING_JUNIPER_SIGN);
         addDrop(ModBlocks.WALL_JUNIPER_SIGN);
@@ -90,9 +91,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STRIPPED_SYCAMORE_WOOD);
         addDrop(ModBlocks.STRIPPED_SYCAMORE_LOG);
         addDrop(ModBlocks.SYCAMORE_PLANKS);
+        addDrop(ModBlocks.SYCAMORE_SAPLING);
 
         // Change Log to sapling
-        addDrop(ModBlocks.SYCAMORE_LEAVES, leavesDrops(ModBlocks.SYCAMORE_LEAVES, ModBlocks.SYCAMORE_LOG, 0.005f));
+        addDrop(ModBlocks.SYCAMORE_LEAVES, leavesDrops(ModBlocks.SYCAMORE_LEAVES, ModBlocks.SYCAMORE_SAPLING, 0.005f));
 
         addDrop(ModBlocks.STANDING_SYCAMORE_SIGN);
         addDrop(ModBlocks.WALL_SYCAMORE_SIGN);

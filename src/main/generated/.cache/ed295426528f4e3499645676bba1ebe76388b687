@@ -1,4 +1,8 @@
-// 1.21.1	2024-09-08T22:39:25.7455831	Minecraft Villager Dimension Mod/World Gen
+// 1.21.1	2024-09-11T19:53:20.573304	Minecraft Villager Dimension Mod/World Gen
+e7dd2107e997cdcdf755b35cf402d05138ae666c data\minecraftvillagerdimensionmod\worldgen\placed_feature\sycamore_tree.json
 e3158c12f03d2122de87a09d909c7516e6ae0cbe data\minecraftvillagerdimensionmod\dimension_type\dim_type.json
+715d67a30e257100b463a2170a58f6bb27ede551 data\minecraftvillagerdimensionmod\worldgen\configured_feature\juniper.json
+e1c7819314aa302279ae03426bd19e2418715d66 data\minecraftvillagerdimensionmod\worldgen\placed_feature\juniper_tree.json
 feaec4e5591806c3a852b6922c5f6a8df6d8104f data\minecraftvillagerdimensionmod\worldgen\placed_feature\rowan_tree.json
-d78cd29ed7aad0b4fc65c2451c2d89df7fd6ebea data\minecraftvillagerdimensionmod\worldgen\configured_feature\rowan.json
+7ec2166523dc2c1c3e3fe959fe1640bc9d63e81f data\minecraftvillagerdimensionmod\worldgen\configured_feature\sycamore.json
+51f8e04c82fbd7949e2d793274a6748024cb5ebe data\minecraftvillagerdimensionmod\worldgen\configured_feature\rowan.json

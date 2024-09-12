@@ -179,6 +179,19 @@ public class ModBlocks {
     public static final Block JUNIPER_TRAPDOOR = registerBlock("juniper_trapdoor",
             new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
 
+    public static final Block JUNIPER_SAPLING = registerBlock("juniper_sapling",
+            new SaplingBlock(
+                    new SaplingGenerator(
+                            MinecraftVillagerDimensionMod.MOD_ID,
+                            0.1F,
+                            Optional.empty(),
+                            Optional.empty(),
+                            Optional.of(ModConfiguredFeatures.JUNIPER_KEY),
+                            Optional.empty(),
+                            Optional.empty(),
+                            Optional.empty()
+                    ), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+
     //*******************************************************************************************************************//
 
     //************************************* SYCAMORE WOOD *******************************************************************//
@@ -232,6 +245,19 @@ public class ModBlocks {
             new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
     public static final Block SYCAMORE_TRAPDOOR = registerBlock("sycamore_trapdoor",
             new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).nonOpaque()));
+
+    public static final Block SYCAMORE_SAPLING = registerBlock("sycamore_sapling",
+            new SaplingBlock(
+                    new SaplingGenerator(
+                            MinecraftVillagerDimensionMod.MOD_ID,
+                            0.1F,
+                            Optional.empty(),
+                            Optional.empty(),
+                            Optional.of(ModConfiguredFeatures.SYCAMORE_KEY),
+                            Optional.empty(),
+                            Optional.empty(),
+                            Optional.empty()
+                    ), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
     //*******************************************************************************************************************//
 

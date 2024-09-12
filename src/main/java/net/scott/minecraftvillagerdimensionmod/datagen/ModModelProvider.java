@@ -53,6 +53,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerDoor(ModBlocks.JUNIPER_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.JUNIPER_TRAPDOOR);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.JUNIPER_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         //*******************************************************************************************************************//
 
         //************************************* SYCAMORE WOOD ****************************************************************//
@@ -71,6 +73,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerDoor(ModBlocks.SYCAMORE_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.SYCAMORE_TRAPDOOR);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.SYCAMORE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         //*******************************************************************************************************************//
     }
 

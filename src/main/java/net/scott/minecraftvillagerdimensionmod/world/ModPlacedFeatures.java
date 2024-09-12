@@ -19,6 +19,8 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> ROWAN_TREE_KEY = registerKey("rowan_tree");
+    public static final RegistryKey<PlacedFeature> JUNIPER_TREE_KEY = registerKey("juniper_tree");
+    public static final RegistryKey<PlacedFeature> SYCAMORE_TREE_KEY = registerKey("sycamore_tree");
 
     public static void boostrap(Registerable<PlacedFeature> context) {
         RegistryEntryLookup<ConfiguredFeature<?,?>> registryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -27,6 +29,16 @@ public class ModPlacedFeatures {
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(1, 0.2f, 3),
                         ModBlocks.ROWAN_SAPLING));
+
+        register(context, JUNIPER_TREE_KEY, registryLookup.getOrThrow(ModConfiguredFeatures.JUNIPER_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.2f, 3),
+                        ModBlocks.JUNIPER_SAPLING));
+
+        register(context, SYCAMORE_TREE_KEY, registryLookup.getOrThrow(ModConfiguredFeatures.SYCAMORE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.2f, 3),
+                        ModBlocks.SYCAMORE_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

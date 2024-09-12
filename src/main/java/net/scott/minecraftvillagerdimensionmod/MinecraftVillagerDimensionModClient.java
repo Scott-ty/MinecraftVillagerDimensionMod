@@ -34,6 +34,8 @@ public class MinecraftVillagerDimensionModClient implements ClientModInitializer
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SYCAMORE_TRAPDOOR, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ROWAN_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JUNIPER_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SYCAMORE_SAPLING, RenderLayer.getCutout());
 
         ParticleFactoryRegistry.getInstance().register(ModParticleTypes.EMERALD_FLAME, EmeraldFlame.Factory::new);
 

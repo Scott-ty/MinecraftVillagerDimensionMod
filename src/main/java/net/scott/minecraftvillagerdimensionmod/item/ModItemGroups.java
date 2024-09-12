@@ -126,6 +126,8 @@ public class ModItemGroups {
                         entries.add(ModItems.JUNIPER_BOAT);
                         entries.add(ModItems.JUNIPER_CHEST_BOAT);
 
+                        entries.add(ModBlocks.JUNIPER_SAPLING);
+
                         // SYCAMORE WOOD
                         entries.add(ModBlocks.SYCAMORE_LOG);
                         entries.add(ModBlocks.SYCAMORE_WOOD);
@@ -148,6 +150,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SYCAMORE_BOAT);
                         entries.add(ModItems.SYCAMORE_CHEST_BOAT);
+
+                        entries.add(ModBlocks.SYCAMORE_SAPLING);
 
                     })).build());
 
