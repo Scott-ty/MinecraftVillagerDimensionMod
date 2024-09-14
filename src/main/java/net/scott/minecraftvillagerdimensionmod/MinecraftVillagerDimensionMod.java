@@ -21,6 +21,7 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
+		//Mod Registering
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
