@@ -10,9 +10,9 @@
     },
     "foliage_placer": {
       "type": "minecraft:fancy_foliage_placer",
-      "height": 5,
-      "offset": 2,
-      "radius": 4
+      "height": 2,
+      "offset": 4,
+      "radius": 3
     },
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
@@ -34,10 +34,14 @@
       "upper_size": 2
     },
     "trunk_placer": {
-      "type": "minecraft:straight_trunk_placer",
-      "base_height": 4,
+      "type": "minecraft:upwards_branching_trunk_placer",
+      "base_height": 6,
+      "can_grow_through": "#minecraftvillagerdimensionmod:sycamore_grow_through",
+      "extra_branch_length": 2,
+      "extra_branch_steps": 5,
       "height_rand_a": 5,
-      "height_rand_b": 6
+      "height_rand_b": 6,
+      "place_branch_per_log_probability": 0.45
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",

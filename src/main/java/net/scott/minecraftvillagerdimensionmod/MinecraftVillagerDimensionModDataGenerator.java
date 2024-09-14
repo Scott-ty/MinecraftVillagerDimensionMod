@@ -7,6 +7,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.scott.minecraftvillagerdimensionmod.datagen.*;
 import net.scott.minecraftvillagerdimensionmod.world.ModConfiguredFeatures;
 import net.scott.minecraftvillagerdimensionmod.world.ModPlacedFeatures;
+import net.scott.minecraftvillagerdimensionmod.world.biome.ModBiomes;
 import net.scott.minecraftvillagerdimensionmod.world.dimension.ModDimensions;
 
 public class MinecraftVillagerDimensionModDataGenerator implements DataGeneratorEntrypoint {
@@ -25,7 +26,8 @@ public class MinecraftVillagerDimensionModDataGenerator implements DataGenerator
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder){
 		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrapType);
-		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::boostrap);
-		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::boostrap);
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
 	}
 }

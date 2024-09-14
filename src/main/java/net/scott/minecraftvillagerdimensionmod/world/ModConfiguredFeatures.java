@@ -8,6 +8,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.IntProvider;
@@ -32,7 +33,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> JUNIPER_KEY = registerKey("juniper");
     public static final RegistryKey<ConfiguredFeature<?,?>> SYCAMORE_KEY = registerKey("sycamore");
 
-    public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
+    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 
         RegistryEntryLookup<PlacedFeature> registryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
 
@@ -77,14 +78,24 @@ public class ModConfiguredFeatures {
                 // float placeBranchPerLogProbability,
                 // IntProvider extraBranchLength,
                 // RegistryEntryList<Block> canGrowThrough
-                new StraightTrunkPlacer(4,5,6),
+                new UpwardsBranchingTrunkPlacer(
+                        6,  // baseHeight
+                        5,  // firstRandomHeight
+                        6,  // secondRandomHeight
+                        ConstantIntProvider.create(5),  // extraBranchSteps
+                        0.45f,  // placeBranchPerLogProbability
+                        ConstantIntProvider.create(2),  // extraBranchLength
+                        context.getRegistryLookup(RegistryKeys.BLOCK).getOrThrow(TagKey.of(RegistryKeys.BLOCK, Identifier.of("minecraftvillagerdimensionmod", "sycamore_grow_through")))
+                ),
 
                 BlockStateProvider.of(ModBlocks.SYCAMORE_LEAVES),
                 // Also several styles of leaves
                 // (IntProvider radius, IntProvider offset, IntProvider trunkHeight)
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(2), 5),
+                new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4),2),
+                //new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), ConstantIntProvider.create(3), 40),
+                //new BlobFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(5),3),
 
-                new TwoLayersFeatureSize(1,0,2)).build());
+                new TwoLayersFeatureSize(1, 0, 2)).build());
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

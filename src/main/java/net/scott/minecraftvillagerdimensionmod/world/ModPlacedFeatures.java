@@ -22,7 +22,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> JUNIPER_TREE_KEY = registerKey("juniper_tree");
     public static final RegistryKey<PlacedFeature> SYCAMORE_TREE_KEY = registerKey("sycamore_tree");
 
-    public static void boostrap(Registerable<PlacedFeature> context) {
+    public static void bootstrap(Registerable<PlacedFeature> context) {
         RegistryEntryLookup<ConfiguredFeature<?,?>> registryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, ROWAN_TREE_KEY, registryLookup.getOrThrow(ModConfiguredFeatures.ROWAN_KEY),
