@@ -11,6 +11,7 @@ import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
 import net.scott.minecraftvillagerdimensionmod.item.ModItemGroups;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 import net.scott.minecraftvillagerdimensionmod.particle.ModParticleTypes;
+import net.scott.minecraftvillagerdimensionmod.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -72,5 +73,8 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 				.destDimID(Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "dim"))
 				.tintColor(0x00674F)
 				.registerPortal();
+
+		// Generates Ore
+		ModWorldGeneration.generateModWorldGen();
 	}
 }
