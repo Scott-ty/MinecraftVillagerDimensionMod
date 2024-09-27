@@ -7,17 +7,18 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
+import net.scott.minecraftvillagerdimensionmod.util.ModTags;
 
 import java.util.function.Supplier;
 
 public class AncientGemstoneToolMaterial {
     public enum ancientGemstoneToolMaterial implements ToolMaterial{
         ANCIENT_GEMSTONE_DUST(
-                2032,
-                8.3F,
-                7.2F,
-                15,
-                BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+                2250,
+                10.0F,
+                5.0F,
+                17,
+                ModTags.Blocks.INCORRECT_FOR_ANCIENT_GEMSTONE_TOOL,
                 () -> Ingredient.ofItems(ModItems.ANCIENT_GEMSTONE_DUST));
 
         private final TagKey<Block> inverseTag;

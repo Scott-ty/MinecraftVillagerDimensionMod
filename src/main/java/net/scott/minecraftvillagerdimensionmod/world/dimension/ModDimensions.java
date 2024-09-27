@@ -33,7 +33,7 @@ public class ModDimensions {
                 false, // hasCeiling
                 false, // ultraWarm
                 true, // natural
-                1.0, // coordinateScale
+                8.0, // coordinateScale
                 true, // bedWorks
                 false, // respawnAnchorWorks
                 -64, // minY, was 0

@@ -32,18 +32,6 @@ public class ModArmorMaterials {
             0.1F,
             () -> Ingredient.ofItems(ModItems.ANCIENT_GEMSTONE_DUST));
 
-    // PILLAGERITE
-    public static final RegistryEntry<ArmorMaterial> PILLAGERITE_INGOT = register("pillagerite_ingot", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 3);
-                map.put(ArmorItem.Type.LEGGINGS, 6);
-                map.put(ArmorItem.Type.CHESTPLATE, 8);
-                map.put(ArmorItem.Type.HELMET, 3);
-                map.put(ArmorItem.Type.BODY, 11);
-            }), 19,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
-            2.0F,
-            0.1F,
-            () -> Ingredient.ofItems(ModItems.PILLAGERITE_INGOT));
 
     // MAGICITE
     public static final RegistryEntry<ArmorMaterial> MAGICITE_DUST = register("magicite_dust", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
@@ -57,6 +45,20 @@ public class ModArmorMaterials {
             2.0F,
             0.1F,
             () -> Ingredient.ofItems(ModItems.MAGICITE_DUST));
+
+
+    // PILLAGERITE
+    public static final RegistryEntry<ArmorMaterial> PILLAGERITE_INGOT = register("pillagerite_ingot", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+                map.put(ArmorItem.Type.BOOTS, 3);
+                map.put(ArmorItem.Type.LEGGINGS, 6);
+                map.put(ArmorItem.Type.CHESTPLATE, 8);
+                map.put(ArmorItem.Type.HELMET, 3);
+                map.put(ArmorItem.Type.BODY, 11);
+            }), 19,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
+            2.0F,
+            0.1F,
+            () -> Ingredient.ofItems(ModItems.PILLAGERITE_INGOT));
 
 
     private static RegistryEntry<ArmorMaterial> register(

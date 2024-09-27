@@ -7,17 +7,18 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
+import net.scott.minecraftvillagerdimensionmod.util.ModTags;
 
 import java.util.function.Supplier;
 
 public class MagiciteToolMaterial {
     public enum magiciteToolMaterial implements ToolMaterial{
         MAGICITE_DUST(
-                2032,
-                8.3F,
-                7.2F,
-                15,
-                BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+                2500,
+                11.0F,
+                6.0F,
+                25,
+                ModTags.Blocks.INCORRECT_FOR_MAGICITE_TOOL,
                 () -> Ingredient.ofItems(ModItems.MAGICITE_DUST));
 
         private final TagKey<Block> inverseTag;

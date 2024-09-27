@@ -77,4 +77,8 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		// Generates Ore
 		ModWorldGeneration.generateModWorldGen();
 	}
+
+	public static Identifier id(String path) {
+		return Identifier.of(MOD_ID, path);
+	}
 }

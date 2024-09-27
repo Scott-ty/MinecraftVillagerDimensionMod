@@ -41,29 +41,29 @@ public class ModItems {
     public static final Item  ANCIENT_GEMSTONE_HELMET = registerItem("ancient_gemstone_helmet",
             new CustomArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
                     ArmorItem.Type.HELMET,
-                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(38))));
 
     public static final Item  ANCIENT_GEMSTONE_BOOTS = registerItem("ancient_gemstone_boots",
             new ArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
                     ArmorItem.Type.BOOTS,
-                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(38))));
 
     public static final Item  ANCIENT_GEMSTONE_CHESTPLATE = registerItem("ancient_gemstone_chestplate",
             new ArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
                     ArmorItem.Type.CHESTPLATE,
-                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(38))));
 
     public static final Item  ANCIENT_GEMSTONE_LEGGINGS = registerItem("ancient_gemstone_leggings",
             new ArmorItem(ModArmorMaterials.ANCIENT_GEMSTONE_DUST,
                     ArmorItem.Type.LEGGINGS,
-                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(38))));
 
 
 
 
 
     public static final Item PILLAGERITE_PICKAXE = registerItem("pillagerite_pickaxe", new PickaxeItem(PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 3, -2.4F
+            PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 3, -3.4F
     ))));
     public static final Item PILLAGERITE_AXE = registerItem("pillagerite_axe", new AxeItem(PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
             PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 3, -2.4F
@@ -81,22 +81,22 @@ public class ModItems {
     public static final Item PILLAGERITE_HELMET = registerItem("pillagerite_helmet",
             new ArmorItem(ModArmorMaterials.PILLAGERITE_INGOT,
                     ArmorItem.Type.HELMET,
-                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(45))));
 
     public static final Item PILLAGERITE_BOOTS = registerItem("pillagerite_boots",
             new ArmorItem(ModArmorMaterials.PILLAGERITE_INGOT,
                     ArmorItem.Type.BOOTS,
-                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(45))));
 
     public static final Item PILLAGERITE_CHESTPLATE = registerItem("pillagerite_chestplate",
             new ArmorItem(ModArmorMaterials.PILLAGERITE_INGOT,
                     ArmorItem.Type.CHESTPLATE,
-                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(45))));
 
     public static final Item PILLAGERITE_LEGGINGS = registerItem("pillagerite_leggings",
             new ArmorItem(ModArmorMaterials.PILLAGERITE_INGOT,
                     ArmorItem.Type.LEGGINGS,
-                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(45))));
 
 
 
@@ -120,23 +120,22 @@ public class ModItems {
     public static final Item MAGICITE_HELMET = registerItem("magicite_helmet",
             new ArmorItem(ModArmorMaterials.MAGICITE_DUST,
                     ArmorItem.Type.HELMET,
-                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(40))));
 
     public static final Item MAGICITE_BOOTS = registerItem("magicite_boots",
             new ArmorItem(ModArmorMaterials.MAGICITE_DUST,
                     ArmorItem.Type.BOOTS,
-                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(40))));
 
     public static final Item MAGICITE_CHESTPLATE = registerItem("magicite_chestplate",
             new ArmorItem(ModArmorMaterials.MAGICITE_DUST,
                     ArmorItem.Type.CHESTPLATE,
-                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(25))));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(40))));
 
     public static final Item MAGICITE_LEGGINGS = registerItem("magicite_leggings",
             new ArmorItem(ModArmorMaterials.MAGICITE_DUST,
                     ArmorItem.Type.LEGGINGS,
-                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
-
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(40))));
 
 
 

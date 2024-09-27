@@ -7,17 +7,18 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
+import net.scott.minecraftvillagerdimensionmod.util.ModTags;
 
 import java.util.function.Supplier;
 
 public class PillageriteToolMaterial {
     public enum pillageriteToolMaterial implements ToolMaterial{
         PILLAGERITE_INGOT(
-                2032,
-                8.3F,
+                2750,
+                12.0F,
                 7.2F,
-                15,
-                BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+                16,
+                ModTags.Blocks.INCORRECT_FOR_PILLAGERITE_TOOL,
                 () -> Ingredient.ofItems(ModItems.PILLAGERITE_INGOT));
 
         private final TagKey<Block> inverseTag;

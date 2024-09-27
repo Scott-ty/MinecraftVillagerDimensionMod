@@ -1,5 +1,6 @@
 package net.scott.minecraftvillagerdimensionmod.datagen;
 
+import com.mojang.datafixers.types.templates.Tag;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Blocks;
@@ -12,7 +13,9 @@ import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
+import net.scott.minecraftvillagerdimensionmod.util.ModTags;
 
+import javax.swing.text.html.HTML;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
@@ -66,5 +69,78 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.SYCAMORE_FENCE_GATE);
         //*******************************************************************************************************************//
+
+
+        // Since I cant set my tool to be the only one to break, I have to prevent all other tools from breaking this block.
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .add(ModBlocks.MAGICITE_BLOCK)
+                .add(ModBlocks.MAGICITE_ORE)
+                .add(ModBlocks.DEEPSLATE_MAGICITE_ORE)
+                .add(ModBlocks.PILLAGERITE_BLOCK)
+                .add(ModBlocks.PILLAGERITE_ORE)
+                .add(ModBlocks.DEEPSLATE_PILLAGERITE_ORE);
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_STONE_TOOL)
+                .add(ModBlocks.MAGICITE_BLOCK)
+                .add(ModBlocks.MAGICITE_ORE)
+                .add(ModBlocks.DEEPSLATE_MAGICITE_ORE)
+                .add(ModBlocks.PILLAGERITE_BLOCK)
+                .add(ModBlocks.PILLAGERITE_ORE)
+                .add(ModBlocks.DEEPSLATE_PILLAGERITE_ORE);
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .add(ModBlocks.MAGICITE_BLOCK)
+                .add(ModBlocks.MAGICITE_ORE)
+                .add(ModBlocks.DEEPSLATE_MAGICITE_ORE)
+                .add(ModBlocks.PILLAGERITE_BLOCK)
+                .add(ModBlocks.PILLAGERITE_ORE)
+                .add(ModBlocks.DEEPSLATE_PILLAGERITE_ORE);
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_GOLD_TOOL)
+                .add(ModBlocks.MAGICITE_BLOCK)
+                .add(ModBlocks.MAGICITE_ORE)
+                .add(ModBlocks.DEEPSLATE_MAGICITE_ORE)
+                .add(ModBlocks.PILLAGERITE_BLOCK)
+                .add(ModBlocks.PILLAGERITE_ORE)
+                .add(ModBlocks.DEEPSLATE_PILLAGERITE_ORE);
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .add(ModBlocks.MAGICITE_BLOCK)
+                .add(ModBlocks.MAGICITE_ORE)
+                .add(ModBlocks.DEEPSLATE_MAGICITE_ORE)
+                .add(ModBlocks.PILLAGERITE_BLOCK)
+                .add(ModBlocks.PILLAGERITE_ORE)
+                .add(ModBlocks.DEEPSLATE_PILLAGERITE_ORE);
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
+                .add(ModBlocks.MAGICITE_BLOCK)
+                .add(ModBlocks.MAGICITE_ORE)
+                .add(ModBlocks.DEEPSLATE_MAGICITE_ORE)
+                .add(ModBlocks.PILLAGERITE_BLOCK)
+                .add(ModBlocks.PILLAGERITE_ORE)
+                .add(ModBlocks.DEEPSLATE_PILLAGERITE_ORE);
+
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.ANCIENT_GEMSTONE_BLOCK)
+                .add(ModBlocks.ANCIENT_GEMSTONE_ORE)
+                .add(ModBlocks.DEEPSLATE_ANCIENT_GEMSTONE_ORE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_ANCIENT_GEMSTONE_TOOL)
+                .add(ModBlocks.ANCIENT_GEMSTONE_BLOCK)
+                .add(ModBlocks.ANCIENT_GEMSTONE_ORE)
+                .add(ModBlocks.DEEPSLATE_ANCIENT_GEMSTONE_ORE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.INCORRECT_FOR_ANCIENT_GEMSTONE_TOOL)
+                .add(ModBlocks.PILLAGERITE_BLOCK)
+                .add(ModBlocks.PILLAGERITE_ORE)
+                .add(ModBlocks.DEEPSLATE_PILLAGERITE_ORE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_MAGICITE_TOOL)
+                .add(ModBlocks.MAGICITE_BLOCK)
+                .add(ModBlocks.MAGICITE_ORE)
+                .add(ModBlocks.DEEPSLATE_MAGICITE_ORE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_PILLAGERITE_TOOL)
+                .add(ModBlocks.MAGICITE_BLOCK)
+                .add(ModBlocks.MAGICITE_ORE)
+                .add(ModBlocks.DEEPSLATE_MAGICITE_ORE)
+                .add(ModBlocks.PILLAGERITE_BLOCK)
+                .add(ModBlocks.PILLAGERITE_ORE)
+                .add(ModBlocks.DEEPSLATE_PILLAGERITE_ORE);
     }
 }
