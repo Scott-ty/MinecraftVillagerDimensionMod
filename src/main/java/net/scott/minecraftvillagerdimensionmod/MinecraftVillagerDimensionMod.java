@@ -1,6 +1,7 @@
 package net.scott.minecraftvillagerdimensionmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
@@ -8,6 +9,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
+import net.scott.minecraftvillagerdimensionmod.entity.ModEntities;
+import net.scott.minecraftvillagerdimensionmod.entity.custom.OrangeKoiFishEntity;
 import net.scott.minecraftvillagerdimensionmod.item.ModItemGroups;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 import net.scott.minecraftvillagerdimensionmod.particle.ModParticleTypes;
@@ -63,6 +66,9 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 
 		// Register ModBoats Java Class
 		ModBoats.registerBoats();
+
+		// Register Orange Koi Fish
+		FabricDefaultAttributeRegistry.register(ModEntities.ORANGE_KOI_FISH, OrangeKoiFishEntity.createOrangeKoiFishAttributes());
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.EMERALD_BLOCK)

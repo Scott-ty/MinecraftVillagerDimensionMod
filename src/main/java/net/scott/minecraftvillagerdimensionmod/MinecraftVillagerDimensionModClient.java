@@ -3,12 +3,18 @@ import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
+import net.scott.minecraftvillagerdimensionmod.entity.ModEntities;
+import net.scott.minecraftvillagerdimensionmod.entity.client.ModModelLayers;
+import net.scott.minecraftvillagerdimensionmod.entity.client.OrangeKoiFishModel;
+import net.scott.minecraftvillagerdimensionmod.entity.client.OrangeKoiFishRenderer;
 import net.scott.minecraftvillagerdimensionmod.particle.EmeraldFlame;
 import net.scott.minecraftvillagerdimensionmod.particle.ModParticleTypes;
 import net.scott.minecraftvillagerdimensionmod.world.ModConfiguredFeatures;
@@ -42,5 +48,8 @@ public class MinecraftVillagerDimensionModClient implements ClientModInitializer
         TerraformBoatClientHelper.registerModelLayers(ModBoats.ROWAN_BOAT_ID, false);
         TerraformBoatClientHelper.registerModelLayers(ModBoats.JUNIPER_BOAT_ID, false);
         TerraformBoatClientHelper.registerModelLayers(ModBoats.SYCAMORE_BOAT_ID, false);
+
+        EntityRendererRegistry.register(ModEntities.ORANGE_KOI_FISH, OrangeKoiFishRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.ORANGE_KOI_FISH, OrangeKoiFishModel::getTexturedModelData);
     }
 }
