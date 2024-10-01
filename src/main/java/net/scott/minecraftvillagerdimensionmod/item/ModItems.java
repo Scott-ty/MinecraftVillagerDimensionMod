@@ -11,6 +11,7 @@ import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
+import net.scott.minecraftvillagerdimensionmod.entity.ModEntities;
 import net.scott.minecraftvillagerdimensionmod.item.custom.*;
 
 public class ModItems {
@@ -180,6 +181,12 @@ public class ModItems {
     // SYCAMORE WOOD
     public static final Item SYCAMORE_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.SYCAMORE_BOAT_ID, ModBoats.SYCAMORE_BOAT_KEY, false);
     public static final Item SYCAMORE_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.SYCAMORE_CHEST_BOAT_ID, ModBoats.SYCAMORE_BOAT_KEY, true);
+
+    // SPAWN EGGS
+    public static final Item ORANGE_KOI_FISH_SPAWN_EGG = registerItem("orange_koi_fish_spawn_egg",
+            new SpawnEggItem(ModEntities.ORANGE_KOI_FISH, 0xffffff, 0xf37800, new Item.Settings()));
+
+
 
     // Once an item has been made, you have to add it to a group
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){

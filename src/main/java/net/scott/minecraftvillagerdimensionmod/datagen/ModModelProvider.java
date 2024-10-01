@@ -4,10 +4,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
-import net.minecraft.item.ArmorItem;
+import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -118,6 +121,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MAGICITE_CHESTPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.MAGICITE_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.MAGICITE_BOOTS, Models.GENERATED);
+
+        // SPAWN EGGS
+        itemModelGenerator.register(ModItems.ORANGE_KOI_FISH_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
 
     }
 }

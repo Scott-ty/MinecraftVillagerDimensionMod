@@ -153,6 +153,8 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.SYCAMORE_SAPLING);
 
+                        entries.add(ModItems.ORANGE_KOI_FISH_SPAWN_EGG);
+
                     })).build());
 
     public static void registerItemGroups(){
