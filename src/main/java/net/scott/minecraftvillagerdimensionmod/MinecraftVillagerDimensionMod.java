@@ -11,6 +11,7 @@ import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
 import net.scott.minecraftvillagerdimensionmod.entity.ModEntities;
 import net.scott.minecraftvillagerdimensionmod.entity.custom.OrangeKoiFishEntity;
+import net.scott.minecraftvillagerdimensionmod.entity.custom.WhiteKoiFishEntity;
 import net.scott.minecraftvillagerdimensionmod.item.ModItemGroups;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 import net.scott.minecraftvillagerdimensionmod.particle.ModParticleTypes;
@@ -67,8 +68,9 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		// Register ModBoats Java Class
 		ModBoats.registerBoats();
 
-		// Register Orange Koi Fish
+		// Register Koi Fish
 		FabricDefaultAttributeRegistry.register(ModEntities.ORANGE_KOI_FISH, OrangeKoiFishEntity.createOrangeKoiFishAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.WHITE_KOI_FISH, WhiteKoiFishEntity.createWhiteKoiFishAttributes());
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.EMERALD_BLOCK)

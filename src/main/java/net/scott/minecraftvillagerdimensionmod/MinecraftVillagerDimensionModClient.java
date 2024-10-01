@@ -12,9 +12,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
 import net.scott.minecraftvillagerdimensionmod.entity.ModEntities;
-import net.scott.minecraftvillagerdimensionmod.entity.client.ModModelLayers;
-import net.scott.minecraftvillagerdimensionmod.entity.client.OrangeKoiFishModel;
-import net.scott.minecraftvillagerdimensionmod.entity.client.OrangeKoiFishRenderer;
+import net.scott.minecraftvillagerdimensionmod.entity.client.*;
 import net.scott.minecraftvillagerdimensionmod.particle.EmeraldFlame;
 import net.scott.minecraftvillagerdimensionmod.particle.ModParticleTypes;
 import net.scott.minecraftvillagerdimensionmod.world.ModConfiguredFeatures;
@@ -51,5 +49,8 @@ public class MinecraftVillagerDimensionModClient implements ClientModInitializer
 
         EntityRendererRegistry.register(ModEntities.ORANGE_KOI_FISH, OrangeKoiFishRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.ORANGE_KOI_FISH, OrangeKoiFishModel::getTexturedModelData);
+
+        EntityRendererRegistry.register(ModEntities.WHITE_KOI_FISH, WhiteKoiFishRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(WhiteKoiModelLayers.WHITE_KOI_FISH, WhiteKoiFishModel::getTexturedModelData);
     }
 }

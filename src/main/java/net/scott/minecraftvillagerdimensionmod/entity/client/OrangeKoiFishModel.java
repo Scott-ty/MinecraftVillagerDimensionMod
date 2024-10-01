@@ -8,7 +8,7 @@ import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.scott.minecraftvillagerdimensionmod.entity.animation.ModAnimations;
+import net.scott.minecraftvillagerdimensionmod.entity.animation.OrangeKoiAnimations;
 import net.scott.minecraftvillagerdimensionmod.entity.custom.OrangeKoiFishEntity;
 
 public class OrangeKoiFishModel<T extends OrangeKoiFishEntity> extends SinglePartEntityModel<T> {
@@ -53,8 +53,8 @@ public class OrangeKoiFishModel<T extends OrangeKoiFishEntity> extends SinglePar
 	@Override
 	public void setAngles(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.getPart().traverse().forEach(ModelPart::resetTransform);
-		this.animateMovement(ModAnimations.swim, limbSwing, limbSwingAmount, .5f, .5f);
-		this.updateAnimation(entity.idleAnimationState, ModAnimations.idle, ageInTicks, 2.0f);
+		this.animateMovement(OrangeKoiAnimations.swim, limbSwing, limbSwingAmount, .5f, .5f);
+		this.updateAnimation(entity.idleAnimationState, OrangeKoiAnimations.idle, ageInTicks, 2.0f);
 	}
 
 	@Override

@@ -185,6 +185,8 @@ public class ModItems {
     // SPAWN EGGS
     public static final Item ORANGE_KOI_FISH_SPAWN_EGG = registerItem("orange_koi_fish_spawn_egg",
             new SpawnEggItem(ModEntities.ORANGE_KOI_FISH, 0xffffff, 0xf37800, new Item.Settings()));
+    public static final Item WHITE_KOI_FISH_SPAWN_EGG = registerItem("white_koi_fish_spawn_egg",
+            new SpawnEggItem(ModEntities.WHITE_KOI_FISH, 0xffffff, 0xFAF9F6, new Item.Settings()));
 
 
 
