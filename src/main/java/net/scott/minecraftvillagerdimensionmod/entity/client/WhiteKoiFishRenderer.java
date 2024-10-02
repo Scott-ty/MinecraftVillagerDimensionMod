@@ -12,7 +12,7 @@ public class WhiteKoiFishRenderer extends MobEntityRenderer<WhiteKoiFishEntity, 
     private static final Identifier TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "textures/entity/white_koi_fish.png");
 
     public WhiteKoiFishRenderer(EntityRendererFactory.Context context) {
-        super(context, new WhiteKoiFishModel<>(context.getPart(WhiteKoiModelLayers.WHITE_KOI_FISH)), .2f);
+        super(context, new WhiteKoiFishModel<>(context.getPart(ModModelLayers.WHITE_KOI_FISH)), .2f);
     }
 
     @Override

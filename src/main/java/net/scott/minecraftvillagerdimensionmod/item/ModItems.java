@@ -3,9 +3,15 @@ import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.sound.Sound;
+import net.minecraft.entity.Bucketable;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.Direction;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.minecraft.util.Identifier;
@@ -187,7 +193,16 @@ public class ModItems {
             new SpawnEggItem(ModEntities.ORANGE_KOI_FISH, 0xffffff, 0xf37800, new Item.Settings()));
     public static final Item WHITE_KOI_FISH_SPAWN_EGG = registerItem("white_koi_fish_spawn_egg",
             new SpawnEggItem(ModEntities.WHITE_KOI_FISH, 0xffffff, 0xFAF9F6, new Item.Settings()));
+    public static final Item BLACK_KOI_FISH_SPAWN_EGG = registerItem("black_koi_fish_spawn_egg",
+            new SpawnEggItem(ModEntities.BLACK_KOI_FISH, 0xffffff, 0x000000, new Item.Settings()));
 
+    // KOI BUCKET ITEMS
+    public static final Item BLACK_KOI_BUCKET = registerItem("black_koi_bucket",
+            new EntityBucketItem(ModEntities.BLACK_KOI_FISH, Fluids.WATER, SoundEvents.ENTITY_SALMON_FLOP, new Item.Settings().maxCount(1)));
+    public static final Item ORANGE_KOI_BUCKET = registerItem("orange_koi_bucket",
+            new EntityBucketItem(ModEntities.ORANGE_KOI_FISH, Fluids.WATER, SoundEvents.ENTITY_SALMON_FLOP, new Item.Settings().maxCount(1)));
+    public static final Item WHITE_KOI_BUCKET = registerItem("white_koi_bucket",
+            new EntityBucketItem(ModEntities.WHITE_KOI_FISH, Fluids.WATER, SoundEvents.ENTITY_SALMON_FLOP, new Item.Settings().maxCount(1)));
 
 
     // Once an item has been made, you have to add it to a group

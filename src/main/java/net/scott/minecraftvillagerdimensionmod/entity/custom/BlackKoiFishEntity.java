@@ -19,12 +19,12 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 
-public class WhiteKoiFishEntity extends FishEntity {
+public class BlackKoiFishEntity extends FishEntity {
 
-    public final AnimationState whiteIdleAnimationState = new AnimationState();
-    private int whiteIdleAnimationTimeout = 0;
+    public final AnimationState blackIdleAnimationState = new AnimationState();
+    private int blackIdleAnimationTimeout = 0;
 
-    public WhiteKoiFishEntity(EntityType<? extends FishEntity> entityType, World world) {
+    public BlackKoiFishEntity(EntityType<? extends FishEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -37,11 +37,11 @@ public class WhiteKoiFishEntity extends FishEntity {
     }
 
     private void setupAnimationStates() {
-        if (this.whiteIdleAnimationTimeout <= 0){
-            this.whiteIdleAnimationTimeout = this.random.nextInt(10) + 20;
-            this.whiteIdleAnimationState.start(this.age);
+        if (this.blackIdleAnimationTimeout <= 0){
+            this.blackIdleAnimationTimeout = this.random.nextInt(10) + 20;
+            this.blackIdleAnimationState.start(this.age);
         }else{
-            --this.whiteIdleAnimationTimeout;
+            --this.blackIdleAnimationTimeout;
         }
     }
 
@@ -52,7 +52,7 @@ public class WhiteKoiFishEntity extends FishEntity {
     }
 
 
-    public static DefaultAttributeContainer.Builder createWhiteKoiFishAttributes(){
+    public static DefaultAttributeContainer.Builder createBlackKoiFishAttributes(){
         return FishEntity.createFishAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 5)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2f);
@@ -88,6 +88,6 @@ public class WhiteKoiFishEntity extends FishEntity {
 
     @Override
     public ItemStack getBucketItem() {
-        return new ItemStack(ModItems.WHITE_KOI_BUCKET);
+        return new ItemStack(ModItems.BLACK_KOI_BUCKET);
     }
 }

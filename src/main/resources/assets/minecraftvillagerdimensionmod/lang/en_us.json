@@ -142,6 +142,10 @@
 
   "item.minecraftvillagerdimensionmod.orange_koi_fish_spawn_egg": "Orange Koi Fish Spawn Egg",
   "item.minecraftvillagerdimensionmod.white_koi_fish_spawn_egg": "White Koi Fish Spawn Egg",
+  "item.minecraftvillagerdimensionmod.black_koi_fish_spawn_egg": "Black Koi Fish Spawn Egg",
+  "item.minecraftvillagerdimensionmod.black_koi_bucket": "Bucket of Black Koi",
+  "item.minecraftvillagerdimensionmod.orange_koi_bucket": "Bucket of Orange Koi",
+  "item.minecraftvillagerdimensionmod.white_koi_bucket": "Bucket of White Koi",
 
   "itemgroup.ancient_gemstone": "Villager Dimension Mod"
 }

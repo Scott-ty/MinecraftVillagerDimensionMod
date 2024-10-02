@@ -6,7 +6,9 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
+import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 
@@ -122,11 +124,20 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MAGICITE_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.MAGICITE_BOOTS, Models.GENERATED);
 
-        // SPAWN EGGS
+        // KOI FISH
         itemModelGenerator.register(ModItems.ORANGE_KOI_FISH_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.ORANGE_KOI_BUCKET, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.WHITE_KOI_FISH_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.WHITE_KOI_BUCKET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.BLACK_KOI_FISH_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.BLACK_KOI_BUCKET, Models.GENERATED);
+
+
 
     }
 }

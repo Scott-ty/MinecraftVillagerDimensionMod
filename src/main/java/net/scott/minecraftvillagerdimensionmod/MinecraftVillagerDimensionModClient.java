@@ -51,6 +51,9 @@ public class MinecraftVillagerDimensionModClient implements ClientModInitializer
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.ORANGE_KOI_FISH, OrangeKoiFishModel::getTexturedModelData);
 
         EntityRendererRegistry.register(ModEntities.WHITE_KOI_FISH, WhiteKoiFishRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(WhiteKoiModelLayers.WHITE_KOI_FISH, WhiteKoiFishModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.WHITE_KOI_FISH, WhiteKoiFishModel::getTexturedModelData);
+
+        EntityRendererRegistry.register(ModEntities.BLACK_KOI_FISH, BlackKoiFishRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BLACK_KOI_FISH, BlackKoiFishModel::getTexturedModelData);
     }
 }

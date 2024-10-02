@@ -17,6 +17,7 @@ import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
+import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 
 public class OrangeKoiFishEntity extends FishEntity {
 
@@ -85,9 +86,8 @@ public class OrangeKoiFishEntity extends FishEntity {
         return SoundEvents.ENTITY_SALMON_DEATH;
     }
 
-    // Will have to make a bucket item for this for now using salmon
     @Override
     public ItemStack getBucketItem() {
-        return new ItemStack(Items.SALMON_BUCKET);
+        return new ItemStack(ModItems.ORANGE_KOI_BUCKET);
     }
 }

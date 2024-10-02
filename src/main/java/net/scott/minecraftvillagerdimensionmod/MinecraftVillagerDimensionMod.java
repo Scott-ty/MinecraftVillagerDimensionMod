@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
 import net.scott.minecraftvillagerdimensionmod.entity.ModEntities;
+import net.scott.minecraftvillagerdimensionmod.entity.custom.BlackKoiFishEntity;
 import net.scott.minecraftvillagerdimensionmod.entity.custom.OrangeKoiFishEntity;
 import net.scott.minecraftvillagerdimensionmod.entity.custom.WhiteKoiFishEntity;
 import net.scott.minecraftvillagerdimensionmod.item.ModItemGroups;
@@ -71,6 +72,7 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		// Register Koi Fish
 		FabricDefaultAttributeRegistry.register(ModEntities.ORANGE_KOI_FISH, OrangeKoiFishEntity.createOrangeKoiFishAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.WHITE_KOI_FISH, WhiteKoiFishEntity.createWhiteKoiFishAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.BLACK_KOI_FISH, BlackKoiFishEntity.createBlackKoiFishAttributes());
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.EMERALD_BLOCK)
