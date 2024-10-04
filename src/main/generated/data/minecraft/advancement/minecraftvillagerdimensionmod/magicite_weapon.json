@@ -1,10 +1,11 @@
 {
+  "parent": "minecraft:minecraftvillagerdimensionmod/magicite_dust_advancement",
   "criteria": {
-    "a_dark_wood": {
+    "magicite_sword": {
       "conditions": {
         "items": [
           {
-            "items": "minecraftvillagerdimensionmod:rowan_log"
+            "items": "minecraftvillagerdimensionmod:magicite_sword"
           }
         ]
       },
@@ -13,16 +14,16 @@
   },
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-    "description": "Conquer the Rowans!",
+    "description": "Craft a Magicite Sword",
     "icon": {
       "count": 1,
-      "id": "minecraftvillagerdimensionmod:rowan_log"
+      "id": "minecraftvillagerdimensionmod:magicite_sword"
     },
-    "title": "A Dark Wood"
+    "title": "Sword of Magic"
   },
   "requirements": [
     [
-      "a_dark_wood"
+      "magicite_sword"
     ]
   ],
   "sends_telemetry_event": true

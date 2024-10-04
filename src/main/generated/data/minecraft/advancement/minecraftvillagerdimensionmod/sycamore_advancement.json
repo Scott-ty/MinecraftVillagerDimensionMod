@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/enter_dimension",
+  "criteria": {
+    "youre_syc": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:sycamore_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Why would you cut such a beautiful tree?",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:sycamore_log"
+    },
+    "title": "You're Syc!"
+  },
+  "requirements": [
+    [
+      "youre_syc"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

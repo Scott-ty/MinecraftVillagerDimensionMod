@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/enter_dimension",
+  "criteria": {
+    "feeling_grey": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:juniper_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Are we on the west coast?",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:juniper_log"
+    },
+    "title": "Feeling Grey"
+  },
+  "requirements": [
+    [
+      "feeling_grey"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

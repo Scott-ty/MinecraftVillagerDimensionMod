@@ -1,0 +1,69 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/ancient_gemstone_dust_advancement",
+  "criteria": {
+    "ancient_gemstone_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:ancient_gemstone_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ancient_gemstone_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:ancient_gemstone_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ancient_gemstone_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:ancient_gemstone_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ancient_gemstone_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:ancient_gemstone_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Craft Ancient Gemstone Armor",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:ancient_gemstone_helmet"
+    },
+    "title": "Ancient Gemstone Armor"
+  },
+  "requirements": [
+    [
+      "ancient_gemstone_helmet"
+    ],
+    [
+      "ancient_gemstone_chestplate"
+    ],
+    [
+      "ancient_gemstone_leggings"
+    ],
+    [
+      "ancient_gemstone_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

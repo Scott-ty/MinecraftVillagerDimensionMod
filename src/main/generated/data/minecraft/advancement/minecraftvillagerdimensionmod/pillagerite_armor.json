@@ -1,0 +1,69 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/pillagerite_ingot_advancement",
+  "criteria": {
+    "pillagerite_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:pillagerite_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pillagerite_chest": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:pillagerite_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pillagerite_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:pillagerite_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pillagerite_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:pillagerite_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Craft Pillagerite Armor",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:pillagerite_helmet"
+    },
+    "title": "Powerful Dark Armor"
+  },
+  "requirements": [
+    [
+      "pillagerite_chest"
+    ],
+    [
+      "pillagerite_helmet"
+    ],
+    [
+      "pillagerite_leggings"
+    ],
+    [
+      "pillagerite_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

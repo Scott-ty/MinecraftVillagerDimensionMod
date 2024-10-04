@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/sycamore_advancement",
+  "criteria": {
+    "ancient_gemstone_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:ancient_gemstone_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Obtain Ancient Gemstone Dust.",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:ancient_gemstone_dust"
+    },
+    "title": "Ancient Secrets"
+  },
+  "requirements": [
+    [
+      "ancient_gemstone_dust"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

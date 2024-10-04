@@ -1,0 +1,69 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/ancient_gemstone_dust_advancement",
+  "criteria": {
+    "ancient_gemstone_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:ancient_gemstone_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ancient_gemstone_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:ancient_gemstone_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ancient_gemstone_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:ancient_gemstone_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ancient_gemstone_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:ancient_gemstone_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Craft Ancient Gemstone Tools",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:ancient_gemstone_pickaxe"
+    },
+    "title": "Ancient Gemstone Tools"
+  },
+  "requirements": [
+    [
+      "ancient_gemstone_shovel"
+    ],
+    [
+      "ancient_gemstone_pickaxe"
+    ],
+    [
+      "ancient_gemstone_axe"
+    ],
+    [
+      "ancient_gemstone_hoe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

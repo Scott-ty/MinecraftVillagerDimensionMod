@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/rowan_advancement",
+  "criteria": {
+    "pillagerite_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:pillagerite_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Obtain a Pillagerite Ingot.",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:pillagerite_ingot"
+    },
+    "title": "Pillager's Reward"
+  },
+  "requirements": [
+    [
+      "pillagerite_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

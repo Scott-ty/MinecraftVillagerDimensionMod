@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/juniper_advancement",
+  "criteria": {
+    "magicite_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:magicite_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Obtain Magicite Dust.",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:magicite_dust"
+    },
+    "title": "Magic in the Air"
+  },
+  "requirements": [
+    [
+      "magicite_dust"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

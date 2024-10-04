@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "minecraftvillagerdimensionmod:large_koi_pond",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 5,
+    "separation": 2,
+    "salt": 1642136478
+  }
+}

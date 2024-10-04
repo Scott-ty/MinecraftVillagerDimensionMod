@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "entered_dimension": {
+      "conditions": {
+        "to": "minecraftvillagerdimensionmod:dim"
+      },
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/end.png",
+    "description": "Enter the villager dimension.",
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:emerald_torch_item"
+    },
+    "title": "Into the Unknown"
+  },
+  "requirements": [
+    [
+      "entered_dimension"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

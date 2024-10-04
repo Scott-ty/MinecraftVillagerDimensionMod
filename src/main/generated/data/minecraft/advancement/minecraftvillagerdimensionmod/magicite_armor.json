@@ -1,0 +1,69 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/magicite_dust_advancement",
+  "criteria": {
+    "magicite_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:magicite_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "magicite_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:magicite_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "magicite_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:magicite_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "magicite_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:magicite_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Craft Magicite Armor",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:magicite_helmet"
+    },
+    "title": "Magicite Armor"
+  },
+  "requirements": [
+    [
+      "magicite_helmet"
+    ],
+    [
+      "magicite_chestplate"
+    ],
+    [
+      "magicite_leggings"
+    ],
+    [
+      "magicite_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

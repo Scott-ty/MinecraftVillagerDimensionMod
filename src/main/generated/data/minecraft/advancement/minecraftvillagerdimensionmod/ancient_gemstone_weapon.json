@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/ancient_gemstone_dust_advancement",
+  "criteria": {
+    "ancient_gemstone_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:ancient_gemstone_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Craft an Ancient Gemstone Sword",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:ancient_gemstone_sword"
+    },
+    "title": "Sword of the Ancients"
+  },
+  "requirements": [
+    [
+      "ancient_gemstone_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

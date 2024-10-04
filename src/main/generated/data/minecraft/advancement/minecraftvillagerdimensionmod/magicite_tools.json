@@ -1,0 +1,69 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/magicite_dust_advancement",
+  "criteria": {
+    "magicite_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:magicite_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "magicite_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:magicite_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "magicite_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:magicite_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "magicite_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:magicite_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Craft Magicite Tools",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:magicite_pickaxe"
+    },
+    "title": "Magicite Tools"
+  },
+  "requirements": [
+    [
+      "magicite_shovel"
+    ],
+    [
+      "magicite_pickaxe"
+    ],
+    [
+      "magicite_axe"
+    ],
+    [
+      "magicite_hoe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

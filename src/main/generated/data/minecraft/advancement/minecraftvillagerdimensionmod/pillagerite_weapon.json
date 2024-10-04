@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/pillagerite_ingot_advancement",
+  "criteria": {
+    "pillagerite_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:pillagerite_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Craft a pillagerite sword",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:pillagerite_sword"
+    },
+    "title": "Sword of Darkness"
+  },
+  "requirements": [
+    [
+      "pillagerite_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

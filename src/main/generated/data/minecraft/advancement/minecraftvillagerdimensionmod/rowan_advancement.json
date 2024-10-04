@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/enter_dimension",
+  "criteria": {
+    "a_dark_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:rowan_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Conquer the Rowans!",
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:rowan_log"
+    },
+    "title": "A Dark Wood"
+  },
+  "requirements": [
+    [
+      "a_dark_wood"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
