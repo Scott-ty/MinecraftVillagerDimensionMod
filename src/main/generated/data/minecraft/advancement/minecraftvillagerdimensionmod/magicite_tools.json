@@ -45,6 +45,7 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
     "description": "Craft Magicite Tools",
+    "hidden": true,
     "icon": {
       "count": 1,
       "id": "minecraftvillagerdimensionmod:magicite_pickaxe"

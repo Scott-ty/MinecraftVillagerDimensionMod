@@ -45,6 +45,7 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
     "description": "Craft Ancient Gemstone Armor",
+    "hidden": true,
     "icon": {
       "count": 1,
       "id": "minecraftvillagerdimensionmod:ancient_gemstone_helmet"

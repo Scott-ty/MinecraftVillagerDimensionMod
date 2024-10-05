@@ -1,7 +1,11 @@
 {
   "replace": false,
+
   "_comment": " This biome tag can specify the biome directly. Or specify another biome tag by starting with # ",
   "values": [
-    "minecraftvillagerdimensionmod:villager_biome"
+    "#minecraft:is_mountain",
+    "#minecraft:is_ocean",
+    "#minecraft:is_deep_ocean",
+    "minecraft:swamp"
   ]
 }

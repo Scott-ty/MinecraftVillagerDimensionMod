@@ -15,6 +15,7 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
     "description": "Craft a Magicite Sword",
+    "hidden": true,
     "icon": {
       "count": 1,
       "id": "minecraftvillagerdimensionmod:magicite_sword"

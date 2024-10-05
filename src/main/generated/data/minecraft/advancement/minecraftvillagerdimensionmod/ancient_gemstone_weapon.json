@@ -15,6 +15,7 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
     "description": "Craft an Ancient Gemstone Sword",
+    "hidden": true,
     "icon": {
       "count": 1,
       "id": "minecraftvillagerdimensionmod:ancient_gemstone_sword"

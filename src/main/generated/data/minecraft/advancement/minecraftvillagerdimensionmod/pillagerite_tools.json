@@ -45,6 +45,7 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
     "description": "Craft the dark tools armor",
+    "hidden": true,
     "icon": {
       "count": 1,
       "id": "minecraftvillagerdimensionmod:pillagerite_pickaxe"

@@ -1,0 +1,41 @@
+{
+
+  "type": "minecraftvillagerdimensionmod:sky_structures",
+
+  "start_pool": "minecraftvillagerdimensionmod:sky_fan",
+
+  "size": 1,
+
+  "max_distance_from_center": 80,
+
+  "biomes": "#minecraftvillagerdimensionmod:has_structure/structure_sky_fan_biome",
+
+  "step": "surface_structures",
+  "start_height": {
+    "absolute": 60
+  },
+
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+
+  "liquid_settings": "apply_waterlogging",
+
+  "spawn_overrides": {
+    "monster": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "minecraft:evoker",
+          "weight": 5,
+          "minCount": 1,
+          "maxCount": 2
+        },
+        {
+          "type": "minecraft:phantom",
+          "weight": 1,
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  }
+}
