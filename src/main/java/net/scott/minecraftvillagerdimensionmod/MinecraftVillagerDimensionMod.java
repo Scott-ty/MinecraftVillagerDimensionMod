@@ -71,7 +71,7 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		// Register ModBoats Java Class
 		ModBoats.registerBoats();
 
-		ModStructures.registerStructureFeatures();
+		//ModStructures.registerStructures();
 
 		// Register Koi Fish
 		FabricDefaultAttributeRegistry.register(ModEntities.ORANGE_KOI_FISH, OrangeKoiFishEntity.createOrangeKoiFishAttributes());

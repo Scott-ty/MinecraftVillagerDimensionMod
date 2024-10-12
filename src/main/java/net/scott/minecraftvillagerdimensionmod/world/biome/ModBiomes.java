@@ -17,9 +17,13 @@ import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
+import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
+import net.minecraft.world.gen.structure.Structure;
+import net.minecraft.world.gen.structure.Structures;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.scott.minecraftvillagerdimensionmod.world.ModPlacedFeatures;
+import net.scott.minecraftvillagerdimensionmod.world.ModStructures;
 
 public class ModBiomes {
     public static final RegistryKey<Biome> VILLAGER_BIOME = RegistryKey.of(RegistryKeys.BIOME,

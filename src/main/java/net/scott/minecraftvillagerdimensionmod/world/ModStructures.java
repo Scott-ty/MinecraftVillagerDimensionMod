@@ -1,24 +1,32 @@
 package net.scott.minecraftvillagerdimensionmod.world;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.structure.Structure;
 import net.minecraft.world.gen.structure.StructureType;
-import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
-import net.scott.minecraftvillagerdimensionmod.world.structure.SkyStructures;
+import net.scott.minecraftvillagerdimensionmod.world.structure.LargeKoiPondStructure;
 
 public class ModStructures {
+    public static final RegistryKey<Structure> LARGE_KOI_POND_KEY =
+            RegistryKey.of(RegistryKeys.STRUCTURE, Identifier.of("minecraftvillagerdimensionmod", "large_koi_pond"));
 
-    public static StructureType<SkyStructures> SKY_STRUCTURES;
+    // Register the structure type
+    public static final StructureType<LargeKoiPondStructure> LARGE_KOI_POND_TYPE =
+            register("large_koi_pond", LargeKoiPondStructure.CODEC);
 
-    /**
-     * Registers the structure itself and sets what its path is. In this case, the
-     * structure will have the Identifier of structure_tutorial:sky_structures.
-     *
-     * It is always a good idea to register your Structures so that other mods and datapacks can
-     * use them too directly from the registries. It's great for mod/datapacks compatibility.
-     */
-    public static void registerStructureFeatures() {
-        SKY_STRUCTURES = Registry.register(Registries.STRUCTURE_TYPE, Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "sky_structures"), () -> SkyStructures.CODEC);
+    //public static void registerStructures() {
+        // Register the structure in the registry
+       // Registry.register(RegistryKeys.STRUCTURE, LARGE_KOI_POND_KEY.getValue(), LARGE_KOI_POND_TYPE);
+   // }
+
+    private static <T extends Structure> StructureType<T> register(String id, MapCodec<T> codec) {
+        return Registry.register(Registries.STRUCTURE_TYPE, Identifier.of("minecraftvillagerdimensionmod", id), () -> codec);
+    }
+
+    public static void registerStructures() {
     }
 }

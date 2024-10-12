@@ -1,12 +1,11 @@
 {
-  "name": "minecraftvillagerdimensionmod:large_koi_pond/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 10,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "minecraftvillagerdimensionmod:large_koi_pond",
+        "location": "minecraftvillagerdimensionmod:koi_ponds/large_koi_pond",
         "projection": "rigid",
         "processors": "minecraft:empty"
       }
