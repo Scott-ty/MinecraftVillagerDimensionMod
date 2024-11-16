@@ -204,6 +204,10 @@ public class ModItems {
     public static final Item WHITE_KOI_BUCKET = registerItem("white_koi_bucket",
             new EntityBucketItem(ModEntities.WHITE_KOI_FISH, Fluids.WATER, SoundEvents.ENTITY_SALMON_FLOP, new Item.Settings().maxCount(1)));
 
+    // BERRIES
+    public static final Item JUNIPER_BERRIES = registerItem( "juniper_berries", new Item(new Item.Settings().food(ModFoodComponent.JUNIPER_BERRIES)));
+    public static final Item ROWAN_BERRIES = registerItem( "rowan_berries", new Item(new Item.Settings().food(ModFoodComponent.ROWAN_BERRIES)));
+
 
     // Once an item has been made, you have to add it to a group
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){

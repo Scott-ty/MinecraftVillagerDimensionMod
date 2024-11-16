@@ -2,6 +2,7 @@ package net.scott.minecraftvillagerdimensionmod.world;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.client.BlockStateSupplier;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
@@ -14,10 +15,13 @@ import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.IntProvider;
+import net.minecraft.util.math.noise.DoublePerlinNoiseSampler;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.NoiseBlockStateProvider;
+import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.trunk.DarkOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
@@ -25,6 +29,7 @@ import net.minecraft.world.gen.trunk.UpwardsBranchingTrunkPlacer;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class ModConfiguredFeatures {
@@ -64,14 +69,17 @@ public class ModConfiguredFeatures {
 
         RegistryEntryLookup<PlacedFeature> registryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
 
-
+        DoublePerlinNoiseSampler.NoiseParameters noiseParameters = new DoublePerlinNoiseSampler.NoiseParameters(0, 1.0);
         // Rowan Tree Growth
         register(context, ROWAN_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.ROWAN_LOG),
                 //This places the trunk. There are lots of different ones
                 new StraightTrunkPlacer(4,2,1),
 
-                BlockStateProvider.of(ModBlocks.ROWAN_LEAVES),
+                new NoiseBlockStateProvider(3, noiseParameters, 3, Arrays.asList(
+                        ModBlocks.ROWAN_LEAVES.getDefaultState(),
+                        ModBlocks.ROWAN_BERRY_LEAVES.getDefaultState()
+                )),
                 // Also several styles of leaves
                 // IntProvider radius, IntProvider offset, int height
                 new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(2), 4),
@@ -85,7 +93,10 @@ public class ModConfiguredFeatures {
                 // int baseHeight, int firstRandomHeight, int secondRandomHeight
                 new StraightTrunkPlacer(2,1,1),
 
-                BlockStateProvider.of(ModBlocks.JUNIPER_LEAVES),
+                new NoiseBlockStateProvider(3, noiseParameters, 3, Arrays.asList(
+                        ModBlocks.JUNIPER_LEAVES.getDefaultState(),
+                        ModBlocks.JUNIPER_BERRY_LEAVES.getDefaultState()
+                )),
                 // Also several styles of leaves
                 // (IntProvider radius, IntProvider offset, IntProvider trunkHeight)
                 //new SpruceFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(3)),
@@ -118,7 +129,7 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(ModBlocks.SYCAMORE_LEAVES),
                 // Also several styles of leaves
                 // (IntProvider radius, IntProvider offset, IntProvider trunkHeight)
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4),2),
+                new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(3),2),
                 //new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), ConstantIntProvider.create(3), 40),
                 //new BlobFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(5),3),
 

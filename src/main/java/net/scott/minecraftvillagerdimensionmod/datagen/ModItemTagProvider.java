@@ -47,6 +47,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.STRIPPED_JUNIPER_LOG.asItem())
                 .add(ModBlocks.JUNIPER_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_JUNIPER_WOOD.asItem());
+
         //*******************************************************************************************************************//
 
         //************************************* SYCAMORE WOOD ****************************************************************//

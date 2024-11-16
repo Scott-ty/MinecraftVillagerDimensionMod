@@ -63,6 +63,7 @@
   "block.minecraftvillagerdimensionmod.stripped_rowan_wood": "Stripped Rowan Wood",
   "block.minecraftvillagerdimensionmod.rowan_planks": "Rowan Planks",
   "block.minecraftvillagerdimensionmod.rowan_leaves": "Rowan Leaves",
+  "block.minecraftvillagerdimensionmod.rowan_berry_leaves": "Rowan Berry Leaves",
 
   "block.minecraftvillagerdimensionmod.rowan_standing_sign": "Rowan Standing Sign",
   "block.minecraftvillagerdimensionmod.rowan_wall_sign": "Rowan Wall Sign",
@@ -84,6 +85,7 @@
 
   "block.minecraftvillagerdimensionmod.rowan_sapling": "Rowan Sapling",
 
+  "item.minecraftvillagerdimensionmod.rowan_berries": "Rowan Berries",
 
   "block.minecraftvillagerdimensionmod.juniper_log": "Juniper Log",
   "block.minecraftvillagerdimensionmod.juniper_wood": "Juniper Wood",
@@ -91,6 +93,7 @@
   "block.minecraftvillagerdimensionmod.stripped_juniper_wood": "Stripped Juniper Wood",
   "block.minecraftvillagerdimensionmod.juniper_planks": "Juniper Planks",
   "block.minecraftvillagerdimensionmod.juniper_leaves": "Juniper Leaves",
+  "block.minecraftvillagerdimensionmod.juniper_berry_leaves": "Juniper Berry Leaves",
 
   "block.minecraftvillagerdimensionmod.juniper_standing_sign": "Juniper Standing Sign",
   "block.minecraftvillagerdimensionmod.juniper_wall_sign": "Juniper Wall Sign",
@@ -112,6 +115,7 @@
 
   "block.minecraftvillagerdimensionmod.juniper_sapling": "Juniper Sapling",
 
+  "item.minecraftvillagerdimensionmod.juniper_berries": "Juniper Berries",
 
   "block.minecraftvillagerdimensionmod.sycamore_log": "Sycamore Log",
   "block.minecraftvillagerdimensionmod.sycamore_wood": "Sycamore Wood",

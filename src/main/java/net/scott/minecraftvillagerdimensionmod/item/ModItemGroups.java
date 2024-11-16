@@ -85,6 +85,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_ROWAN_WOOD);
                         entries.add(ModBlocks.ROWAN_PLANKS);
                         entries.add(ModBlocks.ROWAN_LEAVES);
+                        entries.add(ModBlocks.ROWAN_BERRY_LEAVES);
 
                         entries.add(ModItems.ROWAN_SIGN);
                         entries.add(ModItems.HANGING_ROWAN_SIGN);
@@ -102,6 +103,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ROWAN_CHEST_BOAT);
 
                         entries.add(ModBlocks.ROWAN_SAPLING);
+                        entries.add(ModItems.ROWAN_BERRIES);
 
                         // JUNIPER WOOD
                         entries.add(ModBlocks.JUNIPER_LOG);
@@ -110,6 +112,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_JUNIPER_WOOD);
                         entries.add(ModBlocks.JUNIPER_PLANKS);
                         entries.add(ModBlocks.JUNIPER_LEAVES);
+                        entries.add(ModBlocks.JUNIPER_BERRY_LEAVES);
 
                         entries.add(ModItems.JUNIPER_SIGN);
                         entries.add(ModItems.HANGING_JUNIPER_SIGN);
@@ -127,6 +130,7 @@ public class ModItemGroups {
                         entries.add(ModItems.JUNIPER_CHEST_BOAT);
 
                         entries.add(ModBlocks.JUNIPER_SAPLING);
+                        entries.add(ModItems.JUNIPER_BERRIES);
 
                         // SYCAMORE WOOD
                         entries.add(ModBlocks.SYCAMORE_LOG);
@@ -159,6 +163,7 @@ public class ModItemGroups {
                         entries.add(ModItems.BLACK_KOI_BUCKET);
                         entries.add(ModItems.ORANGE_KOI_BUCKET);
                         entries.add(ModItems.WHITE_KOI_BUCKET);
+
 
 
                     })).build());

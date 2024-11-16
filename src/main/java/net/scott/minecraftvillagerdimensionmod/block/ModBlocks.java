@@ -61,18 +61,20 @@ public class ModBlocks {
 
     //************************************* ROWAN WOOD *******************************************************************//
     public static final Block ROWAN_LOG = registerBlock("rowan_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(1f)));
     public static final Block ROWAN_WOOD = registerBlock("rowan_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).strength(1f)));
     public static final Block STRIPPED_ROWAN_LOG = registerBlock("stripped_rowan_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).strength(1f)));
     public static final Block STRIPPED_ROWAN_WOOD = registerBlock("stripped_rowan_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).strength(1f)));
 
     public static final Block ROWAN_PLANKS = registerBlock("rowan_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).strength(4f)));
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).strength(1f)));
     public static final Block ROWAN_LEAVES = registerBlock("rowan_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(0.3f).nonOpaque()));
+    public static final Block ROWAN_BERRY_LEAVES = registerBlock("rowan_berry_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(0.3f).nonOpaque()));
 
     public static final Identifier ROWAN_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/rowan");
     public static final Identifier ROWAN_HANGING_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/hanging/rowan");
@@ -129,18 +131,20 @@ public class ModBlocks {
 
     //************************************* JUNIPER WOOD *******************************************************************//
     public static final Block JUNIPER_LOG = registerBlock("juniper_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(1f)));
     public static final Block JUNIPER_WOOD = registerBlock("juniper_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).strength(1f)));
     public static final Block STRIPPED_JUNIPER_LOG = registerBlock("stripped_juniper_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).strength(1f)));
     public static final Block STRIPPED_JUNIPER_WOOD = registerBlock("stripped_juniper_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).strength(1f)));
 
     public static final Block JUNIPER_PLANKS = registerBlock("juniper_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).strength(4f)));
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).strength(1f)));
     public static final Block JUNIPER_LEAVES = registerBlock("juniper_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(0.3f).nonOpaque()));
+    public static final Block JUNIPER_BERRY_LEAVES = registerBlock("juniper_berry_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(0.3f).nonOpaque()));
 
     public static final Identifier JUNIPER_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/juniper");
     public static final Identifier JUNIPER_HANGING_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/hanging/juniper");
@@ -196,18 +200,18 @@ public class ModBlocks {
 
     //************************************* SYCAMORE WOOD *******************************************************************//
     public static final Block SYCAMORE_LOG = registerBlock("sycamore_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(1f)));
     public static final Block SYCAMORE_WOOD = registerBlock("sycamore_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).strength(1f)));
     public static final Block STRIPPED_SYCAMORE_LOG = registerBlock("stripped_sycamore_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).strength(1f)));
     public static final Block STRIPPED_SYCAMORE_WOOD = registerBlock("stripped_sycamore_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4f)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).strength(1f)));
 
     public static final Block SYCAMORE_PLANKS = registerBlock("sycamore_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).strength(4f)));
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).strength(1f)));
     public static final Block SYCAMORE_LEAVES = registerBlock("sycamore_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).strength(0.3f).nonOpaque()));
 
     public static final Identifier SYCAMORE_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/sycamore");
     public static final Identifier SYCAMORE_HANGING_SIGN_TEXTURE = Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entity/signs/hanging/sycamore");

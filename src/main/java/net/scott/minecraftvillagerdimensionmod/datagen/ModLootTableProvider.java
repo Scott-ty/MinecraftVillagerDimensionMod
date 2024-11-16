@@ -15,9 +15,12 @@ import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.LootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.math.intprovider.IntProvider;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 
@@ -39,6 +42,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ROWAN_SAPLING);
 
         addDrop(ModBlocks.ROWAN_LEAVES, leavesDrops(ModBlocks.ROWAN_LEAVES, ModBlocks.ROWAN_SAPLING, 0.005f));
+        addDrop(ModBlocks.ROWAN_BERRY_LEAVES, leavesDrops(ModBlocks.ROWAN_BERRY_LEAVES, ModBlocks.ROWAN_SAPLING, 0.005f));
+        addDrop(ModBlocks.ROWAN_BERRY_LEAVES, drops(ModItems.ROWAN_BERRIES, new ConstantLootNumberProvider(3)));
 
         addDrop(ModBlocks.STANDING_ROWAN_SIGN);
         addDrop(ModBlocks.WALL_ROWAN_SIGN);
@@ -67,6 +72,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         // Change Log to sapling
         addDrop(ModBlocks.JUNIPER_LEAVES, leavesDrops(ModBlocks.JUNIPER_LEAVES, ModBlocks.JUNIPER_SAPLING, 0.005f));
+        addDrop(ModBlocks.JUNIPER_BERRY_LEAVES, drops(ModItems.JUNIPER_BERRIES, new ConstantLootNumberProvider(3)));
 
         addDrop(ModBlocks.STANDING_JUNIPER_SIGN);
         addDrop(ModBlocks.WALL_JUNIPER_SIGN);

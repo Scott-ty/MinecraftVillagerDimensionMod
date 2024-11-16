@@ -26,6 +26,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.ROWAN_LOG).log(ModBlocks.ROWAN_LOG).wood(ModBlocks.ROWAN_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_ROWAN_LOG).log(ModBlocks.STRIPPED_ROWAN_LOG).wood(ModBlocks.STRIPPED_ROWAN_WOOD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ROWAN_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ROWAN_BERRY_LEAVES);
 
         BlockStateModelGenerator.BlockTexturePool rowan_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROWAN_PLANKS);
         rowan_pool.family(ModBlocks.ROWAN_FAMILY);
@@ -46,6 +47,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.JUNIPER_LOG).log(ModBlocks.JUNIPER_LOG).wood(ModBlocks.JUNIPER_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_JUNIPER_LOG).log(ModBlocks.STRIPPED_JUNIPER_LOG).wood(ModBlocks.STRIPPED_JUNIPER_WOOD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JUNIPER_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JUNIPER_BERRY_LEAVES);
 
         BlockStateModelGenerator.BlockTexturePool juniper_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JUNIPER_PLANKS);
         juniper_pool.family(ModBlocks.JUNIPER_FAMILY);
