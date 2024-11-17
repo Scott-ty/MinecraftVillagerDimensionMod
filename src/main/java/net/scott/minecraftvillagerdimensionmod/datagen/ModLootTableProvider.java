@@ -41,9 +41,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ROWAN_PLANKS);
         addDrop(ModBlocks.ROWAN_SAPLING);
 
-        addDrop(ModBlocks.ROWAN_LEAVES, leavesDrops(ModBlocks.ROWAN_LEAVES, ModBlocks.ROWAN_SAPLING, 0.005f));
-        addDrop(ModBlocks.ROWAN_BERRY_LEAVES, leavesDrops(ModBlocks.ROWAN_BERRY_LEAVES, ModBlocks.ROWAN_SAPLING, 0.005f));
-        addDrop(ModBlocks.ROWAN_BERRY_LEAVES, drops(ModItems.ROWAN_BERRIES, new ConstantLootNumberProvider(3)));
+        addDrop(ModBlocks.ROWAN_LEAVES, leavesDrops(ModBlocks.ROWAN_LEAVES, ModBlocks.ROWAN_SAPLING, 0.05f));
+        addDrop(ModBlocks.ROWAN_BERRY_LEAVES, leavesDrops(ModBlocks.ROWAN_BERRY_LEAVES, ModBlocks.ROWAN_SAPLING, 0.05f));
+        addDrop(ModBlocks.ROWAN_BERRY_LEAVES, drops(ModItems.ROWAN_BERRIES, new ConstantLootNumberProvider(1)));
 
         addDrop(ModBlocks.STANDING_ROWAN_SIGN);
         addDrop(ModBlocks.WALL_ROWAN_SIGN);
@@ -71,8 +71,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.JUNIPER_SAPLING);
 
         // Change Log to sapling
-        addDrop(ModBlocks.JUNIPER_LEAVES, leavesDrops(ModBlocks.JUNIPER_LEAVES, ModBlocks.JUNIPER_SAPLING, 0.005f));
-        addDrop(ModBlocks.JUNIPER_BERRY_LEAVES, drops(ModItems.JUNIPER_BERRIES, new ConstantLootNumberProvider(3)));
+        addDrop(ModBlocks.JUNIPER_LEAVES, leavesDrops(ModBlocks.JUNIPER_LEAVES, ModBlocks.JUNIPER_SAPLING, 0.05f));
+        addDrop(ModBlocks.JUNIPER_BERRY_LEAVES, leavesDrops(ModBlocks.JUNIPER_BERRY_LEAVES, ModBlocks.JUNIPER_SAPLING, 0.05f));
+        addDrop(ModBlocks.JUNIPER_BERRY_LEAVES, drops(ModItems.JUNIPER_BERRIES, new ConstantLootNumberProvider(1)));
 
         addDrop(ModBlocks.STANDING_JUNIPER_SIGN);
         addDrop(ModBlocks.WALL_JUNIPER_SIGN);
