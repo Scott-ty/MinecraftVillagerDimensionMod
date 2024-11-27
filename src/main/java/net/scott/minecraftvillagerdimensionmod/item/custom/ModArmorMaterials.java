@@ -26,7 +26,7 @@ public class ModArmorMaterials {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
         map.put(ArmorItem.Type.BODY, 11);
-    }), 19,
+    }), 17,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
             2.0F,
             0.1F,
@@ -40,7 +40,7 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.CHESTPLATE, 8);
                 map.put(ArmorItem.Type.HELMET, 3);
                 map.put(ArmorItem.Type.BODY, 11);
-            }), 19,
+            }), 25,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
             2.0F,
             0.1F,
@@ -54,7 +54,7 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.CHESTPLATE, 8);
                 map.put(ArmorItem.Type.HELMET, 3);
                 map.put(ArmorItem.Type.BODY, 11);
-            }), 19,
+            }), 16,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
             2.0F,
             0.1F,

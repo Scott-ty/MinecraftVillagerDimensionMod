@@ -35,14 +35,14 @@ public class ModPlacedFeatures {
 
         // For ore generation
         register(context, ANCIENT_GEMSTONE_ORE_PLACED_KEY, registryLookup.getOrThrow(ModConfiguredFeatures.ANCIENT_GEMSTONE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(5, // Veins per chunk
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+                ModOrePlacement.modifiersWithCount(2, // Veins per chunk
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(10))));
         register(context, MAGICITE_ORE_PLACED_KEY, registryLookup.getOrThrow(ModConfiguredFeatures.MAGICITE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(4, // Veins per chunk
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+                ModOrePlacement.modifiersWithCount(3, // Veins per chunk
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(10))));
         register(context, PILLAGERITE_ORE_PLACED_KEY, registryLookup.getOrThrow(ModConfiguredFeatures.PILLAGERITE_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(3, // Veins per chunk
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(10))));
 
         // For tree generation
         register(context, ROWAN_TREE_KEY, registryLookup.getOrThrow(ModConfiguredFeatures.ROWAN_KEY),

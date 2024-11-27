@@ -28,19 +28,19 @@ public class ModItems {
             new VerticallyAttachableBlockItem(ModBlocks.EMERALD_TORCH, ModBlocks.WALL_EMERALD_TORCH, new Item.Settings(), Direction.DOWN));
 
     public static final Item ANCIENT_GEMSTONE_PICKAXE = registerItem("ancient_gemstone_pickaxe", new PickaxeItem(AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, 3, -2.4F
+            AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, 1, -2.7F
     ))));
     public static final Item ANCIENT_GEMSTONE_AXE = registerItem("ancient_gemstone_axe", new AxeItem(AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, 3, -2.4F
+            AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, 5, -2.8F
     ))));
     public static final Item ANCIENT_GEMSTONE_SWORD= registerItem("ancient_gemstone_sword", new SwordItem(AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
             AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, 3, -2.4F
     ))));
     public static final Item ANCIENT_GEMSTONE_SHOVEL = registerItem("ancient_gemstone_shovel", new ShovelItem(AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, 3, -2.4F
+            AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, 1.5F, -2.8F
     ))));
     public static final Item ANCIENT_GEMSTONE_HOE = registerItem("ancient_gemstone_hoe", new HoeItem(AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, 3, -2.4F
+            AncientGemstoneToolMaterial.ancientGemstoneToolMaterial.ANCIENT_GEMSTONE_DUST, -6, 1
     ))));
 
 
@@ -70,19 +70,19 @@ public class ModItems {
 
 
     public static final Item PILLAGERITE_PICKAXE = registerItem("pillagerite_pickaxe", new PickaxeItem(PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 3, -3.4F
+            PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 1, -2.7F
     ))));
     public static final Item PILLAGERITE_AXE = registerItem("pillagerite_axe", new AxeItem(PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 3, -2.4F
+            PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 5, -2.8F
     ))));
     public static final Item PILLAGERITE_SWORD = registerItem("pillagerite_sword", new SwordItem(PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
             PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 3, -2.4F
     ))));
     public static final Item PILLAGERITE_SHOVEL = registerItem("pillagerite_shovel", new ShovelItem(PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 3, -2.4F
+            PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 1.3F, -2.8F
     ))));
     public static final Item PILLAGERITE_HOE = registerItem("pillagerite_hoe", new HoeItem(PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, 3, -2.4F
+            PillageriteToolMaterial.pillageriteToolMaterial.PILLAGERITE_INGOT, -7.2F, 1
     ))));
 
     public static final Item PILLAGERITE_HELMET = registerItem("pillagerite_helmet",
@@ -109,19 +109,19 @@ public class ModItems {
 
 
     public static final Item MAGICITE_PICKAXE = registerItem("magicite_pickaxe", new PickaxeItem(MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 3, -2.4F
+            MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 1, -2.7F
     ))));
     public static final Item MAGICITE_AXE = registerItem("magicite_axe", new AxeItem(MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 3, -2.4F
+            MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 5, -2.8F
     ))));
     public static final Item MAGICITE_SWORD= registerItem("magicite_sword", new SwordItem(MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
             MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 3, -2.4F
     ))));
     public static final Item MAGICITE_SHOVEL = registerItem("magicite_shovel", new ShovelItem(MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 3, -2.4F
+            MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 1.5F, -2.8F
     ))));
     public static final Item MAGICITE_HOE = registerItem("magicite_hoe", new HoeItem(MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
-            MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 3, -2.4F
+            MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, -5, 1
     ))));
 
     public static final Item MAGICITE_HELMET = registerItem("magicite_helmet",
