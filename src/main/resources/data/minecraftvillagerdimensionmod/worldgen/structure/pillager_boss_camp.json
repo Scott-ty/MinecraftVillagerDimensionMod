@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "minecraftvillagerdimensionmod:contested_biome",
+  "step": "surface_structures",
+  "spawn_overrides": {
+    "water_ambient": {
+      "bounding_box": "full",
+      "spawns": []
+    }
+  },
+  "start_pool": "minecraftvillagerdimensionmod:pillager_boss_camp/start_pool",
+  "size": 1,
+  "start_height": {
+    "absolute": 0
+  },
+  "terrain_adaptation": "none",
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+  "max_distance_from_center": 80,
+  "use_expansion_hack": false
+}
