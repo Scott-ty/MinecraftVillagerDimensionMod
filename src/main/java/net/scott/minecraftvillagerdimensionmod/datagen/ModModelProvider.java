@@ -126,6 +126,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MAGICITE_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.MAGICITE_BOOTS, Models.GENERATED);
 
+        // BOSS ARMOR
+        itemModelGenerator.register(ModItems.BOSS_CROWN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BOSS_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BOSS_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BOSS_BOOTS, Models.GENERATED);
+
         // KOI FISH
         itemModelGenerator.register(ModItems.ORANGE_KOI_FISH_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));

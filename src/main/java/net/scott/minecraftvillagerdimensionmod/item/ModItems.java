@@ -107,7 +107,7 @@ public class ModItems {
 
 
 
-
+    // MAGICITE TOOLS AND ARMOR
     public static final Item MAGICITE_PICKAXE = registerItem("magicite_pickaxe", new PickaxeItem(MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
             MagiciteToolMaterial.magiciteToolMaterial.MAGICITE_DUST, 1, -2.7F
     ))));
@@ -144,7 +144,26 @@ public class ModItems {
                     ArmorItem.Type.LEGGINGS,
                     new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(40))));
 
+    // BOSS ARMOR
+    public static final Item BOSS_CROWN = registerItem("boss_crown",
+            new ArmorItem(ModArmorMaterials.BOSS_ARMOR,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(50))));
 
+    public static final Item BOSS_BOOTS = registerItem("boss_boots",
+            new ArmorItem(ModArmorMaterials.BOSS_ARMOR,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(50))));
+
+    public static final Item BOSS_CHESTPLATE = registerItem("boss_chestplate",
+            new ArmorItem(ModArmorMaterials.BOSS_ARMOR,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(50))));
+
+    public static final Item BOSS_LEGGINGS = registerItem("boss_leggings",
+            new ArmorItem(ModArmorMaterials.BOSS_ARMOR,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(50))));
 
     public static final Item ANCIENT_GEMSTONE = registerItem("ancient_gemstone", new Item(new Item.Settings()));
     public static final Item ANCIENT_GEMSTONE_DUST = registerItem("ancient_gemstone_dust", new Item(new Item.Settings()));

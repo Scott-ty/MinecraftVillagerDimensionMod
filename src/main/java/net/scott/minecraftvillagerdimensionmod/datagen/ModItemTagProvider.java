@@ -137,5 +137,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.MAGICITE_HELMET, ModItems.MAGICITE_CHESTPLATE, ModItems.MAGICITE_LEGGINGS, ModItems.MAGICITE_BOOTS);
         //*******************************************************************************************************************//
+        // BOSS ARMOR
+        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
+                .add(ModItems.BOSS_CROWN);
+        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
+                .add(ModItems.BOSS_CHESTPLATE);
+        getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
+                .add(ModItems.BOSS_LEGGINGS);
+        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
+                .add(ModItems.BOSS_BOOTS);
     }
 }

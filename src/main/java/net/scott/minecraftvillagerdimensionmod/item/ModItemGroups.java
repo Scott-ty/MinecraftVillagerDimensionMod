@@ -75,6 +75,12 @@ public class ModItemGroups {
                         entries.add(ModItems.PILLAGERITE_HOE);
                         entries.add(ModItems.PILLAGERITE_SHOVEL);
 
+                        // BOSS ARMOR
+                        entries.add(ModItems.BOSS_CROWN);
+                        entries.add(ModItems.BOSS_CHESTPLATE);
+                        entries.add(ModItems.BOSS_LEGGINGS);
+                        entries.add(ModItems.BOSS_BOOTS);
+
                         // MISC ITEMS
                         entries.add(ModItems.EMERALD_TORCH_ITEM);
 
