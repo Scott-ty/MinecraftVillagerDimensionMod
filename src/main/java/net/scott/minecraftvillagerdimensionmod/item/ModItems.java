@@ -227,6 +227,11 @@ public class ModItems {
     public static final Item JUNIPER_BERRIES = registerItem( "juniper_berries", new Item(new Item.Settings().food(ModFoodComponent.JUNIPER_BERRIES)));
     public static final Item ROWAN_BERRIES = registerItem( "rowan_berries", new Item(new Item.Settings().food(ModFoodComponent.ROWAN_BERRIES)));
 
+    // JUNIPER BREAD
+    public static final Item JUNIPER_BREAD = registerItem( "juniper_bread", new Item(new Item.Settings().food(ModFoodComponent.JUNIPER_BREAD)));
+
+    // JUNIPER FLOUR
+    public static final Item JUNIPER_FLOUR = registerItem("juniper_flour", new Item(new Item.Settings()));
 
     // Once an item has been made, you have to add it to a group
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){

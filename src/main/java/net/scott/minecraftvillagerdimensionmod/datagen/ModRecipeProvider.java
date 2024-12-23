@@ -196,6 +196,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("E E")
                 .criterion(hasItem(ModItems.MAGICITE_DUST), conditionsFromItem(ModItems.MAGICITE_DUST))
                 .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.JUNIPER_FLOUR)
+                .input('E', ModItems.JUNIPER_BERRIES)
+                .pattern("   ")
+                .pattern("EEE")
+                .criterion(hasItem(ModItems.JUNIPER_BERRIES), conditionsFromItem(ModItems.JUNIPER_FLOUR))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.JUNIPER_BREAD)
+                .input('E', ModItems.JUNIPER_FLOUR)
+                .pattern("   ")
+                .pattern("EEE")
+                .criterion(hasItem(ModItems.JUNIPER_FLOUR), conditionsFromItem(ModItems.JUNIPER_BREAD))
+                .offerTo(exporter);
     }
 }
 

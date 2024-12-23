@@ -137,6 +137,8 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.JUNIPER_SAPLING);
                         entries.add(ModItems.JUNIPER_BERRIES);
+                        entries.add(ModItems.JUNIPER_BREAD);
+                        entries.add(ModItems.JUNIPER_FLOUR);
 
                         // SYCAMORE WOOD
                         entries.add(ModBlocks.SYCAMORE_LOG);
