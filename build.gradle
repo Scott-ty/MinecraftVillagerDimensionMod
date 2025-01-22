@@ -21,6 +21,13 @@ repositories {
 		name = 'TerraformersMC'
 		url = 'https://maven.terraformersmc.com/'
 	}
+	maven {
+		name = 'GeckoLib'
+		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+		content {
+			includeGroup("software.bernie.geckolib")
+		}
+	}
 }
 
 fabricApi {
@@ -42,6 +49,9 @@ dependencies {
 
 	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta66-1.21'
 	include 'net.kyrptonaught:customportalapi:0.0.1-beta66-1.21'
+
+	//Gecko lib for models
+	modImplementation "software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}"
 }
 
 processResources {

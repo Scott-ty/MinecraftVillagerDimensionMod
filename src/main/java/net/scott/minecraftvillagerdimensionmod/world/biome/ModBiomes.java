@@ -16,9 +16,7 @@ import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
-import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.structure.Structure;
 import net.minecraft.world.gen.structure.Structures;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
@@ -73,15 +71,15 @@ public class ModBiomes {
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.FLOWER_DEFAULT);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.PATCH_GRASS_FOREST);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.PATCH_TALL_GRASS);
-        //DefaultBiomeFeatures.addForestTrees(biomeBuilder);
 
 
         DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
         DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
         DefaultBiomeFeatures.addDefaultGrass(biomeBuilder);
-        //DefaultBiomeFeatures.addDefaultFlowers(biomeBuilder);
         DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
+        DefaultBiomeFeatures.addKelp(biomeBuilder);
+        DefaultBiomeFeatures.addSeagrassOnStone(biomeBuilder);
 
         return new Biome.Builder()
                 .precipitation(true)
@@ -128,6 +126,8 @@ public class ModBiomes {
         DefaultBiomeFeatures.addDefaultGrass(biomeBuilder);
         DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
+        DefaultBiomeFeatures.addKelp(biomeBuilder);
+        DefaultBiomeFeatures.addSeagrassOnStone(biomeBuilder);
 
         return new Biome.Builder()
                 .precipitation(true)
@@ -163,12 +163,19 @@ public class ModBiomes {
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
         DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
 
+        // Adding gravel and sand patches in water only
+        biomeBuilder.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION, MiscPlacedFeatures.DISK_SAND);
+        biomeBuilder.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION, MiscPlacedFeatures.DISK_GRAVEL);
+        biomeBuilder.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION, MiscPlacedFeatures.DISK_CLAY);
+
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.JUNIPER_TREE_KEY);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.PATCH_GRASS_PLAIN);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.PATCH_TALL_GRASS);
 
         DefaultBiomeFeatures.addDefaultGrass(biomeBuilder);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
+        DefaultBiomeFeatures.addKelp(biomeBuilder);
+        DefaultBiomeFeatures.addSeagrassOnStone(biomeBuilder);
 
         return new Biome.Builder()
                 .precipitation(true)

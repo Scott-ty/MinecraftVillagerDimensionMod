@@ -15,13 +15,13 @@ import net.scott.minecraftvillagerdimensionmod.entity.custom.WhiteKoiFishEntity;
 public class ModEntities {
     public static final EntityType<OrangeKoiFishEntity> ORANGE_KOI_FISH = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "root"),
-            EntityType.Builder.create(OrangeKoiFishEntity::new, SpawnGroup.WATER_AMBIENT).dimensions(.5f, .5f).build());
+            EntityType.Builder.create(OrangeKoiFishEntity::new, SpawnGroup.WATER_AMBIENT).dimensions(.5f, .5f).build("root"));
 
     public static final EntityType<WhiteKoiFishEntity> WHITE_KOI_FISH = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "root2"),
-            EntityType.Builder.create(WhiteKoiFishEntity::new, SpawnGroup.WATER_AMBIENT).dimensions(.5f, .5f).build());
+            EntityType.Builder.create(WhiteKoiFishEntity::new, SpawnGroup.WATER_AMBIENT).dimensions(.5f, .5f).build("root2"));
 
     public static final EntityType<BlackKoiFishEntity> BLACK_KOI_FISH = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "root3"),
-            EntityType.Builder.create(BlackKoiFishEntity::new, SpawnGroup.WATER_AMBIENT).dimensions(.5f, .5f).build());
+            EntityType.Builder.create(BlackKoiFishEntity::new, SpawnGroup.WATER_AMBIENT).dimensions(.5f, .5f).build("root3"));
 }

@@ -1,0 +1,1 @@
+This folder is for gecko lib models. Specifically, the geo.json files will go in here.

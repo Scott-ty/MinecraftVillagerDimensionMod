@@ -83,10 +83,15 @@
       "minecraft:patch_tall_grass",
       "minecraft:patch_grass_badlands",
       "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin"
+      "minecraft:patch_pumpkin",
+      "minecraft:kelp_cold",
+      "minecraft:seagrass_simple"
     ],
     [
-      "minecraft:freeze_top_layer"
+      "minecraft:freeze_top_layer",
+      "minecraft:disk_sand",
+      "minecraft:disk_gravel",
+      "minecraft:disk_clay"
     ]
   ],
   "has_precipitation": true,
