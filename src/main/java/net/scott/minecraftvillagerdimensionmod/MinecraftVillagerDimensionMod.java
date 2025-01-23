@@ -12,6 +12,7 @@ import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
 import net.scott.minecraftvillagerdimensionmod.entity.ModEntities;
 import net.scott.minecraftvillagerdimensionmod.entity.custom.BlackKoiFishEntity;
 import net.scott.minecraftvillagerdimensionmod.entity.custom.OrangeKoiFishEntity;
+import net.scott.minecraftvillagerdimensionmod.entity.custom.PillagerBruteBossEntity;
 import net.scott.minecraftvillagerdimensionmod.entity.custom.WhiteKoiFishEntity;
 import net.scott.minecraftvillagerdimensionmod.item.ModItemGroups;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
@@ -77,6 +78,8 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.ORANGE_KOI_FISH, OrangeKoiFishEntity.createOrangeKoiFishAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.WHITE_KOI_FISH, WhiteKoiFishEntity.createWhiteKoiFishAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.BLACK_KOI_FISH, BlackKoiFishEntity.createBlackKoiFishAttributes());
+		// Brute Pillager Boss
+		FabricDefaultAttributeRegistry.register(ModEntities.PILLAGER_BRUTE_BOSS, PillagerBruteBossEntity.createPillagerBruteBossAttributes());
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.EMERALD_BLOCK)
@@ -90,6 +93,7 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 
 		// Generates Ore
 		ModWorldGeneration.generateModWorldGen();
+
 	}
 
 	public static Identifier id(String path) {

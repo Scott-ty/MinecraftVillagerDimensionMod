@@ -55,5 +55,7 @@ public class MinecraftVillagerDimensionModClient implements ClientModInitializer
 
         EntityRendererRegistry.register(ModEntities.BLACK_KOI_FISH, BlackKoiFishRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BLACK_KOI_FISH, BlackKoiFishModel::getTexturedModelData);
+
+        EntityRendererRegistry.register(ModEntities.PILLAGER_BRUTE_BOSS, PillagerBruteBossEntityRender::new);
     }
 }

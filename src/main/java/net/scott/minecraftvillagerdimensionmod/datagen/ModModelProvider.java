@@ -145,6 +145,10 @@ public class ModModelProvider extends FabricModelProvider {
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.BLACK_KOI_BUCKET, Models.GENERATED);
 
+        // Pillager Brute Boss
+        itemModelGenerator.register(ModItems.PILLAGER_BRUTE_BOSS_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
 
 
     }

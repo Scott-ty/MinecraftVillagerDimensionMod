@@ -214,6 +214,8 @@ public class ModItems {
             new SpawnEggItem(ModEntities.WHITE_KOI_FISH, 0xffffff, 0xFAF9F6, new Item.Settings()));
     public static final Item BLACK_KOI_FISH_SPAWN_EGG = registerItem("black_koi_fish_spawn_egg",
             new SpawnEggItem(ModEntities.BLACK_KOI_FISH, 0xffffff, 0x000000, new Item.Settings()));
+    public static final Item PILLAGER_BRUTE_BOSS_SPAWN_EGG = registerItem("pillager_brute_boss_spawn_egg",
+            new SpawnEggItem(ModEntities.PILLAGER_BRUTE_BOSS, 0xa4a8b8, 0x194723, new Item.Settings()));
 
     // KOI BUCKET ITEMS
     public static final Item BLACK_KOI_BUCKET = registerItem("black_koi_bucket",
