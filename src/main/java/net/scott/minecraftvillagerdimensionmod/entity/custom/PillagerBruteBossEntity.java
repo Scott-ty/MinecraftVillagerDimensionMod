@@ -20,7 +20,13 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.instance.SingletonAnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
 public class PillagerBruteBossEntity extends PillagerEntity implements GeoEntity {
+    // Special attack chance at 30%
+    private static final float SPECIAL_ATTACK_CHANCE = 0.3f; // 30% chance
+
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
     private ServerBossBar bossBar = null;
     public PillagerBruteBossEntity(EntityType<? extends PillagerEntity> entityType, World world) {
@@ -34,10 +40,10 @@ public class PillagerBruteBossEntity extends PillagerEntity implements GeoEntity
 
     public static DefaultAttributeContainer.Builder createPillagerBruteBossAttributes() {
         return PillagerEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 150)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 250)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
                 .add(EntityAttributes.GENERIC_ARMOR, 3.0f)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5);
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 15);
     }
 
     @Override
@@ -50,7 +56,6 @@ public class PillagerBruteBossEntity extends PillagerEntity implements GeoEntity
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, VillagerEntity.class, true));
         this.goalSelector.add(4, new MeleeAttackGoal(this,0.5F, true));
-        this.goalSelector.add(5, new PounceAtTargetGoal(this,0.5F));
     }
 
     @Override
@@ -61,15 +66,26 @@ public class PillagerBruteBossEntity extends PillagerEntity implements GeoEntity
 
     // For attack animation
     private PlayState attackpredicate(AnimationState<GeoAnimatable> tAnimationState) {
-        if(this.handSwinging && tAnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)){
-            // Will have to look in to this line for the markNeedsReload
-            // This works for now
-            tAnimationState.getController().forceAnimationReset();
-            tAnimationState.getController().setAnimationSpeed(2.0F);
-            // This doesnt work for a special attack chance
-            //tAnimationState.getController().triggerableAnim("Special", RawAnimation.begin().then("jump smash",Animation.LoopType.PLAY_ONCE));
-            //tAnimationState.getController().tryTriggerAnimation("Special");
-            tAnimationState.getController().setAnimation(RawAnimation.begin().then("basic attack", Animation.LoopType.PLAY_ONCE));
+        if (this.handSwinging && tAnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)) {
+            // Check if health is below half
+            if (this.getHealth() < this.getMaxHealth() / 2) {
+                // Roll for special attack chance
+                if (new Random().nextFloat() < SPECIAL_ATTACK_CHANCE) {
+                    tAnimationState.getController().forceAnimationReset();
+                    tAnimationState.getController().setAnimationSpeed(1.5F); // Adjust speed as needed
+                    tAnimationState.getController().setAnimation(RawAnimation.begin().then("jump smash", Animation.LoopType.PLAY_ONCE));
+                } else {
+                    // Perform basic attack
+                    tAnimationState.getController().forceAnimationReset();
+                    tAnimationState.getController().setAnimationSpeed(2.0F);
+                    tAnimationState.getController().setAnimation(RawAnimation.begin().then("basic attack", Animation.LoopType.PLAY_ONCE));
+                }
+            } else {
+                // Perform basic attack
+                tAnimationState.getController().forceAnimationReset();
+                tAnimationState.getController().setAnimationSpeed(2.0F);
+                tAnimationState.getController().setAnimation(RawAnimation.begin().then("basic attack", Animation.LoopType.PLAY_ONCE));
+            }
             this.handSwinging = false;
         }
         return PlayState.CONTINUE;
