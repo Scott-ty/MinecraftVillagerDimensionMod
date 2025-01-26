@@ -17,7 +17,23 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:book",
+          "name": "minecraftvillagerdimensionmod:juniper_bread",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 2.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraftvillagerdimensionmod:juniper_flour",
           "weight": 20
         },
         {
@@ -33,28 +49,8 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:paper",
+          "name": "minecraftvillagerdimensionmod:juniper_berries",
           "weight": 20
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:map"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:compass"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": 30.0,
-              "options": "#minecraft:on_random_loot"
-            }
-          ],
-          "name": "minecraft:book",
-          "weight": 10
         }
       ],
       "rolls": {
@@ -68,10 +64,96 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:eye_armor_trim_smithing_template"
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30.0,
+              "options": "#minecraft:on_random_loot"
+            }
+          ],
+          "name": "minecraft:book",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 7.0,
+                "min": 2.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraftvillagerdimensionmod:magicite_dust",
+          "weight": 20
         }
       ],
-      "rolls": 1.0
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 3.0,
+        "min": 1.0
+      }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30.0,
+              "options": "#minecraft:on_random_loot"
+            }
+          ],
+          "name": "minecraftvillagerdimensionmod:magicite_chestplate",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30.0,
+              "options": "#minecraft:on_random_loot"
+            }
+          ],
+          "name": "minecraftvillagerdimensionmod:magicite_boots",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30.0,
+              "options": "#minecraft:on_random_loot"
+            }
+          ],
+          "name": "minecraftvillagerdimensionmod:magicite_helmet",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30.0,
+              "options": "#minecraft:on_random_loot"
+            }
+          ],
+          "name": "minecraftvillagerdimensionmod:magicite_leggings",
+          "weight": 10
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
     }
   ],
   "random_sequence": "minecraftvillagerdimensionmod:chests/pillager_tower_outpost"

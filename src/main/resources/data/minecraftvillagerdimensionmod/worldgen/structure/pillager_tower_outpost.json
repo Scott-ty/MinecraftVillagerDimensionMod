@@ -2,12 +2,7 @@
   "type": "minecraft:jigsaw",
   "biomes": "minecraftvillagerdimensionmod:contested_biome",
   "step": "surface_structures",
-  "spawn_overrides": {
-    "water_ambient": {
-      "bounding_box": "full",
-      "spawns": []
-    }
-  },
+  "spawn_overrides": {},
   "start_pool": "minecraftvillagerdimensionmod:pillager_tower_outpost/start_pool",
   "size": 1,
   "start_height": {

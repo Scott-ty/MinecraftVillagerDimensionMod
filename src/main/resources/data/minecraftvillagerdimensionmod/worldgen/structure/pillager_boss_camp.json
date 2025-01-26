@@ -3,9 +3,16 @@
   "biomes": "minecraftvillagerdimensionmod:contested_biome",
   "step": "surface_structures",
   "spawn_overrides": {
-    "water_ambient": {
-      "bounding_box": "full",
-      "spawns": []
+    "misc": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "minecraftvillagerdimensionmod:buffpillager",
+          "weight": 10,
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
     }
   },
   "start_pool": "minecraftvillagerdimensionmod:pillager_boss_camp/start_pool",
