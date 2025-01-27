@@ -5,14 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "type_specific": {
-              "type": "minecraft:raider",
-              "is_captain": true
-            }
-          }
+          "condition": "minecraft:killed_by_player"
         }
       ],
       "entries": [
@@ -27,7 +20,7 @@
             {
               "amplifier": {
                 "type": "minecraft:uniform",
-                "max": 4.0,
+                "max": 1.0,
                 "min": 0.0
               },
               "function": "minecraft:set_ominous_bottle_amplifier"
@@ -42,14 +35,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "type_specific": {
-              "type": "minecraft:raider",
-              "is_captain": true
-            }
-          }
+          "condition": "minecraft:killed_by_player"
         }
       ],
       "entries": [
@@ -79,14 +65,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "type_specific": {
-              "type": "minecraft:raider",
-              "is_captain": true
-            }
-          }
+          "condition": "minecraft:killed_by_player"
         }
       ],
       "entries": [
@@ -113,5 +92,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraftvillagerdimensionmod:entity/buffpillager"
+  "random_sequence": "minecraftvillagerdimensionmod:entities/buffpillager"
 }

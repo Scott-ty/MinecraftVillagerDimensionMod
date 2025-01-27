@@ -30,7 +30,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ROWAN_LOG)
                 .add(ModBlocks.STRIPPED_ROWAN_LOG)
                 .add(ModBlocks.ROWAN_WOOD)
-                .add(ModBlocks.STRIPPED_ROWAN_WOOD);
+                .add(ModBlocks.STRIPPED_ROWAN_WOOD)
+                .add(ModBlocks.ROWAN_DOOR)
+                .add(ModBlocks.ROWAN_TRAPDOOR)
+                .add(ModBlocks.ROWAN_BERRY_LEAVES)
+                .add(ModBlocks.ROWAN_LEAVES)
+                .add(ModBlocks.ROWAN_PLANKS)
+                .add(ModBlocks.ROWAN_SLAB)
+                .add(ModBlocks.ROWAN_STAIRS)
+                .add(ModBlocks.ROWAN_PRESSURE_PLATE)
+                .add(ModBlocks.ROWAN_BUTTON)
+                .add(ModBlocks.ROWAN_FENCE)
+                .add(ModBlocks.ROWAN_FENCE_GATE);
 
         // New tag for blocks that the sycamore trunk can grow through
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("minecraftvillagerdimensionmod", "sycamore_grow_through")))
@@ -48,7 +59,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.JUNIPER_LOG)
                 .add(ModBlocks.STRIPPED_JUNIPER_LOG)
                 .add(ModBlocks.JUNIPER_WOOD)
-                .add(ModBlocks.STRIPPED_JUNIPER_WOOD);
+                .add(ModBlocks.STRIPPED_JUNIPER_WOOD)
+                .add(ModBlocks.JUNIPER_DOOR)
+                .add(ModBlocks.JUNIPER_TRAPDOOR)
+                .add(ModBlocks.JUNIPER_BERRY_LEAVES)
+                .add(ModBlocks.JUNIPER_LEAVES)
+                .add(ModBlocks.JUNIPER_PLANKS)
+                .add(ModBlocks.JUNIPER_SLAB)
+                .add(ModBlocks.JUNIPER_STAIRS)
+                .add(ModBlocks.JUNIPER_PRESSURE_PLATE)
+                .add(ModBlocks.JUNIPER_BUTTON)
+                .add(ModBlocks.JUNIPER_FENCE)
+                .add(ModBlocks.JUNIPER_FENCE_GATE);
 
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(ModBlocks.JUNIPER_FENCE);
@@ -62,7 +84,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SYCAMORE_LOG)
                 .add(ModBlocks.STRIPPED_SYCAMORE_LOG)
                 .add(ModBlocks.SYCAMORE_WOOD)
-                .add(ModBlocks.STRIPPED_SYCAMORE_WOOD);
+                .add(ModBlocks.STRIPPED_SYCAMORE_WOOD)
+                .add(ModBlocks.SYCAMORE_DOOR)
+                .add(ModBlocks.SYCAMORE_TRAPDOOR)
+                .add(ModBlocks.SYCAMORE_LEAVES)
+                .add(ModBlocks.SYCAMORE_PLANKS)
+                .add(ModBlocks.SYCAMORE_SLAB)
+                .add(ModBlocks.SYCAMORE_STAIRS)
+                .add(ModBlocks.SYCAMORE_PRESSURE_PLATE)
+                .add(ModBlocks.SYCAMORE_BUTTON)
+                .add(ModBlocks.SYCAMORE_FENCE)
+                .add(ModBlocks.SYCAMORE_FENCE_GATE);
 
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(ModBlocks.SYCAMORE_FENCE);

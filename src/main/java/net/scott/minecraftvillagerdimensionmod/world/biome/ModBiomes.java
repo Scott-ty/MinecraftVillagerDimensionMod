@@ -186,10 +186,10 @@ public class ModBiomes {
                 .effects((new BiomeEffects.Builder())
                         .waterColor(0x506cf0)
                         .waterFogColor(0x506cf0)
-                        .skyColor(0x86eef5)
-                        .grassColor(0x74a749)
-                        .foliageColor(0x70ae3b)
-                        .fogColor(0x506cf0)
+                        .skyColor(0xe8f6dc)//86eef5
+                        .grassColor(0x96a853)//74a749
+                        .foliageColor(0x96a853)//70ae3b
+                        .fogColor(0xc1cbb8)//506cf0
                         .moodSound(BiomeMoodSound.CAVE)
                         .music(MusicType.createIngameMusic(SoundEvents.MUSIC_OVERWORLD_FOREST)).build())
                 .build();
