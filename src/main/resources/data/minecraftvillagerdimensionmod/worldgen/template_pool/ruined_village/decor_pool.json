@@ -3,7 +3,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 10,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "minecraftvillagerdimensionmod:ruined_villages/ruined_decor_1",
@@ -15,7 +15,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 10,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "minecraftvillagerdimensionmod:ruined_villages/ruined_decor_2",

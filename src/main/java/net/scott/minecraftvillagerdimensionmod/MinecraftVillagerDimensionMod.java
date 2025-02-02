@@ -93,6 +93,7 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 
 		// Generates Ore
 		ModWorldGeneration.generateModWorldGen();
+		ModBlocks.registerModBlocks();
 
 	}
 
