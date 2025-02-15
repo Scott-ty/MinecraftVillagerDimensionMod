@@ -1,0 +1,18 @@
+{
+  "name": "minecraftvillagerdimensionmod:village/boss_house_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraftvillagerdimensionmod:villages/village_boss_hut",
+        "start_height": {
+          "absolute": 1
+        },
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

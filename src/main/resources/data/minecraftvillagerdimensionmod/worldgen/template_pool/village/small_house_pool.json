@@ -1,0 +1,54 @@
+{
+  "name": "minecraftvillagerdimensionmod:village/small_house_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraftvillagerdimensionmod:villages/village_small_house_1",
+        "start_height": {
+          "absolute": 1
+        },
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraftvillagerdimensionmod:villages/village_small_house_2",
+        "start_height": {
+          "absolute": 1
+        },
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraftvillagerdimensionmod:villages/village_cow",
+        "start_height": {
+          "absolute": 1
+        },
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraftvillagerdimensionmod:villages/village_farm",
+        "start_height": {
+          "absolute": 1
+        },
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
