@@ -1,0 +1,7 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraftvillagerdimensionmod:no_water_processor"
+    }
+  ]
+}

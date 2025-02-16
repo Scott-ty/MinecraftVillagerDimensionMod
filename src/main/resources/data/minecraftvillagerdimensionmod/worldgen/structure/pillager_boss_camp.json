@@ -18,7 +18,7 @@
   "start_pool": "minecraftvillagerdimensionmod:pillager_boss_camp/start_pool",
   "size": 1,
   "start_height": {
-    "absolute": 0
+    "above_bottom": 65
   },
   "terrain_adaptation": "beard_thin",
   "project_start_to_heightmap": "WORLD_SURFACE_WG",

@@ -21,7 +21,7 @@ import net.minecraft.world.gen.structure.Structure;
 import net.minecraft.world.gen.structure.Structures;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.scott.minecraftvillagerdimensionmod.world.ModPlacedFeatures;
-import net.scott.minecraftvillagerdimensionmod.world.ModStructures;
+
 
 public class ModBiomes {
     public static final RegistryKey<Biome> VILLAGER_BIOME = RegistryKey.of(RegistryKeys.BIOME,
@@ -90,10 +90,10 @@ public class ModBiomes {
                 .effects((new BiomeEffects.Builder())
                         .waterColor(0x506cf0)
                         .waterFogColor(0x506cf0)
-                        .skyColor(0x86eef5)
+                        .skyColor(0x68bcd8)
                         .grassColor(0x74a749)
                         .foliageColor(0x70ae3b)
-                        .fogColor(0x506cf0)
+                        .fogColor(0x569cb3)
                         .moodSound(BiomeMoodSound.CAVE)
                         .music(MusicType.createIngameMusic(SoundEvents.MUSIC_OVERWORLD_FOREST)).build())
                 .build();

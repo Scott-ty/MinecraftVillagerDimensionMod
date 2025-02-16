@@ -7,7 +7,7 @@
         "element_type": "minecraft:single_pool_element",
         "location": "minecraftvillagerdimensionmod:koi_ponds/large_koi_pond",
         "projection": "rigid",
-        "processors": "minecraft:empty"
+        "processors": "minecraftvillagerdimensionmod:no_water_processor"
       }
     }
   ]
