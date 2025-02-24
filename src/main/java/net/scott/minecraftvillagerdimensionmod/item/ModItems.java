@@ -216,6 +216,10 @@ public class ModItems {
             new SpawnEggItem(ModEntities.BLACK_KOI_FISH, 0xffffff, 0x000000, new Item.Settings()));
     public static final Item PILLAGER_BRUTE_BOSS_SPAWN_EGG = registerItem("pillager_brute_boss_spawn_egg",
             new SpawnEggItem(ModEntities.PILLAGER_BRUTE_BOSS, 0xa4a8b8, 0x194723, new Item.Settings()));
+    public static final Item MONARCH_BUTTERFLY_SPAWN_EGG = registerItem("monarch_butterfly_spawn_egg",
+            new SpawnEggItem(ModEntities.MONARCHBUTTERFLY, 0xc66b3d, 0x201e20, new Item.Settings()));
+
+
 
     // KOI BUCKET ITEMS
     public static final Item BLACK_KOI_BUCKET = registerItem("black_koi_bucket",

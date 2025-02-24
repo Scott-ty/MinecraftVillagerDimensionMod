@@ -8,10 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
-import net.scott.minecraftvillagerdimensionmod.entity.custom.BlackKoiFishEntity;
-import net.scott.minecraftvillagerdimensionmod.entity.custom.OrangeKoiFishEntity;
-import net.scott.minecraftvillagerdimensionmod.entity.custom.PillagerBruteBossEntity;
-import net.scott.minecraftvillagerdimensionmod.entity.custom.WhiteKoiFishEntity;
+import net.scott.minecraftvillagerdimensionmod.entity.custom.*;
 
 public class ModEntities {
     public static final EntityType<OrangeKoiFishEntity> ORANGE_KOI_FISH = Registry.register(Registries.ENTITY_TYPE,
@@ -29,4 +26,9 @@ public class ModEntities {
     public static final EntityType<PillagerBruteBossEntity> PILLAGER_BRUTE_BOSS = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "buffpillager"),
             EntityType.Builder.create(PillagerBruteBossEntity::new, SpawnGroup.MISC).dimensions(1.5f, 3.5f).build("buffpillager"));
+
+    public static final EntityType<MonarchButterfly> MONARCHBUTTERFLY = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "monarch_butterfly"),
+            EntityType.Builder.create(MonarchButterfly::new, SpawnGroup.MISC).dimensions(.5f, .5f).maxTrackingRange(100).build("monarch_butterfly"));
+
 }

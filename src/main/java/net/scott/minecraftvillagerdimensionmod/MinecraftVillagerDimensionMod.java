@@ -13,10 +13,7 @@ import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
 import net.scott.minecraftvillagerdimensionmod.entity.ModBoats;
 import net.scott.minecraftvillagerdimensionmod.entity.ModEntities;
-import net.scott.minecraftvillagerdimensionmod.entity.custom.BlackKoiFishEntity;
-import net.scott.minecraftvillagerdimensionmod.entity.custom.OrangeKoiFishEntity;
-import net.scott.minecraftvillagerdimensionmod.entity.custom.PillagerBruteBossEntity;
-import net.scott.minecraftvillagerdimensionmod.entity.custom.WhiteKoiFishEntity;
+import net.scott.minecraftvillagerdimensionmod.entity.custom.*;
 import net.scott.minecraftvillagerdimensionmod.item.ModItemGroups;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 import net.scott.minecraftvillagerdimensionmod.particle.ModParticleTypes;
@@ -95,6 +92,8 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.BLACK_KOI_FISH, BlackKoiFishEntity.createBlackKoiFishAttributes());
 		// Brute Pillager Boss
 		FabricDefaultAttributeRegistry.register(ModEntities.PILLAGER_BRUTE_BOSS, PillagerBruteBossEntity.createPillagerBruteBossAttributes());
+		// Monarch Butterfly
+		FabricDefaultAttributeRegistry.register(ModEntities.MONARCHBUTTERFLY, MonarchButterfly.createMonarchButterflyAttributes());
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.EMERALD_BLOCK)
