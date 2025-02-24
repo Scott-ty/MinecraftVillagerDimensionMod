@@ -170,6 +170,7 @@ public class ModItemGroups {
                         entries.add(ModItems.BLACK_KOI_FISH_SPAWN_EGG);
                         entries.add(ModItems.PILLAGER_BRUTE_BOSS_SPAWN_EGG);
                         entries.add(ModItems.MONARCH_BUTTERFLY_SPAWN_EGG);
+                        entries.add(ModItems.EVIL_VILLAGER_BOSS_SPAWN_EGG);
 
                         entries.add(ModItems.BLACK_KOI_BUCKET);
                         entries.add(ModItems.ORANGE_KOI_BUCKET);

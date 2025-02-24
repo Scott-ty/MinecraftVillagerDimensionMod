@@ -92,6 +92,7 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.BLACK_KOI_FISH, BlackKoiFishEntity.createBlackKoiFishAttributes());
 		// Brute Pillager Boss
 		FabricDefaultAttributeRegistry.register(ModEntities.PILLAGER_BRUTE_BOSS, PillagerBruteBossEntity.createPillagerBruteBossAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.EVIL_VILLAGER_BOSS, EvilVillagerBossEntity.createEvilVillagerBossAttributes());
 		// Monarch Butterfly
 		FabricDefaultAttributeRegistry.register(ModEntities.MONARCHBUTTERFLY, MonarchButterfly.createMonarchButterflyAttributes());
 
