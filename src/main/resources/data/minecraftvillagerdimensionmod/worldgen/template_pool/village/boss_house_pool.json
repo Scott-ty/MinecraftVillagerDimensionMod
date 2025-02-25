@@ -7,6 +7,19 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "minecraftvillagerdimensionmod:villages/village_boss_hut",
+        "spawn_overrides": {
+          "misc": {
+            "bounding_box": "piece",
+            "spawns": [
+              {
+                "type": "minecraftvillagerdimensionmod:evil_villager_boss",
+                "weight": 1.0,
+                "minCount": 1,
+                "maxCount": 1
+              }
+            ]
+          }
+        },
         "start_height": {
           "absolute": 1
         },

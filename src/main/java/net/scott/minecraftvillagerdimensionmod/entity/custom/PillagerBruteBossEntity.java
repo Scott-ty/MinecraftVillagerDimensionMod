@@ -99,6 +99,11 @@ public class PillagerBruteBossEntity extends PillagerEntity implements GeoEntity
         return PlayState.CONTINUE;
     }
 
+    @Override
+    public boolean canImmediatelyDespawn(double distanceSquared) {
+        return false; // Prevents natural despawning
+    }
+
     // For basic walk animation
     private PlayState predicate(AnimationState<GeoAnimatable> tAnimationState) {
         if(tAnimationState.isMoving()){

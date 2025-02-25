@@ -5,11 +5,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.PillagerEntity;
-import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.loot.LootTable;
@@ -25,7 +23,6 @@ import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.instance.SingletonAnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
-import java.util.Random;
 
 public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity {
 
@@ -58,7 +55,7 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
     public static DefaultAttributeContainer.Builder createEvilVillagerBossAttributes() {
         return PillagerEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 200)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, .7f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
                 .add(EntityAttributes.GENERIC_ARMOR, 3.0f)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 13);
     }
@@ -131,6 +128,12 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
         }
         return PlayState.CONTINUE;
     }
+
+    @Override
+    public boolean canImmediatelyDespawn(double distanceSquared) {
+        return false; // Prevents natural despawning
+    }
+
 
     // For Walk and Idle
     private PlayState predicate(AnimationState<GeoAnimatable> tAnimationState) {
