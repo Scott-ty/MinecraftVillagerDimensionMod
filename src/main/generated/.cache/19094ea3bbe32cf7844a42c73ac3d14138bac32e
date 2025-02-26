@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-26T12:03:27.268769	Minecraft Villager Dimension Mod/Tags for minecraft:item
+// 1.21.1	2025-02-26T12:10:40.1334077	Minecraft Villager Dimension Mod/Tags for minecraft:item
 298ca70d39cc2e5f76636c3d92b9e6513b105cb9 data\minecraft\tags\item\logs_that_burn.json
 1fb94f5ec3860595920990bdb5ba23c27e418745 data\minecraft\tags\item\pickaxes.json
 b1faa156a68dcc272866f0f7f9888db750ddb482 data\minecraft\tags\item\head_armor.json
@@ -6,8 +6,8 @@ b1faa156a68dcc272866f0f7f9888db750ddb482 data\minecraft\tags\item\head_armor.jso
 d6b5c87709f5bc065f0da343caa2f43f1e2e437d data\minecraft\tags\item\leg_armor.json
 2d9dd80740c9b881172828f60e21fb728439a0ee data\minecraft\tags\item\planks.json
 fec52468eba5adf210740e0e58eceea2307f63c6 data\minecraft\tags\item\trimmable_armor.json
-1645c1bd6cd92a975ff5e82ba37f05bd6664eed8 data\minecraft\tags\item\chest_armor.json
 26fa12832281bd474d3a05eb44920aa2975a96d8 data\minecraft\tags\item\shovels.json
+1645c1bd6cd92a975ff5e82ba37f05bd6664eed8 data\minecraft\tags\item\chest_armor.json
 27b3f55ba70d2abcd6870c28e839fcd4d569d2ee data\minecraft\tags\item\hoes.json
 a1b55ecc63015b71053dcfed4de6d9fdf0766c66 data\minecraft\tags\item\foot_armor.json
 8c85ab93b3e079004e552e222de6285598d07bbc data\minecraft\tags\item\axes.json

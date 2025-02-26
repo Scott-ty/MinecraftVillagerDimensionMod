@@ -73,16 +73,13 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
         this.targetSelector.add(0, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
 
         // Villager state actions
-        if (!isEvil) {
-            this.goalSelector.add(1, new WanderAroundGoal(this, 0.5F, 15));
-        }
         if (isEvil) {
             this.goalSelector.add(1, new MeleeAttackGoal(this, 0.5F, true));
             this.targetSelector.add(2, new ActiveTargetGoal<>(this, VillagerEntity.class, true));
         }
+        this.goalSelector.add(3, new WanderAroundGoal(this, 0.5F, 15));
 
-        this.goalSelector.add(3, new SwimGoal(this));
-        this.goalSelector.add(4, new WanderAroundPointOfInterestGoal(this, 0.5F, false));
+        this.goalSelector.add(4, new SwimGoal(this));
         this.goalSelector.add(5, new LookAroundGoal(this));
 
     }
