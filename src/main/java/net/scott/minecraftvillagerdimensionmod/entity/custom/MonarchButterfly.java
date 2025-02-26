@@ -1,6 +1,7 @@
 package net.scott.minecraftvillagerdimensionmod.entity.custom;
 
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.control.MoveControl;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -10,6 +11,7 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoAnimatable;
@@ -79,6 +81,11 @@ public class MonarchButterfly extends FlyingEntity implements GeoEntity {
     @Nullable
     public Identifier getButterflyTexture() {
         return this.butterflyTexture;
+    }
+
+    public static boolean isOnGroundPredicate(EntityType<MonarchButterfly> type, ServerWorldAccess world, SpawnReason spawnReason, BlockPos pos, net.minecraft.util.math.random.Random random) {
+        // Check if the block below the spawn position is a solid block.
+        return world.getBlockState(pos.down()).isSolidBlock(world, pos.down());
     }
 
     @Override
