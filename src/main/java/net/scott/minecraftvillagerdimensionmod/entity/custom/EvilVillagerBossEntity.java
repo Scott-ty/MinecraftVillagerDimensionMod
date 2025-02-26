@@ -49,6 +49,12 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
                 ServerBossBar.Color.GREEN,           // Boss bar color
                 ServerBossBar.Style.PROGRESS       // Boss bar style
         );
+        if(isEvil){
+            this.bossBar.setVisible(true);
+        }
+        else{
+            this.bossBar.setVisible(false); // Hide the boss bar initially
+        }
     }
 
     // Standard Attributes Class
@@ -63,27 +69,29 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
     // Goals Class
     @Override
     protected void initGoals() {
-        this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new WanderAroundPointOfInterestGoal(this, 0.5F, false));
-        this.goalSelector.add(2, new LookAroundGoal(this));
-
         // Transform when targeting a player
-        this.targetSelector.add(3, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(0, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
 
         // Villager state actions
         if (!isEvil) {
-            this.goalSelector.add(4, new WanderAroundGoal(this, 0.5F, 15));
+            this.goalSelector.add(1, new WanderAroundGoal(this, 0.5F, 15));
         }
         if (isEvil) {
-            this.goalSelector.add(4, new MeleeAttackGoal(this, 0.5F, true));
-            this.targetSelector.add(5, new ActiveTargetGoal<>(this, VillagerEntity.class, true));
+            this.goalSelector.add(1, new MeleeAttackGoal(this, 0.5F, true));
+            this.targetSelector.add(2, new ActiveTargetGoal<>(this, VillagerEntity.class, true));
         }
+
+        this.goalSelector.add(3, new SwimGoal(this));
+        this.goalSelector.add(4, new WanderAroundPointOfInterestGoal(this, 0.5F, false));
+        this.goalSelector.add(5, new LookAroundGoal(this));
+
     }
 
     // Method to trigger evil transformation
     private boolean triggerTransformation(LivingEntity target) {
         if (!isEvil && target instanceof PlayerEntity) {
             isEvil = true;
+            System.out.println("Transformation triggered: Now evil!");
 
             if (transformationController != null) {
                 transformationController.forceAnimationReset();
@@ -93,6 +101,17 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
             // Update AI goals
             this.goalSelector.getGoals().clear();
             this.initGoals();
+
+            // Show boss bar after transformation
+            if (!this.getWorld().isClient) {
+                System.out.println("Making boss bar visible");
+                this.bossBar.setVisible(true);
+                for (PlayerEntity player : this.getWorld().getPlayers()) {
+                    if (player instanceof ServerPlayerEntity) {
+                        this.bossBar.addPlayer((ServerPlayerEntity) player);
+                    }
+                }
+            }
 
             return true;
         }
@@ -173,8 +192,9 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
             }
         }
 
-        // Update boss bar percentage
-        if (!this.getWorld().isClient && this.isAlive()) {
+        // Only update the boss bar if the entity is evil
+        if (isEvil && !this.getWorld().isClient && this.isAlive()) {
+            this.bossBar.setVisible(true);
             this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
         }
     }
@@ -182,7 +202,10 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
     @Override
     public void onStartedTrackingBy(ServerPlayerEntity player) {
         super.onStartedTrackingBy(player);
-        this.bossBar.addPlayer(player); // Add player to boss bar
+        // Add player to boss bar
+        if (isEvil) {
+            this.bossBar.addPlayer(player);
+        }
     }
     // For the boss bar
     @Override
