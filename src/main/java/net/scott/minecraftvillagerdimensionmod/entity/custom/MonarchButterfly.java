@@ -1,16 +1,15 @@
 package net.scott.minecraftvillagerdimensionmod.entity.custom;
 
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ai.control.MoveControl;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.data.DataTracker;
-import net.minecraft.entity.data.TrackedData;
-import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.entity.mob.FlyingEntity;
+import net.minecraft.entity.mob.GhastEntity;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.mob.PathAwareEntity;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoAnimatable;
@@ -19,24 +18,27 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.instance.SingletonAnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 
+import java.util.EnumSet;
 import java.util.Random;
 
-public class MonarchButterfly extends PathAwareEntity implements GeoEntity {
+public class MonarchButterfly extends FlyingEntity implements GeoEntity {
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
     private static final Random RANDOM = new Random();
 
+
     // DataTracker to sync the texture
     private final Identifier butterflyTexture;
-    public MonarchButterfly(EntityType<? extends PathAwareEntity> entityType, World world) {
+    public MonarchButterfly(EntityType<? extends FlyingEntity> entityType, World world) {
         super(entityType, world);
+        this.moveControl = new ButterflyMoveControl(this);
         this.butterflyTexture = selectRandomTexture();
     }
 
     @Override
     protected void initGoals() {
-        this.goalSelector.add(4, new FlyGoal(this, 1));
-        this.goalSelector.add(5, new WanderAroundGoal(this, 0.5F, 3));
-        this.goalSelector.add(6, new SwimGoal(this));
+        this.goalSelector.add(0, new RandomFlyGoal(this, 0.2F));
+        //this.goalSelector.add(5, new WanderAroundGoal(this, 0.5F, 3));
+        this.goalSelector.add(1, new SwimGoal(this));
     }
 
     public static DefaultAttributeContainer.Builder createMonarchButterflyAttributes() {
@@ -98,4 +100,82 @@ public class MonarchButterfly extends PathAwareEntity implements GeoEntity {
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return cache;
     }
+
+    public class RandomFlyGoal extends Goal {
+        private final MonarchButterfly butterfly;
+        private final double speed;
+        private final Random random = new Random();
+        private Vec3d target;
+
+        public RandomFlyGoal(MonarchButterfly butterfly, double speed) {
+            this.butterfly = butterfly;
+            this.speed = speed;
+            this.setControls(EnumSet.of(Control.MOVE));
+        }
+
+        @Override
+        public boolean canStart() {
+            return !butterfly.getMoveControl().isMoving() && random.nextInt(10) == 0;
+        }
+
+        @Override
+        public boolean shouldContinue() {
+            return target != null && butterfly.getPos().distanceTo(target) > 0.5;
+        }
+
+        @Override
+        public void start() {
+            target = getRandomLocation();
+            butterfly.getMoveControl().moveTo(target.x, target.y, target.z, speed);
+        }
+
+        private Vec3d getRandomLocation() {
+            double x = butterfly.getX() + (random.nextDouble() * 10 - 5);
+            double z = butterfly.getZ() + (random.nextDouble() * 10 - 5);
+
+            // Allow vertical movement between a reasonable range
+            double minY = Math.max(butterfly.getY() - 3, butterfly.getWorld().getBottomY() + 10); // Prevent going too low
+            double maxY = Math.min(butterfly.getY() + 3, butterfly.getWorld().getTopY() - 5); // Prevent going too high
+            double y = minY + random.nextDouble() * (maxY - minY);
+
+            return new Vec3d(x, y, z);
+        }
+    }
+
+
+    class ButterflyMoveControl extends MoveControl {
+        private final MonarchButterfly butterfly;
+
+        public ButterflyMoveControl(MonarchButterfly butterfly) {
+            super(butterfly);
+            this.butterfly = butterfly;
+        }
+
+        @Override
+        public void tick() {
+            if (this.state == State.MOVE_TO) {
+                Vec3d target = new Vec3d(this.targetX, this.targetY, this.targetZ);
+                Vec3d direction = target.subtract(butterfly.getPos()).normalize();
+                double speed = 0.05; // Slightly increase speed for more natural movement
+
+                // Apply movement smoothly, allowing vertical movement
+                Vec3d newVelocity = new Vec3d(direction.x * speed, direction.y * speed, direction.z * speed);
+                butterfly.setVelocity(newVelocity);
+
+                // Calculate rotation
+                float yaw = getYaw();
+                float pitch = getPitch();
+
+                butterfly.setYaw(yaw); // Set facing direction
+                butterfly.setPitch(pitch); // Adjust pitch for vertical motion
+
+                // Stop moving when close to the target
+                if (butterfly.getPos().distanceTo(target) < 0.5) {
+                    this.state = State.WAIT;
+                }
+            }
+        }
+    }
+
+
 }

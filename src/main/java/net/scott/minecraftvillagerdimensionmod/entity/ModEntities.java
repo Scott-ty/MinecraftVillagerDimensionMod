@@ -29,7 +29,7 @@ public class ModEntities {
 
     public static final EntityType<MonarchButterfly> MONARCHBUTTERFLY = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "monarch_butterfly"),
-            EntityType.Builder.create(MonarchButterfly::new, SpawnGroup.MISC).dimensions(.5f, .5f).maxTrackingRange(100).build("monarch_butterfly"));
+            EntityType.Builder.create(MonarchButterfly::new, SpawnGroup.MISC).dimensions(.2f, .2f).maxTrackingRange(100).build("monarch_butterfly"));
 
     public static final EntityType<EvilVillagerBossEntity> EVIL_VILLAGER_BOSS = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "evil_villager_boss"),

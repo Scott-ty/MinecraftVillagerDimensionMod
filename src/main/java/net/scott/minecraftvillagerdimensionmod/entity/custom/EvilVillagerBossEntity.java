@@ -129,6 +129,7 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
         return PlayState.CONTINUE;
     }
 
+    // Prevents the boss from despawning
     @Override
     public boolean canImmediatelyDespawn(double distanceSquared) {
         return false; // Prevents natural despawning

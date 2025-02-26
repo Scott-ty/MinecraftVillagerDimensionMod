@@ -21,6 +21,7 @@ public class MonarchButterflyEntityRender extends GeoEntityRenderer<MonarchButte
 
     @Override
     public void render(MonarchButterfly entity, float entityYaw, float partialTick, MatrixStack poseStack, VertexConsumerProvider bufferSource, int packedLight) {
+        poseStack.scale(0.2f, 0.2f, 0.2f);
         super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);
     }
 }
