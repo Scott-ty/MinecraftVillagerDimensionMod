@@ -75,7 +75,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraftvillagerdimensionmod:magicite_dust",
+          "name": "minecraftvillagerdimensionmod:ancient_gemstone_dust",
           "weight": 10
         },
         {
@@ -99,6 +99,36 @@
         "type": "minecraft:uniform",
         "max": 1.0,
         "min": 0.0
+      }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraftvillagerdimensionmod:ancient_gemstone_chestplate",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftvillagerdimensionmod:ancient_gemstone_boots",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftvillagerdimensionmod:ancient_gemstone_helmet",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftvillagerdimensionmod:ancient_gemstone_leggings",
+          "weight": 10
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 2.0,
+        "min": 1.0
       }
     }
   ],
