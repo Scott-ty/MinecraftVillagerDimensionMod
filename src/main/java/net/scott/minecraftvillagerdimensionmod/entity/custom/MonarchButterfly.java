@@ -6,9 +6,9 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.FlyingEntity;
-import net.minecraft.entity.mob.GhastEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -130,16 +130,40 @@ public class MonarchButterfly extends FlyingEntity implements GeoEntity {
         }
 
         private Vec3d getRandomLocation() {
-            double x = butterfly.getX() + (random.nextDouble() * 10 - 5);
-            double z = butterfly.getZ() + (random.nextDouble() * 10 - 5);
+            // Try up to 10 times to find a valid location
+            for (int attempts = 0; attempts < 10; attempts++) {
+                double x = butterfly.getX() + (random.nextDouble() * 10 - 5);
+                double z = butterfly.getZ() + (random.nextDouble() * 10 - 5);
 
-            // Allow vertical movement between a reasonable range
-            double minY = Math.max(butterfly.getY() - 3, butterfly.getWorld().getBottomY() + 10); // Prevent going too low
-            double maxY = Math.min(butterfly.getY() + 3, butterfly.getWorld().getTopY() - 5); // Prevent going too high
-            double y = minY + random.nextDouble() * (maxY - minY);
+                double currentY = butterfly.getY();
+                double worldBottom = butterfly.getWorld().getBottomY();
+                double worldTop = butterfly.getWorld().getTopY();
 
-            return new Vec3d(x, y, z);
+                // Define safe vertical bounds
+                double safeMinY = worldBottom + 20;  // e.g., at least 20 blocks above the bottom
+                double safeMaxY = worldTop - 5;        // slightly below the top
+
+                // Try to keep the new Y close to the current Y (±3), clamped to our safe boundaries
+                double minY = Math.max(currentY - 3, safeMinY);
+                double maxY = Math.min(currentY + 3, safeMaxY);
+                if (minY > maxY) { // in case the range inverted
+                    minY = safeMinY;
+                    maxY = safeMinY + 6;
+                }
+                double y = minY + random.nextDouble() * (maxY - minY);
+
+                Vec3d candidate = new Vec3d(x, y, z);
+                // Check if the candidate location is in a non-solid block (air)
+                if (butterfly.getWorld().getBlockState(new BlockPos((int) candidate.x, (int) candidate.y, (int) candidate.z)).isAir()) {
+                    return candidate;
+                }
+            }
+            // If no valid position is found after several attempts, return current position as fallback.
+            return butterfly.getPos();
         }
+
+
+
     }
 
 
@@ -159,15 +183,18 @@ public class MonarchButterfly extends FlyingEntity implements GeoEntity {
                 double speed = 0.05; // Slightly increase speed for more natural movement
 
                 // Apply movement smoothly, allowing vertical movement
-                Vec3d newVelocity = new Vec3d(direction.x * speed, direction.y * speed, direction.z * speed);
-                butterfly.setVelocity(newVelocity);
+                butterfly.setVelocity(new Vec3d(direction.x * speed, direction.y * speed, direction.z * speed));
 
-                // Calculate rotation
-                float yaw = getYaw();
-                float pitch = getPitch();
+                // Only recalc rotation if the direction isn't near zero
+                if (direction.lengthSquared() > 1e-6) {
+                    // Calculate yaw: arctan2 returns radians; convert to degrees and adjust so 0 faces north
+                    float newYaw = (float)(Math.atan2(direction.z, direction.x) * (180 / Math.PI)) - 90F;
+                    // Calculate pitch: negative arctan2 of vertical vs horizontal component
+                    float newPitch = (float)(-Math.atan2(direction.y, Math.sqrt(direction.x * direction.x + direction.z * direction.z)) * (180 / Math.PI));
 
-                butterfly.setYaw(yaw); // Set facing direction
-                butterfly.setPitch(pitch); // Adjust pitch for vertical motion
+                    butterfly.setYaw(newYaw);
+                    butterfly.setPitch(newPitch);
+                }
 
                 // Stop moving when close to the target
                 if (butterfly.getPos().distanceTo(target) < 0.5) {
@@ -176,6 +203,4 @@ public class MonarchButterfly extends FlyingEntity implements GeoEntity {
             }
         }
     }
-
-
 }
