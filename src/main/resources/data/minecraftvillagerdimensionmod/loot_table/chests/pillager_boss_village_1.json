@@ -11,45 +11,13 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraftvillagerdimensionmod:juniper_bread",
-          "weight": 15
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
                 "max": 4.0,
                 "min": 2.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraftvillagerdimensionmod:juniper_flour",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 2.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraftvillagerdimensionmod:juniper_berries",
+          "name": "minecraftvillagerdimensionmod:rowan_berries",
           "weight": 20
         }
       ],
@@ -57,6 +25,36 @@
         "type": "minecraft:uniform",
         "max": 4.0,
         "min": 2.0
+      }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraftvillagerdimensionmod:pillagerite_chestplate",
+          "weight": 9
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftvillagerdimensionmod:pillagerite_boots",
+          "weight": 11
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftvillagerdimensionmod:pillagerite_helmet",
+          "weight": 12
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftvillagerdimensionmod:pillagerite_leggings",
+          "weight": 10
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
       }
     },
     {
@@ -75,7 +73,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraftvillagerdimensionmod:ancient_gemstone_dust",
+          "name": "minecraftvillagerdimensionmod:pillagerite_ingot",
           "weight": 10
         },
         {
@@ -102,5 +100,5 @@
       }
     }
   ],
-  "random_sequence": "minecraftvillagerdimensionmod:chests/ruined_house_2"
+  "random_sequence": "minecraftvillagerdimensionmod:chests/pillager_boss_village_1"
 }

@@ -1,0 +1,42 @@
+{
+  "name": "minecraftvillagerdimensionmod:pillager/decor_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraftvillagerdimensionmod:pillagers/pillager_light",
+        "start_height": {
+          "absolute": 1
+        },
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraftvillagerdimensionmod:pillagers/pillager_em_pile",
+        "start_height": {
+          "absolute": 1
+        },
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraftvillagerdimensionmod:pillagers/pillager_wheat_pile",
+        "start_height": {
+          "absolute": 1
+        },
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
