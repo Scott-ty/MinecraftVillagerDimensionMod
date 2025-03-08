@@ -35,4 +35,8 @@ public class ModEntities {
             Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "evil_villager_boss"),
             EntityType.Builder.create(EvilVillagerBossEntity::new, SpawnGroup.MISC).dimensions(1f, 2f).maxTrackingRange(100).build("evil_villager_boss"));
 
+    public static final EntityType<PillagerWizardBossEntity> PILLAGER_WIZARD_BOSS = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "wizard_pillager"),
+            EntityType.Builder.create(PillagerWizardBossEntity::new, SpawnGroup.MISC).dimensions(1f, 2f).maxTrackingRange(100).build("wizard_pillager"));
+
 }

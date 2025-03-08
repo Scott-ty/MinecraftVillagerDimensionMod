@@ -151,6 +151,9 @@ public class ModModelProvider extends FabricModelProvider {
         // Evil Villager Boss
         itemModelGenerator.register(ModItems.EVIL_VILLAGER_BOSS_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        // Pillager Wizard Boss
+        itemModelGenerator.register(ModItems.PILLAGER_WIZARD_BOSS_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
 
         // Monarch Butterfly
         itemModelGenerator.register(ModItems.MONARCH_BUTTERFLY_SPAWN_EGG,

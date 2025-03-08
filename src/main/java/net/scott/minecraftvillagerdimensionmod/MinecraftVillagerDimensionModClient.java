@@ -58,6 +58,7 @@ public class MinecraftVillagerDimensionModClient implements ClientModInitializer
 
         EntityRendererRegistry.register(ModEntities.PILLAGER_BRUTE_BOSS, PillagerBruteBossEntityRender::new);
         EntityRendererRegistry.register(ModEntities.EVIL_VILLAGER_BOSS, EvilVillagerBossEntityRender::new);
+        EntityRendererRegistry.register(ModEntities.PILLAGER_WIZARD_BOSS, PillagerWizardBossEntityRender::new);
 
         EntityRendererRegistry.register(ModEntities.MONARCHBUTTERFLY, MonarchButterflyEntityRender::new);
     }

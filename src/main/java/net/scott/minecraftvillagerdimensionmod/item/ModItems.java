@@ -220,6 +220,8 @@ public class ModItems {
             new SpawnEggItem(ModEntities.MONARCHBUTTERFLY, 0xc66b3d, 0x201e20, new Item.Settings()));
     public static final Item EVIL_VILLAGER_BOSS_SPAWN_EGG = registerItem("evil_villager_boss_spawn_egg",
             new SpawnEggItem(ModEntities.EVIL_VILLAGER_BOSS, 0x1b6535, 0xb9925e, new Item.Settings()));
+    public static final Item PILLAGER_WIZARD_BOSS_SPAWN_EGG = registerItem("pillager_wizard_boss_spawn_egg",
+            new SpawnEggItem(ModEntities.PILLAGER_WIZARD_BOSS, 0x5b6135, 0xd9925e, new Item.Settings()));
 
 
 

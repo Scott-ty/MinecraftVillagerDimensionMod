@@ -39,7 +39,7 @@ public class PillagerBruteBossEntity extends PillagerEntity implements GeoEntity
     public PillagerBruteBossEntity(EntityType<? extends PillagerEntity> entityType, World world) {
         super(entityType, world);
         this.bossBar = new ServerBossBar(
-                Text.literal("Pillager Brute Boss"), // Boss bar title
+                Text.literal("Gronk The Manly"), // Boss bar title
                 ServerBossBar.Color.RED,           // Boss bar color
                 ServerBossBar.Style.PROGRESS       // Boss bar style
         );

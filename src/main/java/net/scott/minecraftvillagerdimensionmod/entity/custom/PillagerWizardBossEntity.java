@@ -4,6 +4,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.mob.PillagerEntity;
 import net.minecraft.entity.passive.VillagerEntity;
@@ -27,12 +28,14 @@ import java.util.Random;
 public class PillagerWizardBossEntity extends PillagerEntity implements GeoEntity {
     // Special attack chance at 30%
     private static final float SPECIAL_ATTACK_CHANCE = 0.3f; // 30% chance
+    // Chant attack chance
+    private static final float CHANT_ATTACK_CHANCE = 0.25f; // 25% chance
+
 
     // This does not work for loot tables
     public static final RegistryKey<LootTable> LOOT_TABLE_KEY = RegistryKey.of(
             RegistryKeys.LOOT_TABLE,
-            //RegistryKey.ofRegistry(Identifier.of("minecraft", "loot_table/entities")),
-            Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entities/buffpillager")
+            Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entities/wizardpillager")
     );
 
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
@@ -40,13 +43,13 @@ public class PillagerWizardBossEntity extends PillagerEntity implements GeoEntit
     public PillagerWizardBossEntity(EntityType<? extends PillagerEntity> entityType, World world) {
         super(entityType, world);
         this.bossBar = new ServerBossBar(
-                Text.literal("Pillager Brute Boss"), // Boss bar title
-                ServerBossBar.Color.RED,           // Boss bar color
+                Text.literal("Mortvax The Chaotic"), // Boss bar title
+                ServerBossBar.Color.BLUE,           // Boss bar color
                 ServerBossBar.Style.PROGRESS       // Boss bar style
         );
     }
 
-    public static DefaultAttributeContainer.Builder createPillagerBruteBossAttributes() {
+    public static DefaultAttributeContainer.Builder createPillagerWizardBossAttributes() {
         return PillagerEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 250)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
@@ -79,21 +82,21 @@ public class PillagerWizardBossEntity extends PillagerEntity implements GeoEntit
             // Check if health is below half
             if (this.getHealth() < this.getMaxHealth() / 2) {
                 // Roll for special attack chance
-                if (new Random().nextFloat() < SPECIAL_ATTACK_CHANCE) {
+                if (new Random().nextFloat() < CHANT_ATTACK_CHANCE) {
                     tAnimationState.getController().forceAnimationReset();
                     tAnimationState.getController().setAnimationSpeed(1.5F); // Adjust speed as needed
-                    tAnimationState.getController().setAnimation(RawAnimation.begin().then("jump smash", Animation.LoopType.PLAY_ONCE));
+                    tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.model.chant", Animation.LoopType.PLAY_ONCE));
                 } else {
                     // Perform basic attack
                     tAnimationState.getController().forceAnimationReset();
                     tAnimationState.getController().setAnimationSpeed(2.0F);
-                    tAnimationState.getController().setAnimation(RawAnimation.begin().then("basic attack", Animation.LoopType.PLAY_ONCE));
+                    tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.model.launch_projectile", Animation.LoopType.PLAY_ONCE));
                 }
             } else {
                 // Perform basic attack
                 tAnimationState.getController().forceAnimationReset();
                 tAnimationState.getController().setAnimationSpeed(2.0F);
-                tAnimationState.getController().setAnimation(RawAnimation.begin().then("basic attack", Animation.LoopType.PLAY_ONCE));
+                tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.model.swing", Animation.LoopType.PLAY_ONCE));
             }
             this.handSwinging = false;
         }
@@ -108,11 +111,11 @@ public class PillagerWizardBossEntity extends PillagerEntity implements GeoEntit
     // For basic walk animation
     private PlayState predicate(AnimationState<GeoAnimatable> tAnimationState) {
         if(tAnimationState.isMoving()){
-            tAnimationState.getController().setAnimation(RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
+            tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.model.walk", Animation.LoopType.LOOP));
             return PlayState.CONTINUE;
         }
 
-        tAnimationState.getController().setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+        tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.model.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 

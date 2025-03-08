@@ -45,7 +45,7 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
     public EvilVillagerBossEntity(EntityType<? extends PillagerEntity> entityType, World world) {
         super(entityType, world);
         this.bossBar = new ServerBossBar(
-                Text.literal("Evil Villager Boss"), // Boss bar title
+                Text.literal("Aragog The Hidden"), // Boss bar title
                 ServerBossBar.Color.GREEN,           // Boss bar color
                 ServerBossBar.Style.PROGRESS       // Boss bar style
         );
