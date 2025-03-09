@@ -78,7 +78,6 @@ public class EvilVillagerBossEntity extends PillagerEntity implements GeoEntity 
             this.targetSelector.add(2, new ActiveTargetGoal<>(this, VillagerEntity.class, true));
         }
         this.goalSelector.add(3, new WanderAroundGoal(this, 0.5F, 15));
-
         this.goalSelector.add(4, new SwimGoal(this));
         this.goalSelector.add(5, new LookAroundGoal(this));
 

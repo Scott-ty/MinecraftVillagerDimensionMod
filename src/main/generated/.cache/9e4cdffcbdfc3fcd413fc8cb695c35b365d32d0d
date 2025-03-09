@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-08T14:18:00.4237053	Minecraft Villager Dimension Mod/Tags for minecraft:block
+// 1.21.1	2025-03-08T20:20:56.3194182	Minecraft Villager Dimension Mod/Tags for minecraft:block
 561eb7deaf53adff2bc5d1f7ee41420d8521b008 data\minecraft\tags\block\incorrect_for_diamond_tool.json
 2ff79905471336ecdd93e20be684f142b5fcc329 data\minecraftvillagerdimensionmod\tags\block\incorrect_for_ancient_gemstone_tool.json
 37c5facd0787925096b9a9192096443871def06d data\minecraftvillagerdimensionmod\tags\block\sycamore_grow_through.json
@@ -10,8 +10,8 @@
 561eb7deaf53adff2bc5d1f7ee41420d8521b008 data\minecraftvillagerdimensionmod\tags\block\needs_pillagerite_tool.json
 561eb7deaf53adff2bc5d1f7ee41420d8521b008 data\minecraft\tags\block\incorrect_for_stone_tool.json
 657327934e2997f90c1d7d3a0598f4ad757af0da data\minecraft\tags\block\mob_interactable_doors.json
-f876b2c9c456dfe7fbf99d3ea3acb64aa64c3a4c data\minecraft\tags\block\fences.json
 9be06ab5efb5c9b50b1f33288fdc4362cec97fef data\minecraft\tags\block\logs_that_burn.json
+f876b2c9c456dfe7fbf99d3ea3acb64aa64c3a4c data\minecraft\tags\block\fences.json
 d6caa12795a9175a541fed106157a5c6268932de data\minecraft\tags\block\needs_diamond_tool.json
 561eb7deaf53adff2bc5d1f7ee41420d8521b008 data\minecraft\tags\block\incorrect_for_gold_tool.json
 d6caa12795a9175a541fed106157a5c6268932de data\minecraftvillagerdimensionmod\tags\block\needs_ancient_gemstone_tool.json
