@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/magicite_weapon",
+  "criteria": {
+    "killed_brute_pillager": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraftvillagerdimensionmod:buffpillager"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Kill a Pillager Brute Boss",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:pillager_brute_boss_spawn_egg"
+    },
+    "title": "Free The Contested Lands"
+  },
+  "requirements": [
+    [
+      "killed_brute_pillager"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

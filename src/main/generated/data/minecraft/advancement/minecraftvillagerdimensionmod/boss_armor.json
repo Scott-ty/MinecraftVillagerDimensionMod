@@ -1,0 +1,70 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/enter_dimension",
+  "criteria": {
+    "boss_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:boss_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "boss_chest": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:boss_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "boss_crown": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:boss_crown"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "boss_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraftvillagerdimensionmod:boss_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Obtain all 4 boss armor pieces",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:boss_crown"
+    },
+    "title": "Full Power of The Villagers"
+  },
+  "requirements": [
+    [
+      "boss_crown"
+    ],
+    [
+      "boss_chest"
+    ],
+    [
+      "boss_leggings"
+    ],
+    [
+      "boss_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

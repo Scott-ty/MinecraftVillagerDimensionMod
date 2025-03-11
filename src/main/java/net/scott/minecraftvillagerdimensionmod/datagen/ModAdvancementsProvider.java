@@ -8,16 +8,17 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
-import net.minecraft.advancement.criterion.ChangedDimensionCriterion;
-import net.minecraft.advancement.criterion.CriterionProgress;
-import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.advancement.criterion.*;
 import net.minecraft.item.Items;
+import net.minecraft.predicate.entity.EntityPredicate;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
 import net.scott.minecraftvillagerdimensionmod.block.ModBlocks;
+import net.scott.minecraftvillagerdimensionmod.entity.ModEntities;
+import net.scott.minecraftvillagerdimensionmod.entity.custom.EvilVillagerBossEntity;
 import net.scott.minecraftvillagerdimensionmod.item.ModItems;
 import net.scott.minecraftvillagerdimensionmod.world.dimension.ModDimensions;
 
@@ -325,7 +326,71 @@ public class ModAdvancementsProvider extends FabricAdvancementProvider {
                 .criterion("ancient_gemstone_sword", InventoryChangedCriterion.Conditions.items(ModItems.ANCIENT_GEMSTONE_SWORD))
                 .build(consumer, MinecraftVillagerDimensionMod.MOD_ID + "/ancient_gemstone_weapon");
 
+        // Advancements for Boss Armor Set
+        AdvancementEntry bossArmorAdvancement = Advancement.Builder.create()
+                .parent(enterDimensionAdvancement)
+                .display(
+                        ModItems.BOSS_CROWN,
+                        Text.literal("Full Power of The Villagers"),
+                        Text.literal("Obtain all 4 boss armor pieces"),
+                        Identifier.of("textures/gui/advancements/backgrounds/adventure.png"),
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        true
+                )
+                .criterion("boss_crown", InventoryChangedCriterion.Conditions.items(ModItems.BOSS_CROWN))
+                .criterion("boss_chest", InventoryChangedCriterion.Conditions.items(ModItems.BOSS_CHESTPLATE))
+                .criterion("boss_leggings", InventoryChangedCriterion.Conditions.items(ModItems.BOSS_LEGGINGS))
+                .criterion("boss_boots", InventoryChangedCriterion.Conditions.items(ModItems.BOSS_BOOTS))
+                .build(consumer, MinecraftVillagerDimensionMod.MOD_ID + "/boss_armor");
 
+        // Advancements for Killing Evil Villager
+        AdvancementEntry evilVillagerAdvancement = Advancement.Builder.create()
+                .parent(ancientGemstoneWeaponAdvancement)
+                .display(
+                        ModItems.EVIL_VILLAGER_BOSS_SPAWN_EGG,
+                        Text.literal("Cleanse the village"),
+                        Text.literal("Kill an Evil Villager Boss"),
+                        Identifier.of("textures/gui/advancements/backgrounds/adventure.png"),
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        true)
+                .criterion("killed_evil_villager", OnKilledCriterion.Conditions.createPlayerKilledEntity(
+                        EntityPredicate.Builder.create().type(ModEntities.EVIL_VILLAGER_BOSS)))
+                .build(consumer, MinecraftVillagerDimensionMod.MOD_ID + "/killed_evil_pillager");
 
+        // Advancements for Killing Pillager Brute
+        AdvancementEntry pillagerBruteAdvancement = Advancement.Builder.create()
+                .parent(magiciteWeaponAdvancement)
+                .display(
+                        ModItems.PILLAGER_BRUTE_BOSS_SPAWN_EGG,
+                        Text.literal("Free The Contested Lands"),
+                        Text.literal("Kill a Pillager Brute Boss"),
+                        Identifier.of("textures/gui/advancements/backgrounds/adventure.png"),
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        true)
+                .criterion("killed_brute_pillager", OnKilledCriterion.Conditions.createPlayerKilledEntity(
+                        EntityPredicate.Builder.create().type(ModEntities.PILLAGER_BRUTE_BOSS)))
+                .build(consumer, MinecraftVillagerDimensionMod.MOD_ID + "/killed_brute_pillager");
+
+        // Advancements for Killing Pillager Wizard
+        AdvancementEntry pillagerWizardAdvancement = Advancement.Builder.create()
+                .parent(pillageriteWeaponAdvancement)
+                .display(
+                        ModItems.PILLAGER_BRUTE_BOSS_SPAWN_EGG,
+                        Text.literal("You Aren't A Wizard Harry"),
+                        Text.literal("Kill a Pillager Wizard Boss"),
+                        Identifier.of("textures/gui/advancements/backgrounds/adventure.png"),
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        true)
+                .criterion("killed_wizard_pillager", OnKilledCriterion.Conditions.createPlayerKilledEntity(
+                        EntityPredicate.Builder.create().type(ModEntities.PILLAGER_WIZARD_BOSS)))
+                .build(consumer, MinecraftVillagerDimensionMod.MOD_ID + "/killed_wizard_pillager");
     }
 }

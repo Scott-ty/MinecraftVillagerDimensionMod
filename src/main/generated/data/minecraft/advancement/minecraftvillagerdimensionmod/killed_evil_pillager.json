@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/ancient_gemstone_weapon",
+  "criteria": {
+    "killed_evil_villager": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraftvillagerdimensionmod:evil_villager_boss"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Kill an Evil Villager Boss",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:evil_villager_boss_spawn_egg"
+    },
+    "title": "Cleanse the village"
+  },
+  "requirements": [
+    [
+      "killed_evil_villager"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

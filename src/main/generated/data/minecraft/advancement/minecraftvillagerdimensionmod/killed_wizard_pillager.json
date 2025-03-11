@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:minecraftvillagerdimensionmod/pillagerite_weapon",
+  "criteria": {
+    "killed_wizard_pillager": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraftvillagerdimensionmod:wizard_pillager"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Kill a Pillager Wizard Boss",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraftvillagerdimensionmod:pillager_brute_boss_spawn_egg"
+    },
+    "title": "You Aren't A Wizard Harry"
+  },
+  "requirements": [
+    [
+      "killed_wizard_pillager"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

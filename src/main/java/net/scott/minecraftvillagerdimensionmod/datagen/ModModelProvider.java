@@ -83,26 +83,43 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.SYCAMORE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         //*******************************************************************************************************************//
+        // Block states for hanging signs
+        blockStateModelGenerator.registerHangingSign(
+                ModBlocks.STRIPPED_JUNIPER_LOG,      // the log that provides the particle texture
+                ModBlocks.HANGING_JUNIPER_SIGN,       // the free-standing hanging sign block
+                ModBlocks.WALL_HANGING_JUNIPER_SIGN   // the wall-mounted variant
+        );
+        blockStateModelGenerator.registerHangingSign(
+                ModBlocks.STRIPPED_ROWAN_LOG,
+                ModBlocks.HANGING_ROWAN_SIGN,
+                ModBlocks.WALL_HANGING_ROWAN_SIGN
+        );
+        blockStateModelGenerator.registerHangingSign(
+                ModBlocks.STRIPPED_SYCAMORE_LOG,
+                ModBlocks.HANGING_SYCAMORE_SIGN,
+                ModBlocks.WALL_HANGING_SYCAMORE_SIGN
+        );
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
         // ROWAN WOOD
-        itemModelGenerator.register(ModItems.HANGING_ROWAN_SIGN, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.HANGING_ROWAN_SIGN, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.ROWAN_BOAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.ROWAN_CHEST_BOAT, Models.GENERATED);
 
         // JUNIPER WOOD
-        itemModelGenerator.register(ModItems.HANGING_JUNIPER_SIGN, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.HANGING_JUNIPER_SIGN, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.JUNIPER_BOAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.JUNIPER_CHEST_BOAT, Models.GENERATED);
 
 
         // SYCAMORE WOOD
-        itemModelGenerator.register(ModItems.HANGING_SYCAMORE_SIGN, Models.GENERATED);
+        // Had to remove these because of duplicate definitions?? Minecraft can be weird
+        //itemModelGenerator.register(ModItems.HANGING_SYCAMORE_SIGN, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SYCAMORE_BOAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SYCAMORE_CHEST_BOAT, Models.GENERATED);

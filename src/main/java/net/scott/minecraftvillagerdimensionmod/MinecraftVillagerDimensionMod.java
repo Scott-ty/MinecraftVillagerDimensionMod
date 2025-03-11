@@ -54,6 +54,15 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		StrippableBlockRegistry.register(ModBlocks.ROWAN_WOOD, ModBlocks.STRIPPED_ROWAN_WOOD);
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROWAN_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROWAN_FENCE, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROWAN_FENCE_GATE, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROWAN_TRAPDOOR, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROWAN_DOOR, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WALL_ROWAN_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STANDING_ROWAN_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.HANGING_ROWAN_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WALL_HANGING_ROWAN_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROWAN_BUTTON, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROWAN_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_ROWAN_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_ROWAN_WOOD, 5, 5);
@@ -65,6 +74,16 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		StrippableBlockRegistry.register(ModBlocks.JUNIPER_WOOD, ModBlocks.STRIPPED_JUNIPER_WOOD);
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_FENCE, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_FENCE_GATE, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_TRAPDOOR, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_DOOR, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_BUTTON, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WALL_JUNIPER_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STANDING_JUNIPER_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.HANGING_JUNIPER_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WALL_HANGING_JUNIPER_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_BUTTON, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JUNIPER_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_JUNIPER_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_JUNIPER_WOOD, 5, 5);
@@ -76,6 +95,15 @@ public class MinecraftVillagerDimensionMod implements ModInitializer {
 		StrippableBlockRegistry.register(ModBlocks.SYCAMORE_WOOD, ModBlocks.STRIPPED_SYCAMORE_WOOD);
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_FENCE, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_FENCE_GATE, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_TRAPDOOR, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_DOOR, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WALL_SYCAMORE_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STANDING_SYCAMORE_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.HANGING_SYCAMORE_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WALL_HANGING_SYCAMORE_SIGN, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_BUTTON, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SYCAMORE_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_SYCAMORE_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_SYCAMORE_WOOD, 5, 5);

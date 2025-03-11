@@ -26,6 +26,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg){
 
+        getOrCreateTagBuilder(BlockTags.MOB_INTERACTABLE_DOORS)
+                .add(ModBlocks.ROWAN_DOOR)
+                .add(ModBlocks.JUNIPER_DOOR)
+                .add(ModBlocks.SYCAMORE_DOOR);
+
+        // An attempt to fix the wall signs
+        getOrCreateTagBuilder(BlockTags.ALL_HANGING_SIGNS)
+                .add(ModBlocks.HANGING_JUNIPER_SIGN)
+                .add(ModBlocks.HANGING_ROWAN_SIGN)
+                .add(ModBlocks.HANGING_SYCAMORE_SIGN)
+                .add(ModBlocks.WALL_HANGING_JUNIPER_SIGN)
+                .add(ModBlocks.WALL_HANGING_ROWAN_SIGN)
+                .add(ModBlocks.WALL_HANGING_SYCAMORE_SIGN);
+
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.ROWAN_LOG)
                 .add(ModBlocks.STRIPPED_ROWAN_LOG)
@@ -43,12 +57,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ROWAN_FENCE)
                 .add(ModBlocks.ROWAN_FENCE_GATE);
 
-        getOrCreateTagBuilder(BlockTags.MOB_INTERACTABLE_DOORS)
-                .add(ModBlocks.ROWAN_DOOR)
-                .add(ModBlocks.JUNIPER_DOOR)
-                .add(ModBlocks.SYCAMORE_DOOR);
-
-        // New tag for blocks that the sycamore trunk can grow through
+        // New tag for blocks so that the sycamore trunk can grow through
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("minecraftvillagerdimensionmod", "sycamore_grow_through")))
                 .add(Blocks.AIR)  // Adding air is a typical block trees grow through
                 .add(ModBlocks.SYCAMORE_LEAVES);  // Add more blocks as needed
