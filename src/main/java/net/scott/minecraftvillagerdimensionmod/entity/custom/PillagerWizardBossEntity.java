@@ -312,31 +312,27 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.scott.minecraftvillagerdimensionmod.MinecraftVillagerDimensionMod;
-import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.instance.SingletonAnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
-import java.util.Random;
 
 public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implements GeoEntity {
-    // Special attack chance at 30%
-    private static final float SPECIAL_ATTACK_CHANCE = 0.3f; // 30% chance
-    // Chant attack chance
-    private static final float CHANT_ATTACK_CHANCE = 0.25f; // 25% chance
-    // Current spell
-    private String currentSpellAnimation;
 
+    // This is for animation
+    private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
-    // This does not work for loot tables
+    // This is for the boss bar
+    private ServerBossBar bossBar = null;
+
+    // This data member is for loot tables
     public static final RegistryKey<LootTable> LOOT_TABLE_KEY = RegistryKey.of(
             RegistryKeys.LOOT_TABLE,
             Identifier.of(MinecraftVillagerDimensionMod.MOD_ID, "entities/wizardpillager")
     );
 
-    private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
-    private ServerBossBar bossBar = null;
+    // This function is for creating the entity
     public PillagerWizardBossEntity(EntityType<? extends SpellcastingIllagerEntity> entityType, World world) {
         super(entityType, world);
         this.bossBar = new ServerBossBar(
@@ -346,6 +342,7 @@ public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implemen
         );
     }
 
+    // This function is also for creating the entity, but this sets his stats
     public static DefaultAttributeContainer.Builder createPillagerWizardBossAttributes() {
         return PillagerEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 250)
@@ -354,6 +351,7 @@ public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implemen
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 15);
     }
 
+    // This function is for setting goal priorities and handles how the entity ai behaves
     @Override
     protected void initGoals() {
         // **Target Selection**
@@ -374,23 +372,25 @@ public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implemen
         this.goalSelector.add(8, new WanderAroundGoal(this, 0.3F, 20)); // Only wander when idle
     }
 
+    // This is a useless function for this entity. But you have to override from the parent class.
     @Override
     public void addBonusForWave(ServerWorld world, int wave, boolean unused) {
         // Do nothing
     }
 
+    // This function is for registering animation controllers, and it dictates what predicate to send an animation instance to.
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<GeoAnimatable>(this, "controller", 0, this::predicate));
         controllers.add(new AnimationController<GeoAnimatable>(this, "attackcontroller", 0, this::attackpredicate));
     }
 
-    // For attack animation
+    // This function is for handling attack animations
     private PlayState attackpredicate(AnimationState<GeoAnimatable> tAnimationState) {
-        //&& tAnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)
+        SpellcastingIllagerEntity.Spell currentSpell = this.getSpell();
         if (this.handSwinging) {
             // If target is close enough, use melee attack animation.
-            if (this.getTarget() != null && this.getTarget().squaredDistanceTo(this) <= 9.0) {
+            if (this.getTarget() != null && this.getTarget().squaredDistanceTo(this) <= 9.0 && currentSpell == SpellcastingIllagerEntity.Spell.NONE) {
                 tAnimationState.getController().forceAnimationReset();
                 tAnimationState.getController().setAnimationSpeed(2.0F);
                 tAnimationState.getController().setAnimation(
@@ -398,33 +398,32 @@ public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implemen
                 );
             }
             // Otherwise, if a spell is being cast, play its animation.
-            else if (this.currentSpellAnimation != null) {
-
-                tAnimationState.getController().forceAnimationReset();
-                tAnimationState.getController().setAnimationSpeed(2.0F);
-                tAnimationState.getController().setAnimation(
-                        RawAnimation.begin().then(this.currentSpellAnimation, Animation.LoopType.PLAY_ONCE)
-                );
-                // Clear the stored spell animation after playing it.
-                //this.currentSpellAnimation = null;
+            if(currentSpell != SpellcastingIllagerEntity.Spell.NONE) {
+                String animation;
+                switch (currentSpell) {
+                    case FANGS:
+                        animation = "animation.model.chant";
+                        break;
+                    case SUMMON_VEX:
+                        animation = "animation.model.launch_projectile";
+                        break;
+                    default:
+                        animation = "";
+                }
+                if (!animation.isEmpty()) {
+                    tAnimationState.getController().forceAnimationReset();
+                    tAnimationState.getController().setAnimationSpeed(2.0F);
+                    tAnimationState.getController().setAnimation(
+                            RawAnimation.begin().then(animation, Animation.LoopType.PLAY_ONCE)
+                    );
+                }
             }
             this.handSwinging = false;
         }
         return PlayState.CONTINUE;
     }
 
-
-    @Override
-    public boolean canImmediatelyDespawn(double distanceSquared) {
-        return false; // Prevents natural despawning
-    }
-
-    @Override
-    public SoundEvent getCelebratingSound() {
-        return null;
-    }
-
-    // For basic walk animation
+    // Function for basic walk/idle animations
     private PlayState predicate(AnimationState<GeoAnimatable> tAnimationState) {
         if(tAnimationState.isMoving()){
             tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.model.walk", Animation.LoopType.LOOP));
@@ -435,12 +434,25 @@ public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implemen
         return PlayState.CONTINUE;
     }
 
+    // This function makes the boss never despawn from the world.
+    @Override
+    public boolean canImmediatelyDespawn(double distanceSquared) {
+        return false; // Prevents natural despawning
+    }
+
+    // Another useless function that I have to override from parent class.
+    @Override
+    public SoundEvent getCelebratingSound() {
+        return null;
+    }
+
+    // This function is a helper for animations
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return cache;
     }
 
-    // Mostly for the boss bar
+    // The tick function is mostly for the boss bar, but can be useful for other events.
     @Override
     public void tick() {
         super.tick();
@@ -451,29 +463,34 @@ public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implemen
         }
     }
 
+    // This function is for the spell sounds - I use MC's Default
     @Override
     protected SoundEvent getCastSpellSound() {
         return SoundEvents.ENTITY_EVOKER_CAST_SPELL;
     }
 
-    // For the boss bar
+    // This is for the boss bar
     @Override
     public void onStartedTrackingBy(ServerPlayerEntity player) {
         super.onStartedTrackingBy(player);
         this.bossBar.addPlayer(player); // Add player to boss bar
     }
-    // For the boss bar
+    // This is for the boss bar
     @Override
     public void onStoppedTrackingBy(ServerPlayerEntity player) {
         super.onStoppedTrackingBy(player);
         this.bossBar.removePlayer(player); // Remove player from boss bar
     }
 
+    // This is for the loot table
     @Override
     protected RegistryKey<LootTable> getLootTableId() {
         return LOOT_TABLE_KEY;
     }
 
+    //******************************************************************************************************************//
+    //                                      Spell Class Definitions
+    //******************************************************************************************************************//
     // Cast Fangs
     class SummonFangsGoal extends CastSpellGoal {
         @Override
@@ -489,7 +506,7 @@ public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implemen
         @Override
         protected void castSpell() {
             // Set the animation for summoning fangs.
-            PillagerWizardBossEntity.this.currentSpellAnimation = "animation.model.chant";
+            PillagerWizardBossEntity.this.setSpell(SpellcastingIllagerEntity.Spell.FANGS);
             LivingEntity target = PillagerWizardBossEntity.this.getTarget();
             double d = Math.min(target.getY(), PillagerWizardBossEntity.this.getY());
             double e = Math.max(target.getY(), PillagerWizardBossEntity.this.getY()) + 1.0;
@@ -556,11 +573,11 @@ public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implemen
 
         @Override
         protected SpellcastingIllagerEntity.Spell getSpell() {
-            return Spell.SUMMON_VEX;
+            return Spell.FANGS;
         }
     }
 
-    // Vanilla-like inner class for conjuring fangs (spike summoning spell)
+    // Vanilla-like inner class for snowball projectile
     class ThrowSnowballSpellGoal extends CastSpellGoal {
         @Override
         protected int getSpellTicks() {
@@ -575,7 +592,7 @@ public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implemen
         @Override
         protected void castSpell() {
             // Set the animation for the snowball throw.
-            PillagerWizardBossEntity.this.currentSpellAnimation = "animation.model.launch_projectile";
+            PillagerWizardBossEntity.this.setSpell(SpellcastingIllagerEntity.Spell.SUMMON_VEX);
             LivingEntity target = PillagerWizardBossEntity.this.getTarget();
             if (target != null) {
                 DamagingSnowballEntity snowball = new DamagingSnowballEntity(PillagerWizardBossEntity.this.getWorld(), PillagerWizardBossEntity.this);
@@ -602,7 +619,7 @@ public class PillagerWizardBossEntity extends SpellcastingIllagerEntity implemen
         @Override
         protected SpellcastingIllagerEntity.Spell getSpell() {
             // Use an appropriate built-in spell type.
-            return Spell.FANGS;
+            return Spell.SUMMON_VEX;
         }
     }
 
