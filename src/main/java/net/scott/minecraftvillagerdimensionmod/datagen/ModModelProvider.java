@@ -83,7 +83,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.SYCAMORE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         //*******************************************************************************************************************//
-        // Block states for hanging signs
+
+        // Block states for hanging signs - Fixes Breaking texture bug
         blockStateModelGenerator.registerHangingSign(
                 ModBlocks.STRIPPED_JUNIPER_LOG,      // the log that provides the particle texture
                 ModBlocks.HANGING_JUNIPER_SIGN,       // the free-standing hanging sign block
